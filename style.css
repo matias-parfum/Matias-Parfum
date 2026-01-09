@@ -99,3 +99,23 @@ body {
   background: #d4af37;
   color: #000;
 }
+
+.search-box {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 20px;
+  background: #111;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: rgba(212, 175, 55, 0.6);
+}
