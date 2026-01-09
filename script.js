@@ -18,3 +18,18 @@ function consultarGeneral() {
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
+
+function filtrarPerfumes() {
+  const texto = document.getElementById("buscador").value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const nombre = card.getAttribute("data-nombre").toLowerCase();
+
+    if (nombre.includes(texto)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
