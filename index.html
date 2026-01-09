@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Matías Parfum</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- HERO -->
   <section class="hero">
-    <img src="portada.png" alt="Matías Parfum" class="hero-img" />
-    <button class="hero-btn" onclick="consultarGeneral()">
-      Comprar por WhatsApp
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- BOTÓN GENERAL -->
+  <section class="cta">
+    <button class="btn-primary" onclick="consultarGeneral()">
+      Consultar por WhatsApp
     </button>
   </section>
 
@@ -20,16 +23,16 @@
   <section class="catalogo">
     <h2>Perfumes para Hombre</h2>
 
-    <div class="perfume">
-      <h3>Elegance Homme</h3>
-      <button onclick="consultarPerfume('Elegance Homme')">
+    <div class="producto">
+      <span>Perfume Hombre 01</span>
+      <button class="btn-outline" onclick="consultarPerfume('Perfume Hombre 01')">
         Consultar
       </button>
     </div>
 
-    <div class="perfume">
-      <h3>Noir Intense</h3>
-      <button onclick="consultarPerfume('Noir Intense')">
+    <div class="producto">
+      <span>Perfume Hombre 02</span>
+      <button class="btn-outline" onclick="consultarPerfume('Perfume Hombre 02')">
         Consultar
       </button>
     </div>
@@ -39,22 +42,21 @@
   <section class="catalogo">
     <h2>Perfumes para Mujer</h2>
 
-    <div class="perfume">
-      <h3>Rose Divine</h3>
-      <button onclick="consultarPerfume('Rose Divine')">
+    <div class="producto">
+      <span>Perfume Mujer 01</span>
+      <button class="btn-outline" onclick="consultarPerfume('Perfume Mujer 01')">
         Consultar
       </button>
     </div>
 
-    <div class="perfume">
-      <h3>Pure Elegance</h3>
-      <button onclick="consultarPerfume('Pure Elegance')">
+    <div class="producto">
+      <span>Perfume Mujer 02</span>
+      <button class="btn-outline" onclick="consultarPerfume('Perfume Mujer 02')">
         Consultar
       </button>
     </div>
   </section>
 
-  <!-- SCRIPT (OBLIGATORIO) -->
   <script src="script.js"></script>
 </body>
 </html>
