@@ -2,73 +2,82 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Matías Parfum</title>
+  <title>Matias Parfum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>MATÍAS</h1>
-    <p>La elegancia comienza con tu aroma</p>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="logo.png" alt="Matias Parfum" class="logo">
 
     <a
-      href="https://wa.me/50683674466?text=Buenos%20d%C3%ADas,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20perfumes.%20Muchas%20gracias."
-      class="btn-main"
-      target="_blank"
-    >
+      class="btn-primary"
+      href="https://wa.me/50683674466?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20sus%20perfumes.%20Quedo%20atento."
+      target="_blank">
       Comprar por WhatsApp
     </a>
-  </div>
-</section>
+  </section>
 
-<!-- HOMBRE -->
-<section class="catalogo">
-  <h2>Perfumes para Hombre</h2>
+  <!-- CATÁLOGO HOMBRE -->
+  <section class="catalogo">
+    <h2>Perfumes para Hombre</h2>
 
-  <div class="productos">
+    <div class="grid">
+      <div class="card">
+        <h3>Dior Sauvage</h3>
+        <button onclick="consultar('Dior Sauvage')">Consultar</button>
+      </div>
 
-    <div class="producto">
-      <h3>Black Oud Homme</h3>
-      <a href="https://wa.me/50683674466?text=Buenos%20d%C3%ADas,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20perfume%20Black%20Oud%20Homme.%20Quedo%20atento.%20Gracias."
-         target="_blank">Consultar</a>
+      <div class="card">
+        <h3>Bleu de Chanel</h3>
+        <button onclick="consultar('Bleu de Chanel')">Consultar</button>
+      </div>
+
+      <div class="card">
+        <h3>Invictus</h3>
+        <button onclick="consultar('Invictus')">Consultar</button>
+      </div>
     </div>
+  </section>
 
-    <div class="producto">
-      <h3>Amber Night</h3>
-      <a href="https://wa.me/50683674466?text=Buenos%20d%C3%ADas,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20perfume%20Amber%20Night.%20Quedo%20atento.%20Gracias."
-         target="_blank">Consultar</a>
+  <!-- CATÁLOGO MUJER -->
+  <section class="catalogo">
+    <h2>Perfumes para Mujer</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Good Girl</h3>
+        <button onclick="consultar('Good Girl')">Consultar</button>
+      </div>
+
+      <div class="card">
+        <h3>La Vie Est Belle</h3>
+        <button onclick="consultar('La Vie Est Belle')">Consultar</button>
+      </div>
+
+      <div class="card">
+        <h3>Miss Dior</h3>
+        <button onclick="consultar('Miss Dior')">Consultar</button>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <script>
+    function consultar(nombre) {
+      const mensaje =
+        `Hola, buen día.%0A%0A` +
+        `Me gustaría recibir información detallada sobre el perfume *${nombre}*, ` +
+        `incluyendo disponibilidad, precio y presentación.%0A%0A` +
+        `Quedo atento. Muchas gracias.`;
 
-<!-- MUJER -->
-<section class="catalogo">
-  <h2>Perfumes para Mujer</h2>
-
-  <div class="productos">
-
-    <div class="producto">
-      <h3>Rose Élégance</h3>
-      <a href="https://wa.me/50683674466?text=Buenos%20d%C3%ADas,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20perfume%20Rose%20%C3%89l%C3%A9gance.%20Quedo%20atenta.%20Gracias."
-         target="_blank">Consultar</a>
-    </div>
-
-    <div class="producto">
-      <h3>Golden Bloom</h3>
-      <a href="https://wa.me/50683674466?text=Buenos%20d%C3%ADas,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20perfume%20Golden%20Bloom.%20Quedo%20atenta.%20Gracias."
-         target="_blank">Consultar</a>
-    </div>
-
-  </div>
-</section>
+      window.open(
+        `https://wa.me/50683674466?text=${mensaje}`,
+        '_blank'
+      );
+    }
+  </script>
 
 </body>
 </html>
