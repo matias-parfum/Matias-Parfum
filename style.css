@@ -10,10 +10,16 @@ body {
 }
 
 .hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 80px 20px;
-  background: radial-gradient(circle at top, #222 0%, #000 60%);
+  padding: 40px 20px;
+  background: radial-gradient(circle at top, #1a1a1a 0%, #000 65%);
 }
+
 
 .hero h1 {
   margin: 0;
