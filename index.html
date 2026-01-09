@@ -8,52 +8,62 @@
 <body>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-  </section>
+  <section class="hero"></section>
 
   <!-- BOTÓN GENERAL -->
   <section class="cta">
-    <button class="btn-primary" onclick="consultarGeneral()">
+    <button class="btn-gold" onclick="consultarGeneral()">
       Consultar por WhatsApp
     </button>
   </section>
 
-  <!-- CATÁLOGO HOMBRE -->
+  <!-- PERFUMES HOMBRE -->
   <section class="catalogo">
     <h2>Perfumes para Hombre</h2>
 
-    <div class="producto">
-      <span>Perfume Hombre 01</span>
-      <button class="btn-outline" onclick="consultarPerfume('Perfume Hombre 01')">
-        Consultar
-      </button>
-    </div>
+    <div class="grid">
+      <div class="card">
+        <img src="perfume-placeholder.png" alt="Dior Sauvage">
+        <h3>Dior Sauvage</h3>
+        <button onclick="consultarPerfume('Dior Sauvage')">Consultar</button>
+      </div>
 
-    <div class="producto">
-      <span>Perfume Hombre 02</span>
-      <button class="btn-outline" onclick="consultarPerfume('Perfume Hombre 02')">
-        Consultar
-      </button>
+      <div class="card">
+        <img src="perfume-placeholder.png" alt="Bleu de Chanel">
+        <h3>Bleu de Chanel</h3>
+        <button onclick="consultarPerfume('Bleu de Chanel')">Consultar</button>
+      </div>
+
+      <div class="card">
+        <img src="perfume-placeholder.png" alt="Y Yves Saint Laurent">
+        <h3>Y – Yves Saint Laurent</h3>
+        <button onclick="consultarPerfume('Y Yves Saint Laurent')">Consultar</button>
+      </div>
     </div>
   </section>
 
-  <!-- CATÁLOGO MUJER -->
+  <!-- PERFUMES MUJER -->
   <section class="catalogo">
     <h2>Perfumes para Mujer</h2>
 
-    <div class="producto">
-      <span>Perfume Mujer 01</span>
-      <button class="btn-outline" onclick="consultarPerfume('Perfume Mujer 01')">
-        Consultar
-      </button>
-    </div>
+    <div class="grid">
+      <div class="card">
+        <img src="perfume-placeholder.png" alt="Libre YSL">
+        <h3>Libre – Yves Saint Laurent</h3>
+        <button onclick="consultarPerfume('Libre Yves Saint Laurent')">Consultar</button>
+      </div>
 
-    <div class="producto">
-      <span>Perfume Mujer 02</span>
-      <button class="btn-outline" onclick="consultarPerfume('Perfume Mujer 02')">
-        Consultar
-      </button>
+      <div class="card">
+        <img src="perfume-placeholder.png" alt="Coco Mademoiselle">
+        <h3>Coco Mademoiselle</h3>
+        <button onclick="consultarPerfume('Coco Mademoiselle Chanel')">Consultar</button>
+      </div>
+
+      <div class="card">
+        <img src="perfume-placeholder.png" alt="Good Girl">
+        <h3>Good Girl – Carolina Herrera</h3>
+        <button onclick="consultarPerfume('Good Girl Carolina Herrera')">Consultar</button>
+      </div>
     </div>
   </section>
 
