@@ -65,5 +65,50 @@ body {
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  box-shadow
+  box-shadow: 0 0 25px rgba(212,175,55,0.4);
+}
 
+/* CATALOGO */
+.catalogo {
+  padding: 90px 10%;
+  text-align: center;
+}
+
+.catalogo h3 {
+  font-size: 36px;
+  color: #d4af37;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 14px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card span {
+  color: #d4af37;
+  font-weight: bold;
+}
