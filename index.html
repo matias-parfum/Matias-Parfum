@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Matias Parfum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Matías Parfum</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HERO -->
   <section class="hero">
-    <img src="logo.png" alt="Matias Parfum" class="logo">
+    <div class="overlay"></div>
 
-    <a
-      class="btn-primary"
-      href="https://wa.me/50683674466?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20sus%20perfumes.%20Quedo%20atento."
-      target="_blank">
-      Comprar por WhatsApp
-    </a>
+    <div class="hero-content">
+      <img src="logo.png" alt="Matías Parfum" class="logo" />
+
+      <a href="#" class="btn-principal" onclick="consultarGeneral()">
+        Comprar por WhatsApp
+      </a>
+    </div>
   </section>
 
   <!-- CATÁLOGO HOMBRE -->
@@ -26,18 +26,17 @@
 
     <div class="grid">
       <div class="card">
-        <h3>Dior Sauvage</h3>
-        <button onclick="consultar('Dior Sauvage')">Consultar</button>
+        <h3>Perfume Hombre Elegance</h3>
+        <button onclick="consultarPerfume('Perfume Hombre Elegance')">
+          Consultar
+        </button>
       </div>
 
       <div class="card">
-        <h3>Bleu de Chanel</h3>
-        <button onclick="consultar('Bleu de Chanel')">Consultar</button>
-      </div>
-
-      <div class="card">
-        <h3>Invictus</h3>
-        <button onclick="consultar('Invictus')">Consultar</button>
+        <h3>Perfume Hombre Intense</h3>
+        <button onclick="consultarPerfume('Perfume Hombre Intense')">
+          Consultar
+        </button>
       </div>
     </div>
   </section>
@@ -48,36 +47,21 @@
 
     <div class="grid">
       <div class="card">
-        <h3>Good Girl</h3>
-        <button onclick="consultar('Good Girl')">Consultar</button>
+        <h3>Perfume Mujer Blossom</h3>
+        <button onclick="consultarPerfume('Perfume Mujer Blossom')">
+          Consultar
+        </button>
       </div>
 
       <div class="card">
-        <h3>La Vie Est Belle</h3>
-        <button onclick="consultar('La Vie Est Belle')">Consultar</button>
-      </div>
-
-      <div class="card">
-        <h3>Miss Dior</h3>
-        <button onclick="consultar('Miss Dior')">Consultar</button>
+        <h3>Perfume Mujer Luxe</h3>
+        <button onclick="consultarPerfume('Perfume Mujer Luxe')">
+          Consultar
+        </button>
       </div>
     </div>
   </section>
 
-  <script>
-    function consultar(nombre) {
-      const mensaje =
-        `Hola, buen día.%0A%0A` +
-        `Me gustaría recibir información detallada sobre el perfume *${nombre}*, ` +
-        `incluyendo disponibilidad y precio.%0A%0A` +
-        `Quedo atento. Muchas gracias.`;
-
-      window.open(
-        `https://wa.me/50683674466?text=${mensaje}`,
-        '_blank'
-      );
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
