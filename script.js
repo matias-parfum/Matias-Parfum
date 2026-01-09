@@ -3,7 +3,8 @@ const telefono = "50683674466";
 function consultarPerfume(nombre) {
   const mensaje =
     `Me gustaría recibir información detallada sobre el perfume *${nombre}*, ` +
-    `incluyendo disponibilidad y precio.`;
+    `incluyendo disponibilidad y precio.\n\n` +
+    `Quedo atento. Muchas gracias.`;
 
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
@@ -11,7 +12,8 @@ function consultarPerfume(nombre) {
 
 function consultarGeneral() {
   const mensaje =
-    "Me gustaría recibir información sobre sus perfumes, disponibilidad y precios.";
+    "Me gustaría recibir información sobre sus perfumes, disponibilidad y precios.\n\n" +
+    "Quedo atento. Muchas gracias.";
 
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
