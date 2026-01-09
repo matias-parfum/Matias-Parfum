@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Matías Parfum</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -9,35 +10,28 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-      <img src="logo.png" alt="Matías Parfum" class="logo" />
-
-      <a href="#" class="btn-principal" onclick="consultarGeneral()">
-        Comprar por WhatsApp
-      </a>
-    </div>
+    <img src="portada.png" alt="Matías Parfum" class="hero-img" />
+    <button class="hero-btn" onclick="consultarGeneral()">
+      Comprar por WhatsApp
+    </button>
   </section>
 
   <!-- CATÁLOGO HOMBRE -->
   <section class="catalogo">
     <h2>Perfumes para Hombre</h2>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Perfume Hombre Elegance</h3>
-        <button onclick="consultarPerfume('Perfume Hombre Elegance')">
-          Consultar
-        </button>
-      </div>
+    <div class="perfume">
+      <h3>Elegance Homme</h3>
+      <button onclick="consultarPerfume('Elegance Homme')">
+        Consultar
+      </button>
+    </div>
 
-      <div class="card">
-        <h3>Perfume Hombre Intense</h3>
-        <button onclick="consultarPerfume('Perfume Hombre Intense')">
-          Consultar
-        </button>
-      </div>
+    <div class="perfume">
+      <h3>Noir Intense</h3>
+      <button onclick="consultarPerfume('Noir Intense')">
+        Consultar
+      </button>
     </div>
   </section>
 
@@ -45,23 +39,22 @@
   <section class="catalogo">
     <h2>Perfumes para Mujer</h2>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Perfume Mujer Blossom</h3>
-        <button onclick="consultarPerfume('Perfume Mujer Blossom')">
-          Consultar
-        </button>
-      </div>
+    <div class="perfume">
+      <h3>Rose Divine</h3>
+      <button onclick="consultarPerfume('Rose Divine')">
+        Consultar
+      </button>
+    </div>
 
-      <div class="card">
-        <h3>Perfume Mujer Luxe</h3>
-        <button onclick="consultarPerfume('Perfume Mujer Luxe')">
-          Consultar
-        </button>
-      </div>
+    <div class="perfume">
+      <h3>Pure Elegance</h3>
+      <button onclick="consultarPerfume('Pure Elegance')">
+        Consultar
+      </button>
     </div>
   </section>
 
+  <!-- SCRIPT (OBLIGATORIO) -->
   <script src="script.js"></script>
 </body>
 </html>
