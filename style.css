@@ -182,3 +182,12 @@ body {
 .filter-buttons button:hover {
   background-color: #9c8445;
 }
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
+}
+
+.card:hover {
+  transform: scale(1.05); /* agranda ligeramente la card */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* sombra elegante */
+}
