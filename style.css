@@ -119,3 +119,10 @@ body {
 .search-box input::placeholder {
   color: rgba(212, 175, 55, 0.6);
 }
+
+.precio {
+  font-weight: bold;
+  color: #bfa055; /* color dorado similar a tu botón */
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
