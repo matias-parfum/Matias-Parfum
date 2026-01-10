@@ -33,3 +33,15 @@ function filtrarPerfumes() {
     }
   });
 }
+
+function filtrarTipo(tipo) {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    const categoria = card.getAttribute('data-tipo');
+    if(tipo === 'Todos' || categoria === tipo) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
