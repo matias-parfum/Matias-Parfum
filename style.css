@@ -126,3 +126,32 @@ body {
   margin: 5px 0;
   font-size: 1.1rem;
 }
+
+/* FOOTER */
+.footer {
+  background-color: #1a1a1a; /* fondo oscuro */
+  color: #bfa055; /* texto dorado */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-family: sans-serif;
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2); /* agranda icono al pasar mouse */
+}
+
+.icon-redes {
+  width: 30px;
+  height: 30px;
+}
