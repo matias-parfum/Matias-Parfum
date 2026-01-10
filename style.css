@@ -137,6 +137,10 @@ body {
   font-family: sans-serif;
 }
 
+.footer p {
+  color: #bfa055; /* texto dorado */
+}
+
 .footer .social-icons {
   margin-top: 10px;
 }
@@ -144,11 +148,15 @@ body {
 .footer .social-icons a {
   margin: 0 10px;
   display: inline-block;
-  transition: transform 0.3s;
+  color: #bfa055; /* letras doradas */
+  text-decoration: none; /* quita subrayado */
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .footer .social-icons a:hover {
-  transform: scale(1.2); /* agranda icono al pasar mouse */
+  color: #ffffff; /* cambia a blanco al pasar mouse */
+  transform: scale(1.2);
 }
 
 .icon-redes {
