@@ -19,20 +19,17 @@
     </button>
   </section>
 
-  <section class="search-box">
-  <input 
-    type="text" 
-    id="buscador" 
-    placeholder="Buscar perfume..."
-    onkeyup="filtrarPerfumes()"
-  >
-</section>
-  
-<div class="filter-buttons">
-  <button onclick="filtrarTipo('Hombre')">Hombre</button>
-  <button onclick="filtrarTipo('Mujer')">Mujer</button>
-  <button onclick="filtrarTipo('Unisex')">Unisex</button>
-  <button onclick="filtrarTipo('Todos')">Todos</button>
+  <div class="search-filter-container">
+  <div class="search-box">
+    <input type="text" id="buscador" placeholder="Buscar perfume..." onkeyup="filtrarPerfumes()">
+  </div>
+
+  <div class="filter-buttons">
+    <button onclick="filtrarTipo('Hombre')">Hombre</button>
+    <button onclick="filtrarTipo('Mujer')">Mujer</button>
+    <button onclick="filtrarTipo('Unisex')">Unisex</button>
+    <button onclick="filtrarTipo('Todos')">Todos</button>
+  </div>
 </div>
 
   <!-- PERFUMES HOMBRE -->
