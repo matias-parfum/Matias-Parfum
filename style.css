@@ -298,3 +298,11 @@ body {
   border-radius: 6px;
   text-decoration: none;
 }
+
+/* Alineación de botones dentro de las cards */
+.card-buttons {
+  display: flex;
+  justify-content: flex-end; /* mueve todos los botones al extremo derecho */
+  gap: 10px; /* espacio entre los botones */
+  margin-top: 15px; /* separa los botones del contenido de la card */
+}
