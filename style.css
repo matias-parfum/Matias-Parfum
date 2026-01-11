@@ -10,12 +10,6 @@ body {
   color: #e5c07b;
 }
 
-/* CTA */
-.cta {
-  text-align: center;
-  padding: 40px 20px;
-}
-
 /* CATÁLOGO */
 .catalogo {
   max-width: 1100px;
@@ -43,6 +37,7 @@ body {
   padding: 20px;
   text-align: center;
   border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card img {
@@ -50,6 +45,11 @@ body {
   height: 260px;
   object-fit: contain;
   margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.08);
 }
 
 .card h3 {
@@ -73,65 +73,107 @@ body {
 
 .precio {
   font-weight: bold;
-  color: #bfa055; /* color dorado similar a tu botón */
+  color: #bfa055; /* color dorado */
   margin: 5px 0;
   font-size: 1.1rem;
 }
 
-/* FOOTER */
-.footer {
-  background-color: #1a1a1a; /* fondo oscuro */
-  color: #bfa055; /* texto dorado */
+/* BOTONES DENTRO DE LAS CARDS */
+.card-buttons {
+  display: flex;
+  justify-content: flex-end; /* botones a la derecha */
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 70vh;
+  max-height: 700px;
+  background-image: url("portada.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-  font-family: sans-serif;
 }
 
-.footer p {
-  color: #bfa055; /* texto dorado */
+.hero-text .btn-gold {
+  margin-top: 100px;
+  padding: 14px 38px;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.footer .social-icons {
-  margin-top: 10px;
+.hero-text .btn-gold:hover {
+  background: #d4af37;
+  color: #000;
 }
 
-.footer .social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-  color: #bfa055; /* letras doradas */
-  text-decoration: none; /* quita subrayado */
-  font-weight: bold;
-  transition: transform 0.3s, color 0.3s;
+/* BUSCADOR */
+.search-box input {
+  width: 250px;
+  padding: 12px 16px;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  background: #111;
+  color: #d4af37;
+  font-size: 16px;
+  outline: none;
 }
 
-.footer .social-icons a:hover {
-  color: #ffffff; /* cambia a blanco al pasar mouse */
-  transform: scale(1.2);
+/* FILTROS */
+.search-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 60px 0 40px 0;
 }
 
-.icon-redes {
-  width: 30px;
-  height: 30px;
+.filter-buttons button {
+  padding: 14px 38px;
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
 }
 
-.card {
-  transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
+.filter-buttons button:hover {
+  background: #d4af37;
+  color: #000;
 }
 
+.filter-buttons button.active {
+  background: transparent;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 12px #d4af37, 0 0 24px #d4af37, 0 0 36px #d4af37;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* CARD hover */
 .card:hover {
-  transform: scale(1.05); /* agranda ligeramente la card */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* sombra elegante */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.card img {
-  transition: transform 0.3s;
-}
-
-.card img:hover {
-  transform: scale(1.08);
-}
-
+/* BLOG */
 .blog {
   max-width: 1100px;
   margin: 60px auto;
@@ -178,96 +220,39 @@ body {
   line-height: 1.5;
 }
 
-.blog-card .btn-gold {
-  padding: 10px 28px;
-  font-size: 14px;
-}
-
-.search-box input {
-  width: 250px;             /* Tamaño elegante */
-  padding: 12px 16px;
-  border: 1px solid #d4af37;
-  border-radius: 6px;
-  background: #111;
-  color: #d4af37;
-  font-size: 16px;
-  outline: none;
-}
-
-.search-filter-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin: 60px 0 40px 0; /* 60px arriba, 40px abajo */
-}
-
-/* Botones de filtro al estilo WhatsApp */
-.filter-buttons button {
-  padding: 14px 38px;
-  background: transparent;
-  border: 1px solid #d4af37;  /* mismo borde dorado que btn-gold */
-  color: #d4af37;              /* mismo color de texto */
-  font-size: 15px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 5px;
-}
-
-.filter-buttons button:hover {
-  background: #d4af37;  /* efecto dorado como btn-gold hover */
-  color: #000;
-}
-
-.hero {
-  width: 100%;
-  height: 70vh;
-  max-height: 700px;
-  background-image: url("portada.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #000;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* FOOTER */
+.footer {
+  background-color: #1a1a1a;
+  color: #bfa055;
   text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-family: sans-serif;
 }
 
-.hero-text .btn-gold {
-  margin-top: 100px; /* agrega más espacio sobre el botón */
-  padding: 14px 38px;
-  background: transparent;
-  border: 2px solid #d4af37;
-  color: #d4af37;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.footer p {
+  color: #bfa055;
 }
 
-.hero-text .btn-gold:hover {
-  background: #d4af37;
-  color: #000;
+.footer .social-icons {
+  margin-top: 10px;
 }
 
-/* Filtro activo con efecto neón elegante */
-.filter-buttons button.active {
-  background: transparent; /* sin fondo sólido, elegante */
-  color: #d4af37;           /* texto dorado */
-  border: 2px solid #d4af37; /* borde dorado */
-  box-shadow: 0 0 12px #d4af37, 0 0 24px #d4af37, 0 0 36px #d4af37; /* glow neón dorado */
-  transform: scale(1.05);   /* ligero aumento de tamaño */
-  transition: all 0.3s ease;
+.footer .social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  color: #bfa055;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
 }
 
-/* Alineación de botones dentro de las cards */
-.card-buttons {
-  display: flex;
-  justify-content: flex-end; /* mueve todos los botones al extremo derecho */
-  gap: 10px; /* espacio entre los botones */
-  margin-top: 15px; /* separa los botones del contenido de la card */
+.footer .social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+.icon-redes {
+  width: 30px;
+  height: 30px;
 }
