@@ -258,12 +258,11 @@ body {
   color: #000;
 }
 
-/* Botón activo (neón) */
+/* Botón activo (neón elegante) */
 .filter-buttons button.active {
-  background: linear-gradient(135deg, #d4af37, #b8962e);  /* neón dorado */
-  color: #111;
-  border: none;
-  box-shadow: 0 0 8px rgba(212,175,55,0.6);
+  background: #111; /* fondo oscuro para contraste */
+  color: #0ef;       /* texto azul neón */
+  border: 2px solid #0ef; /* borde azul neón */
+  box-shadow: 0 0 8px #0ef, 0 0 20px #0ef, 0 0 30px #0ef; /* efecto glow */
   transform: scale(1.05);
 }
-
