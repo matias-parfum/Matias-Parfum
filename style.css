@@ -10,18 +10,6 @@ body {
   color: #e5c07b;
 }
 
-/* HERO */
-.hero {
-  width: 100%;
-  height: 70vh;              /* 🔑 CLAVE */
-  max-height: 700px;         /* 🔑 NO SE PIXELIZA */
-  background-image: url("portada.png");
-  background-size: contain;  /* 🔑 NO SE ESTIRA */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #000;
-}
-
 /* CTA */
 .cta {
   text-align: center;
