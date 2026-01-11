@@ -194,6 +194,15 @@ body {
   outline: none;
 }
 
+.search-filter-container {
+  display: flex;
+  flex-wrap: wrap;          /* permite que los elementos bajen en pantallas pequeñas */
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  gap: 20px;                /* espacio entre barra de búsqueda y botones */
+  margin: 40px 0;           /* separación arriba y abajo */
+}
+
 /* Botones de filtro al estilo WhatsApp */
 .filter-buttons button {
   padding: 14px 38px;
