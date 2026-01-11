@@ -183,15 +183,6 @@ body {
   font-size: 14px;
 }
 
-.search-filter-container {
-  display: flex;
-  flex-wrap: wrap;          /* Permite que se bajen en pantallas pequeñas */
-  justify-content: center;  /* Centra todo horizontalmente */
-  align-items: center;      /* Alinea verticalmente la barra y los botones */
-  gap: 20px;                /* Espacio entre la barra y los filtros */
-  margin-bottom: 40px;      /* Espacio debajo del contenedor */
-}
-
 .search-box input {
   width: 250px;             /* Tamaño elegante */
   padding: 12px 16px;
@@ -236,13 +227,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.hero-text h1 {
-  color: #d4af37; /* dorado elegante */
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-family: "Georgia", serif;
 }
 
 .hero-text .btn-gold {
