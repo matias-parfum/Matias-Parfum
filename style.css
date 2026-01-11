@@ -169,18 +169,18 @@ body {
 }
 
 .filter-buttons button {
-  background-color: #bfa055;
+  background-color: #8c734f; /* nuevo color elegante */
   color: #fff;
   border: none;
   padding: 10px 15px;
   margin: 5px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .filter-buttons button:hover {
-  background-color: #9c8445;
+  background-color: #a28c57; /* un poco más claro al pasar mouse */
 }
 
 .card {
