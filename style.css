@@ -258,11 +258,11 @@ body {
   color: #000;
 }
 
-/* Botón activo (neón dorado elegante) */
+/* Botón activo (neón dorado más elegante) */
 .filter-buttons button.active {
-  background: #111; /* fondo oscuro para contraste */
-  color: #f0d86f;   /* texto dorado/neón */
-  border: 2px solid #f0d86f; /* borde dorado/neón */
-  box-shadow: 0 0 6px #f0d86f, 0 0 12px #f0d86f, 0 0 24px #f0d86f; /* glow elegante */
+  background: #111; /* fondo oscuro */
+  color: #d4af37;   /* dorado elegante intenso */
+  border: 2px solid #d4af37; /* borde dorado */
+  box-shadow: 0 0 6px #d4af37, 0 0 14px #d4af37, 0 0 28px #d4af37; /* glow refinado */
   transform: scale(1.05);
 }
