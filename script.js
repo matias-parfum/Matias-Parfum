@@ -1,11 +1,8 @@
 const telefono = "50683674466";
 
 function consultarPerfume(nombre) {
-  const mensaje =
-    `Me gustaría recibir información detallada sobre el perfume *${nombre}*, ` +
-    `incluyendo disponibilidad y precio.\n\n` +
-    `Quedo atento. Muchas gracias.`;
-
+  const mensaje = `Estimados, me gustaría recibir información detallada sobre el perfume "${nombre}", ` +
+                  `incluyendo disponibilidad y precio. Quedo atento a su respuesta. Muchas gracias.`;
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
@@ -80,9 +77,8 @@ document.querySelectorAll(".info-btn").forEach(btn => {
     modalTamano.textContent = card.dataset.tamano;
     modalDuracion.textContent = card.dataset.duracion;
 
-    // WhatsApp con mensaje profesional
-    const mensaje = `Hola, quiero consultar sobre el perfume "${card.dataset.nombre}".`;
-    modalWhatsapp.href = `https://wa.me/50683674466?text=${encodeURIComponent(mensaje)}`;
+   const mensaje = `Estimados, me gustaría recibir información detallada sobre el perfume "${card.dataset.nombre}", incluyendo disponibilidad y precio. Quedo atento a su respuesta. Muchas gracias.`;
+modalWhatsapp.href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
     modal.style.display = "block";
   });
