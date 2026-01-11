@@ -81,9 +81,9 @@ body {
 /* BOTONES DENTRO DE LAS CARDS */
 .card-buttons {
   display: flex;
-  justify-content: flex-end; /* botones a la derecha */
+  justify-content: center; 
   gap: 10px;
-  margin-top: 15px;
+  margin: 15px 0 10px 0;
 }
 
 /* HERO */
