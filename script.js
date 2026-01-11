@@ -3,7 +3,7 @@ let filtroTipoActivo = "Todos";
 
 // Función para abrir WhatsApp con mensaje de perfume específico
 function consultarPerfume(nombre) {
-  const mensaje = `Estimados, me gustaría recibir información detallada sobre el perfume "${nombre}", incluyendo disponibilidad y precio. Quedo atento a su respuesta. Muchas gracias.`;
+  const mensaje = `Hola, me gustaría recibir información detallada sobre el perfume "${nombre}", incluyendo disponibilidad y precio. Quedo atento a su respuesta. Muchas gracias.`;
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
