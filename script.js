@@ -19,34 +19,42 @@ function consultarGeneral() {
   window.open(url, "_blank");
 }
 
+let filtroTipoActivo = "Todos";
+
 function filtrarPerfumes() {
   const texto = document.getElementById("buscador").value.toLowerCase();
   const cards = document.querySelectorAll(".card");
+  const secciones = document.querySelectorAll(".catalogo");
 
   cards.forEach(card => {
     const nombre = card.getAttribute("data-nombre").toLowerCase();
+    const tipo = card.getAttribute("data-tipo");
 
-    if (nombre.includes(texto)) {
+    const coincideTexto = nombre.includes(texto);
+    const coincideTipo = (filtroTipoActivo === "Todos" || tipo === filtroTipoActivo);
+
+    if (coincideTexto && coincideTipo) {
       card.style.display = "block";
     } else {
       card.style.display = "none";
+    }
+  });
+
+  secciones.forEach(seccion => {
+    const visibles = seccion.querySelectorAll(".card:not([style*='display: none'])");
+
+    if (visibles.length > 0) {
+      seccion.style.display = "block";
+    } else {
+      seccion.style.display = "none";
     }
   });
 }
 
 function filtrarTipo(tipo) {
-  const cards = document.querySelectorAll(".card");
-  const secciones = document.querySelectorAll(".catalogo");
-
-  cards.forEach(card => {
-    const cardTipo = card.getAttribute("data-tipo");
-
-    if (tipo === "Todos" || cardTipo === tipo) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
+  filtroTipoActivo = tipo;
+  filtrarPerfumes();
+}
 
   secciones.forEach(seccion => {
     const seccionTipo = seccion.getAttribute("data-seccion");
