@@ -240,17 +240,30 @@ body {
   outline: none;
 }
 
+/* Botones de filtro al estilo WhatsApp */
 .filter-buttons button {
-  background-color: #8c734f; /* color elegante */
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  margin: 0;                 /* margin ya lo maneja gap */
-  border-radius: 5px;
+  padding: 14px 38px;
+  background: transparent;
+  border: 1px solid #d4af37;  /* mismo borde dorado que btn-gold */
+  color: #d4af37;              /* mismo color de texto */
+  font-size: 15px;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
+  border-radius: 5px;
 }
 
 .filter-buttons button:hover {
-  background-color: #a28c57;
+  background: #d4af37;  /* efecto dorado como btn-gold hover */
+  color: #000;
 }
+
+/* Botón activo (neón) */
+.filter-buttons button.active {
+  background: linear-gradient(135deg, #d4af37, #b8962e);  /* neón dorado */
+  color: #111;
+  border: none;
+  box-shadow: 0 0 8px rgba(212,175,55,0.6);
+  transform: scale(1.05);
+}
+
