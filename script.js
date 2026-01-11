@@ -49,6 +49,7 @@ function filtrarPerfumes() {
       seccion.style.display = "none";
     }
   });
+  
 }
 
 function filtrarTipo(tipo, event) {
@@ -61,3 +62,40 @@ function filtrarTipo(tipo, event) {
 
   filtrarPerfumes();
 }
+// Seleccionamos elementos
+const modal = document.getElementById("modal");
+const modalNombre = document.getElementById("modal-nombre");
+const modalNotas = document.getElementById("modal-notas");
+const modalTamano = document.getElementById("modal-tamano");
+const modalDuracion = document.getElementById("modal-duracion");
+const modalWhatsapp = document.getElementById("modal-whatsapp");
+const closeBtn = document.querySelector(".close");
+
+// Abrir modal al hacer clic en "Más info"
+document.querySelectorAll(".info-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".card");
+    modalNombre.textContent = card.dataset.nombre;
+    modalNotas.textContent = card.dataset.notas;
+    modalTamano.textContent = card.dataset.tamano;
+    modalDuracion.textContent = card.dataset.duracion;
+
+    // WhatsApp con mensaje profesional
+    const mensaje = `Hola, quiero consultar sobre el perfume "${card.dataset.nombre}".`;
+    modalWhatsapp.href = `https://wa.me/50688744154?text=${encodeURIComponent(mensaje)}`;
+
+    modal.style.display = "block";
+  });
+});
+
+// Cerrar modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Cerrar al hacer clic fuera del modal
+window.addEventListener("click", (e) => {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+});
