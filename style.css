@@ -260,3 +260,12 @@ body {
   background: #d4af37;
   color: #000;
 }
+
+/* FILTRO ACTIVO CON NEÓN DORADO */
+.filter-buttons button.active {
+  background: linear-gradient(135deg, #d4af37, #b8962e); /* dorado elegante */
+  color: #111; /* texto oscuro para contraste */
+  border: none;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.8); /* glow dorado */
+  transform: scale(1.05);
+}
