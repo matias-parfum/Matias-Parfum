@@ -264,39 +264,62 @@ body {
   transition: all 0.3s ease;
 }
 
+/* MODAL ELEGANTE CENTRAL */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(11,11,11,0.95); /* fondo más oscuro y elegante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .modal-content {
   background-color: #111;
-  color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
+  color: #e5c07b; /* dorado de la página */
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  padding: 25px 30px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  position: relative;
 }
 
 .close {
-  color: #ffd700;
-  float: right;
-  font-size: 28px;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #d4af37;
+  font-size: 26px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
+
+.close:hover {
+  color: #fff;
+}
+
 .whatsapp-btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 6px;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #d4af37; /* dorado */
+  color: #111; /* texto oscuro */
+  font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #bfa055; /* dorado más oscuro al pasar mouse */
+  color: #fff;
 }
 
 /* Alineación de botones dentro de las cards */
