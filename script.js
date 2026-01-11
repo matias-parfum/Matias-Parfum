@@ -53,17 +53,11 @@ function filtrarPerfumes() {
 
 function filtrarTipo(tipo) {
   filtroTipoActivo = tipo;
+
+  const botones = document.querySelectorAll(".filter-buttons button");
+  botones.forEach(boton => boton.classList.remove("active"));
+
+  event.target.classList.add("active");
+
   filtrarPerfumes();
 }
-
-  secciones.forEach(seccion => {
-    const seccionTipo = seccion.getAttribute("data-seccion");
-
-    if (tipo === "Todos" || seccionTipo === tipo) {
-      seccion.style.display = "block";
-    } else {
-      seccion.style.display = "none";
-    }
-  });
-}
-
