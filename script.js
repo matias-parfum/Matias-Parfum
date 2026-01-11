@@ -35,13 +35,27 @@ function filtrarPerfumes() {
 }
 
 function filtrarTipo(tipo) {
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll(".card");
+  const secciones = document.querySelectorAll(".catalogo");
+
   cards.forEach(card => {
-    const categoria = card.getAttribute('data-tipo');
-    if(tipo === 'Todos' || categoria === tipo) {
-      card.style.display = 'block';
+    const cardTipo = card.getAttribute("data-tipo");
+
+    if (tipo === "Todos" || cardTipo === tipo) {
+      card.style.display = "block";
     } else {
-      card.style.display = 'none';
+      card.style.display = "none";
+    }
+  });
+
+  secciones.forEach(seccion => {
+    const seccionTipo = seccion.getAttribute("data-seccion");
+
+    if (tipo === "Todos" || seccionTipo === tipo) {
+      seccion.style.display = "block";
+    } else {
+      seccion.style.display = "none";
     }
   });
 }
+
