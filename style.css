@@ -258,3 +258,38 @@ body {
   box-shadow: 0 0 8px rgba(212,175,55,0.6);
   transform: scale(1.05);
 }
+
+.search-filter-container {
+  display: flex;
+  flex-wrap: wrap;          /* Permite que se bajen en pantallas pequeñas */
+  justify-content: center;  /* Centra todo horizontalmente */
+  align-items: center;      /* Alinea verticalmente la barra y los botones */
+  gap: 20px;                /* Espacio entre la barra y los filtros */
+  margin-bottom: 40px;      /* Espacio debajo del contenedor */
+}
+
+.search-box input {
+  width: 250px;             /* Tamaño elegante */
+  padding: 12px 16px;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  background: #111;
+  color: #d4af37;
+  font-size: 16px;
+  outline: none;
+}
+
+.filter-buttons button {
+  background-color: #8c734f; /* color elegante */
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  margin: 0;                 /* margin ya lo maneja gap */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #a28c57;
+}
