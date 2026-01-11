@@ -82,7 +82,7 @@ document.querySelectorAll(".info-btn").forEach(btn => {
 
     // WhatsApp con mensaje profesional
     const mensaje = `Hola, quiero consultar sobre el perfume "${card.dataset.nombre}".`;
-    modalWhatsapp.href = `https://wa.me/50688744154?text=${encodeURIComponent(mensaje)}`;
+    modalWhatsapp.href = `https://wa.me/50683674466?text=${encodeURIComponent(mensaje)}`;
 
     modal.style.display = "block";
   });
