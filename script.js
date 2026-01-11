@@ -51,7 +51,7 @@ function filtrarPerfumes() {
   });
 }
 
-function filtrarTipo(tipo) {
+function filtrarTipo(tipo, event) {
   filtroTipoActivo = tipo;
 
   const botones = document.querySelectorAll(".filter-buttons button");
