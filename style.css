@@ -143,10 +143,6 @@ body {
   width: 30px;
   height: 30px;
 }
-.filter-buttons {
-  text-align: center;
-  margin: 20px 0;
-}
 
 .card {
   transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
