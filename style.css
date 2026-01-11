@@ -213,10 +213,10 @@ body {
 }
 
 .filter-buttons button.active {
-  background: linear-gradient(135deg, #d4af37, #b8962e);
+  background: linear-gradient(135deg, #d4af37, #b8962e); /* dorado elegante */
   color: #111;
   border: none;
-  box-shadow: 0 0 8px rgba(212,175,55,0.6);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.8); /* glow suave dorado */
   transform: scale(1.05);
 }
 
