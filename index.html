@@ -25,7 +25,7 @@
     <button onclick="filtrarTipo('Hombre', event)">Hombre</button>
     <button onclick="filtrarTipo('Mujer', event)">Mujer</button>
     <button onclick="filtrarTipo('Unisex', event)">Unisex</button>
-    <button onclick="filtrarTipo('Todos', event)" class="active">Todos</button>
+    <button onclick="filtrarTipo('Todos', event)">Todos</button>
   </div>
 </div>
 
@@ -34,6 +34,22 @@
   <h2>Catálogo</h2>
   <div class="grid" id="catalogo"></div>
 </section>
+
+<!-- MODAL FICHA DE PERFUME -->
+<div id="fichaModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarFicha()">&times;</span>
+    <img id="fichaImagen" src="" alt="">
+    <h2 id="fichaNombre"></h2>
+    <p><strong>Tipo:</strong> <span id="fichaTipo"></span></p>
+    <p><strong>Aroma:</strong> <span id="fichaAroma"></span></p>
+    <p><strong>Notas:</strong> <span id="fichaNotas"></span></p>
+    <p><strong>Intensidad:</strong> <span id="fichaIntensidad"></span></p>
+    <p><strong>Duración:</strong> <span id="fichaDuracion"></span></p>
+    <p><strong>Ocasión:</strong> <span id="fichaOcasión"></span></p>
+    <button class="btn-gold" id="fichaWhatsBtn">Consultar por WhatsApp</button>
+  </div>
+</div>
 
 <!-- BLOG -->
 <section class="blog">
