@@ -287,3 +287,38 @@ body {
   padding: 10px 30px;
   font-size: 16px;
 }
+
+/* Badge de tipo de perfume */
+.card .tipo-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Colores por tipo */
+.card.hombre .tipo-badge {
+  background-color: #bfa055; /* dorado */
+}
+
+.card.mujer .tipo-badge {
+  background-color: #d46fa5; /* rosa elegante */
+}
+
+.card.unisex .tipo-badge {
+  background-color: #5fa5d4; /* azul suave */
+}
+
+/* Espaciado extra en el grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px; /* un poco más de espacio */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
