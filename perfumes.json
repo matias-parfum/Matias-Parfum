@@ -1,33 +1,33 @@
 [
-  { "nombre": "Dior Sauvage", "tipo": "Hombre", "precio": "₡55,000", "imagen": "Dior Sauvage.jpg" },
-  { "nombre": "Bleu de Chanel", "tipo": "Hombre", "precio": "₡60,000", "imagen": "Bleu.png" },
-  { "nombre": "Yves Saint Laurent Y", "tipo": "Hombre", "precio": "₡50,000", "imagen": "Yves.jpg" },
+  { "nombre": "Dior Sauvage", "tipo": "Hombre", "precio": "₡55,000", "imagen": "Dior Sauvage.jpg", "buscado": true },
+  { "nombre": "Bleu de Chanel", "tipo": "Hombre", "precio": "₡60,000", "imagen": "Bleu.png", "buscado": true },
+  { "nombre": "Yves Saint Laurent Y", "tipo": "Hombre", "precio": "₡50,000", "imagen": "Yves.jpg", "buscado": true },
 
-  { "nombre": "Jean Paul Gaultier Le Male", "tipo": "Hombre", "precio": "₡52,000", "imagen": "img/lemale.jpg" },
-  { "nombre": "Jean Paul Gaultier Ultra Male", "tipo": "Hombre", "precio": "₡54,000", "imagen": "img/ultramale.jpg" },
-  { "nombre": "Jean Paul Gaultier Le Male Elixir", "tipo": "Hombre", "precio": "₡58,000", "imagen": "img/elixir.jpg" },
-  { "nombre": "Jean Paul Gaultier Le Beau", "tipo": "Hombre", "precio": "₡50,000", "imagen": "img/lebeau.jpg" },
-  { "nombre": "Jean Paul Gaultier Le Beau Le Parfum", "tipo": "Hombre", "precio": "₡55,000", "imagen": "img/parfum.jpg" },
-  { "nombre": "Jean Paul Gaultier Scandal Pour Homme", "tipo": "Hombre", "precio": "₡52,000", "imagen": "img/scandalpourhomme.jpg" },
+  { "nombre": "Jean Paul Gaultier Le Male", "tipo": "Hombre", "precio": "₡", "imagen": "img/lemale.jpg", "buscado": true },
+  { "nombre": "Jean Paul Gaultier Ultra Male", "tipo": "Hombre", "precio": "₡", "imagen": "img/ultramale.jpg", "buscado": false },
+  { "nombre": "Jean Paul Gaultier Le Male Elixir Eau de Parfum", "tipo": "Hombre", "precio": "₡", "imagen": "img/elixir.jpg", "buscado": true },
+  { "nombre": "Jean Paul Gaultier Le Beau", "tipo": "Hombre", "precio": "₡", "imagen": "img/lebeau.jpg", "buscado": false },
+  { "nombre": "Jean Paul Gaultier Le Beau Le Parfum", "tipo": "Hombre", "precio": "₡", "imagen": "img/parfum.jpg", "buscado": false },
+  { "nombre": "Jean Paul Gaultier Scandal Pour Homme", "tipo": "Hombre", "precio": "₡", "imagen": "img/scandalpourhomme.jpg", "buscado": true },
 
-  { "nombre": "Versace Eros", "tipo": "Hombre", "precio": "₡48,000", "imagen": "img/eros.png" },
-  { "nombre": "Versace Eros Flame", "tipo": "Hombre", "precio": "₡49,000", "imagen": "img/flame.png" },
-  { "nombre": "Versace Dylan Blue", "tipo": "Hombre", "precio": "₡47,000", "imagen": "img/blue.png" },
-  { "nombre": "Versace Pour Homme", "tipo": "Hombre", "precio": "₡46,000", "imagen": "img/homme.png" },
-  { "nombre": "Versace Oud Noir", "tipo": "Hombre", "precio": "₡50,000", "imagen": "img/noir.png" },
+  { "nombre": "Versace Eros", "tipo": "Hombre", "precio": "₡", "imagen": "img/eros.png", "buscado": true },
+  { "nombre": "Versace Eros Flame", "tipo": "Hombre", "precio": "₡", "imagen": "img/flame.png", "buscado": false },
+  { "nombre": "Versace Dylan Blue", "tipo": "Hombre", "precio": "₡", "imagen": "img/blue.png", "buscado": false },
+  { "nombre": "Versace Pour Homme", "tipo": "Hombre", "precio": "₡", "imagen": "img/homme.png", "buscado": false },
+  { "nombre": "Versace Oud Noir", "tipo": "Hombre", "precio": "₡", "imagen": "img/noir.png", "buscado": false },
 
-  { "nombre": "Libre Yves Saint Laurent", "tipo": "Mujer", "precio": "₡65,000", "imagen": "Libres.jpg" },
-  { "nombre": "Coco Mademoiselle", "tipo": "Mujer", "precio": "₡60,000", "imagen": "cocos.png" },
-  { "nombre": "Good Girl", "tipo": "Mujer", "precio": "₡55,000", "imagen": "carolina.jpg" },
+  { "nombre": "Libre Yves Saint Laurent", "tipo": "Mujer", "precio": "₡65,000", "imagen": "Libres.jpg", "buscado": true },
+  { "nombre": "Coco Mademoiselle Chanel", "tipo": "Mujer", "precio": "₡60,000", "imagen": "cocos.png", "buscado": true },
+  { "nombre": "Good Girl Carolina Herrera", "tipo": "Mujer", "precio": "₡55,000", "imagen": "carolina.jpg", "buscado": true },
 
-  { "nombre": "Jean Paul Gaultier Scandal", "tipo": "Mujer", "precio": "₡54,000", "imagen": "img/scandaleau.jpg" },
-  { "nombre": "Jean Paul Gaultier Scandal Le Parfum", "tipo": "Mujer", "precio": "₡56,000", "imagen": "img/scandaledp.jpg" },
+  { "nombre": "Jean Paul Gaultier Scandal", "tipo": "Mujer", "precio": "₡", "imagen": "img/scandaleau.jpg", "buscado": false },
+  { "nombre": "Jean Paul Gaultier Scandal Le Parfum", "tipo": "Mujer", "precio": "₡", "imagen": "img/scandaledp.jpg", "buscado": false },
 
-  { "nombre": "Versace Bright Crystal", "tipo": "Mujer", "precio": "₡48,000", "imagen": "img/Crystal.jpg" },
-  { "nombre": "Versace Bright Crystal Absolu", "tipo": "Mujer", "precio": "₡50,000", "imagen": "img/CrystalAbsolu.jpg" },
-  { "nombre": "Versace Crystal Noir", "tipo": "Mujer", "precio": "₡49,000", "imagen": "img/CrystalNoir.jpg" },
-  { "nombre": "Versace Dylan Blue Pour Femme", "tipo": "Mujer", "precio": "₡47,000", "imagen": "img/BlueFemme.jpg" },
+  { "nombre": "Versace Bright Crystal", "tipo": "Mujer", "precio": "₡", "imagen": "img/Crystal.jpg", "buscado": true },
+  { "nombre": "Versace Bright Crystal Absolu", "tipo": "Mujer", "precio": "₡", "imagen": "img/CrystalAbsolu.jpg", "buscado": false },
+  { "nombre": "Versace Crystal Noir", "tipo": "Mujer", "precio": "₡", "imagen": "img/CrystalNoir.jpg", "buscado": false },
+  { "nombre": "Versace Dylan Blue Pour Femme", "tipo": "Mujer", "precio": "₡", "imagen": "img/BlueFemme.jpg", "buscado": false },
 
-  { "nombre": "CK One", "tipo": "Unisex", "precio": "₡40,000", "imagen": "CK.jpg" },
-  { "nombre": "Tommy Girl & Boy", "tipo": "Unisex", "precio": "₡38,000", "imagen": "Tommy.jpg" }
+  { "nombre": "CK One Calvin Klein", "tipo": "Unisex", "precio": "₡40,000", "imagen": "CK.jpg", "buscado": true },
+  { "nombre": "Tommy Girl & Boy", "tipo": "Unisex", "precio": "₡38,000", "imagen": "Tommy.jpg", "buscado": false }
 ]
