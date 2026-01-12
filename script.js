@@ -1,47 +1,61 @@
 const telefono = "50683674466";
 let filtroTipoActivo = "Todos";
+let perfumes = [];
 
-// Función para abrir WhatsApp con mensaje de perfume específico
+fetch("perfumes.json")
+  .then(res => res.json())
+  .then(data => {
+    perfumes = data;
+    renderizarCatalogo(perfumes);
+  });
+
+function renderizarCatalogo(lista) {
+  const contenedor = document.getElementById("catalogo");
+  contenedor.innerHTML = "";
+
+  lista.forEach(p => {
+    contenedor.innerHTML += `
+      <div class="card" data-nombre="${p.nombre}" data-tipo="${p.tipo}">
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <h3>${p.nombre}</h3>
+        <p class="precio">${p.precio}</p>
+        <div class="card-buttons">
+          <button class="consultar-btn" onclick="consultarPerfume('${p.nombre}')">Consultar</button>
+        </div>
+      </div>
+    `;
+  });
+}
+
+// WhatsApp perfume
 function consultarPerfume(nombre) {
-  const mensaje = `Hola, me gustaría recibir información detallada sobre el perfume "${nombre}", incluyendo disponibilidad y precio. Quedo atento a su respuesta. Muchas gracias.`;
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+  const mensaje = `Hola, me gustaría recibir información detallada sobre el perfume "${nombre}", incluyendo disponibilidad y precio.`;
+  window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 
-// Función para abrir WhatsApp con mensaje general
+// WhatsApp general
 function consultarGeneral() {
-  const mensaje = "Me gustaría recibir información sobre sus perfumes, disponibilidad y precios.\n\nQuedo atento. Muchas gracias.";
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+  const mensaje = "Me gustaría recibir información sobre sus perfumes, disponibilidad y precios.";
+  window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 
-// Función de filtrado de perfumes por texto y tipo
+// Filtro texto + tipo
 function filtrarPerfumes() {
   const texto = document.getElementById("buscador").value.toLowerCase();
-  const cards = document.querySelectorAll(".card");
-  const secciones = document.querySelectorAll(".catalogo");
 
-  cards.forEach(card => {
-    const nombre = card.dataset.nombre.toLowerCase();
-    const tipo = card.dataset.tipo;
-    const coincideTexto = nombre.includes(texto);
-    const coincideTipo = (filtroTipoActivo === "Todos" || tipo === filtroTipoActivo);
-    card.style.display = (coincideTexto && coincideTipo) ? "block" : "none";
+  const filtrados = perfumes.filter(p => {
+    const coincideTexto = p.nombre.toLowerCase().includes(texto);
+    const coincideTipo = (filtroTipoActivo === "Todos" || p.tipo === filtroTipoActivo);
+    return coincideTexto && coincideTipo;
   });
 
-  secciones.forEach(seccion => {
-    const visibles = seccion.querySelectorAll(".card:not([style*='display: none'])");
-    seccion.style.display = (visibles.length > 0) ? "block" : "none";
-  });
+  renderizarCatalogo(filtrados);
 }
 
-// Función para cambiar filtro activo
+// Filtro botones
 function filtrarTipo(tipo, event) {
   filtroTipoActivo = tipo;
-
-  const botones = document.querySelectorAll(".filter-buttons button");
-  botones.forEach(boton => boton.classList.remove("active"));
+  document.querySelectorAll(".filter-buttons button").forEach(b => b.classList.remove("active"));
   event.target.classList.add("active");
-
   filtrarPerfumes();
 }
