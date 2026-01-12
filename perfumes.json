@@ -4,359 +4,263 @@
     "tipo": "Hombre",
     "precio": "₡55,000",
     "imagen": "Dior Sauvage.jpg",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Bergamota, Pimienta",
-      "corazon": "Lavanda, Geranio",
-      "fondo": "Ambroxan, Vainilla"
-    },
+    "notas": "Bergamota, Pimienta, Ambroxan",
     "duracion": "8-10 horas",
     "familia": "Aromático Fougère",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": true
   },
   {
     "nombre": "Bleu de Chanel",
     "tipo": "Hombre",
     "precio": "₡60,000",
     "imagen": "Bleu.png",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Limón, Menta, Pimienta Rosa",
-      "corazon": "Jengibre, Jazmín, Noz Moscada",
-      "fondo": "Cedro, Sándalo, Incienso"
-    },
-    "duracion": "7-9 horas",
+    "notas": "Limón, Jengibre, Sándalo",
+    "duracion": "7-8 horas",
     "familia": "Amaderado Aromático",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": true
   },
   {
     "nombre": "Yves Saint Laurent",
     "tipo": "Hombre",
     "precio": "₡50,000",
     "imagen": "Yves.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Bergamota, Jengibre",
-      "corazon": "Salvia, Geranio",
-      "fondo": "Abeto, Almizcle"
-    },
-    "duracion": "7-8 horas",
-    "familia": "Aromático Fougère",
-    "intensidad": "Media"
+    "notas": "Bergamota, Jengibre, Salvia",
+    "duracion": "7 horas",
+    "familia": "Aromático",
+    "intensidad": "Media",
+    "buscado": false
   },
   {
     "nombre": "Jean Paul Gaultier Le Male Le Parfum",
     "tipo": "Hombre",
-    "precio": "₡48,000",
+    "precio": "₡58,000",
     "imagen": "img/lemale.jpg",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Lavanda, Bergamota",
-      "corazon": "Canela, Comino",
-      "fondo": "Vainilla, Tonka"
-    },
-    "duracion": "8 horas",
-    "familia": "Oriental Fougère",
-    "intensidad": "Alta"
+    "notas": "Cardamomo, Lavanda, Iris, Vainilla", 
+    "duracion": "8-9 horas",
+    "familia": "Oriental Amaderado", 
+    "intensidad": "Alta",
+    "buscado": true
   },
   {
     "nombre": "Jean Paul Gaultier Ultra Male",
     "tipo": "Hombre",
-    "precio": "₡50,000",
+    "precio": "₡55,000",
     "imagen": "img/ultramale.jpg",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Bergamota, Menta",
-      "corazon": "Canela, Comino",
-      "fondo": "Vainilla, Cedro"
-    },
+    "notas": "Pera, Lavanda, Menta, Canela",  
     "duracion": "8 horas",
-    "familia": "Oriental Fougère",
-    "intensidad": "Alta"
+    "familia": "Oriental Fougère", 
+    "intensidad": "Alta",
+    "buscado": true
   },
   {
     "nombre": "Jean Paul Gaultier Le Male Elixir Eau de Parfum",
     "tipo": "Hombre",
-    "precio": "₡52,000",
+    "precio": "₡62,000",
     "imagen": "img/elixir.jpg",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Bergamota, Lavanda",
-      "corazon": "Canela, Comino",
-      "fondo": "Vainilla, Miel"
-    },
-    "duracion": "9 horas",
+    "notas": "Lavanda, Haba Tonka, Miel, Vainilla",
+    "duracion": "9-10 horas",
     "familia": "Oriental Fougère",
-    "intensidad": "Alta"
+    "intensidad": "Muy Alta",
+    "buscado": true
   },
   {
     "nombre": "Jean Paul Gaultier Le Beau",
     "tipo": "Hombre",
-    "precio": "₡49,000",
+    "precio": "₡50,000",
     "imagen": "img/lebeau.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Bergamota, Limón",
-      "corazon": "Lavanda, Geranio",
-      "fondo": "Vainilla, Cedro"
-    },
-    "duracion": "7-8 horas",
-    "familia": "Oriental Floral",
-    "intensidad": "Media"
+    "notas": "Coco, Almizcle, Tonka",
+    "duracion": "6-8 horas",
+    "familia": "Amaderado Dulce",
+    "intensidad": "Media",
+    "buscado": false
   },
   {
     "nombre": "Jean Paul Gaultier Le Beau Le Parfum",
     "tipo": "Hombre",
-    "precio": "₡50,000",
+    "precio": "₡52,000",
     "imagen": "img/parfum.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Cítricos",
-      "corazon": "Lavanda, Violeta",
-      "fondo": "Vainilla, Cedro"
-    },
-    "duracion": "8 horas",
-    "familia": "Oriental Floral",
-    "intensidad": "Alta"
+    "notas": "Coco, Patchouli, Ámbar",
+    "duracion": "8-9 horas",
+    "familia": "Amaderado Dulce",
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Jean Paul Gaultier Scandal Pour Homme",
     "tipo": "Hombre",
     "precio": "₡50,000",
     "imagen": "img/scandalpourhomme.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Bergamota, Limón",
-      "corazon": "Haba Tonka, Canela",
-      "fondo": "Miel, Almizcle"
-    },
-    "duracion": "8 horas",
-    "familia": "Oriental Amaderado",
-    "intensidad": "Alta"
+    "notas": "Mandarina, Tonka Bean, Caramelo",
+    "duracion": "7-8 horas",
+    "familia": "Aromático Dulce",
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Versace Eros Flame",
     "tipo": "Hombre",
     "precio": "₡52,000",
     "imagen": "img/flame.png",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Mandarina, Limón",
-      "corazon": "Hojas de Olivo, Pimienta Rosa",
-      "fondo": "Vainilla, Cedro"
-    },
+    "notas": "Mandarina, Pimienta, Vainilla",  
     "duracion": "8 horas",
-    "familia": "Oriental Fougère",
-    "intensidad": "Alta"
+    "familia": "Amaderado Especiado", 
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Versace Dylan Blue",
     "tipo": "Hombre",
     "precio": "₡50,000",
     "imagen": "img/blue.png",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Bergamota, Pomelo, Hojas de Higuera",
-      "corazon": "Pimienta Negra, Paprika",
-      "fondo": "Almizcle, Pachulí"
-    },
-    "duracion": "7-8 horas",
+    "notas": "Bergamota, Pimienta Negra, Pachulí",  
+    "duracion": "7 horas",
     "familia": "Amaderado Aromático",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Versace Pour Homme",
     "tipo": "Hombre",
     "precio": "₡50,000",
     "imagen": "img/homme.png",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Limón, Neroli, Cedrón",
-      "corazon": "Jazmín, Salvia",
-      "fondo": "Ámbar, Almizcle"
-    },
+    "notas": "Limón, Neroli, Cedro",
     "duracion": "7-8 horas",
     "familia": "Cítrico Aromático",
-    "intensidad": "Media"
+    "intensidad": "Media",
+    "buscado": false
   },
   {
     "nombre": "Versace Oud Noir",
     "tipo": "Hombre",
     "precio": "₡50,000",
     "imagen": "img/noir.png",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Cardamomo, Pimienta",
-      "corazon": "Rosa, Sándalo",
-      "fondo": "Oud, Ámbar, Vainilla"
-    },
+    "notas": "Cardamomo, Oud, Ámbar",
     "duracion": "8-9 horas",
     "familia": "Oriental Amaderado",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Libre Yves Saint Laurent",
     "tipo": "Mujer",
     "precio": "₡65,000",
     "imagen": "Libres.jpg",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Lavanda, Mandarina",
-      "corazon": "Jazmín, Flor de Azahar",
-      "fondo": "Vainilla, Cedro, Almizcle"
-    },
-    "duracion": "10 horas",
+    "notas": "Lavanda, Flor de Naranjo, Vainilla",
+    "duracion": "8-10 horas",
     "familia": "Floral Oriental",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": true
   },
   {
     "nombre": "Coco Mademoiselle",
     "tipo": "Mujer",
     "precio": "₡60,000",
     "imagen": "cocos.png",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Naranja, Bergamota",
-      "corazon": "Jazmín, Rosa, Lichi",
-      "fondo": "Patchouli, Vainilla, Vetiver"
-    },
-    "duracion": "8 horas",
+    "notas": "Naranja, Rosa, Patchouli",
+    "duracion": "7-8 horas",
     "familia": "Oriental Floral",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Good Girl Carolina Herrera",
     "tipo": "Mujer",
     "precio": "₡55,000",
     "imagen": "carolina.jpg",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Almendra, Café",
-      "corazon": "Jazmín Sambac, Tuberosa",
-      "fondo": "Cacao, Tonka, Vainilla"
-    },
-    "duracion": "9 horas",
+    "notas": "Almendra, Café, Jazmín",  
+    "duracion": "8-9 horas",
     "familia": "Oriental Floral",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": true
   },
   {
     "nombre": "Jean Paul Gaultier Scandal",
     "tipo": "Mujer",
-    "precio": "₡50,000",
+    "precio": "₡48,000",
     "imagen": "img/scandaleau.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Mandarina, Flor de Naranjo",
-      "corazon": "Jazmín, Gardenia",
-      "fondo": "Miel, Almizcle"
-    },
-    "duracion": "8 horas",
-    "familia": "Oriental Floral",
-    "intensidad": "Alta"
+    "notas": "Mandarina, Gardenia, Miel",
+    "duracion": "7 horas",
+    "familia": "Floral Dulce",
+    "intensidad": "Media",
+    "buscado": false
   },
   {
     "nombre": "Jean Paul Gaultier Scandal Le Parfum",
     "tipo": "Mujer",
     "precio": "₡50,000",
     "imagen": "img/scandaledp.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Mandarina, Flor de Naranjo",
-      "corazon": "Jazmín, Gardenia",
-      "fondo": "Miel, Almizcle"
-    },
+    "notas": "Jazmín, Gardenia, Miel",
     "duracion": "8 horas",
-    "familia": "Oriental Floral",
-    "intensidad": "Alta"
+    "familia": "Floral Dulce",
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Versace Bright Crystal",
     "tipo": "Mujer",
-    "precio": "₡50,000",
+    "precio": "₡48,000",
     "imagen": "img/Crystal.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Granada, Yuzu, Lichi",
-      "corazon": "Peonía, Magnolio, Loto",
-      "fondo": "Almizcle, Ambar, Madera"
-    },
-    "duracion": "8 horas",
+    "notas": "Granada, Peonía, Almizcle",  
+    "duracion": "7-8 horas",
     "familia": "Floral Frutal",
-    "intensidad": "Media"
+    "intensidad": "Media",
+    "buscado": false
   },
   {
     "nombre": "Versace Bright Crystal Absolu",
     "tipo": "Mujer",
     "precio": "₡50,000",
     "imagen": "img/CrystalAbsolu.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Granada, Mandarina",
-      "corazon": "Peonía, Flor de Loto",
-      "fondo": "Almizcle, Ambar, Madera"
-    },
-    "duracion": "9 horas",
+    "notas": "Granada, Loto, Ámbar",  
+    "duracion": "8 horas",
     "familia": "Floral Frutal",
-    "intensidad": "Media"
+    "intensidad": "Media",
+    "buscado": false
   },
   {
     "nombre": "Versace Crystal Noir",
     "tipo": "Mujer",
     "precio": "₡50,000",
     "imagen": "img/CrystalNoir.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Cardamomo, Naranja",
-      "corazon": "Jazmín, Nardo",
-      "fondo": "Almizcle, Vainilla, Madera"
-    },
-    "duracion": "8 horas",
+    "notas": "Cardamomo, Peonía, Ámbar",  
+    "duracion": "7-9 horas",
     "familia": "Floral Oriental",
-    "intensidad": "Alta"
+    "intensidad": "Alta",
+    "buscado": false
   },
   {
     "nombre": "Versace Dylan Blue Pour Femme",
     "tipo": "Mujer",
     "precio": "₡50,000",
     "imagen": "img/BlueFemme.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Pomelo, Hojas de Higuera",
-      "corazon": "Bergamota, Jazmín",
-      "fondo": "Almizcle, Pachulí, Vainilla"
-    },
-    "duracion": "8 horas",
+    "notas": "Pomelo, Jazmín, Almizcle",
+    "duracion": "7 horas",
     "familia": "Amaderado Floral",
-    "intensidad": "Alta"
+    "intensidad": "Media",
+    "buscado": false
   },
   {
     "nombre": "CK One Calvin Klein",
     "tipo": "Unisex",
     "precio": "₡40,000",
     "imagen": "CK.jpg",
-    "buscado": true,
-    "notas": {
-      "cabeza": "Bergamota, Limón, Piña",
-      "corazon": "Neroli, Jazmín, Loto",
-      "fondo": "Almizcle, Ámbar, Cedro"
-    },
+    "notas": "Bergamota, Limón, Almizcle",
     "duracion": "6-8 horas",
     "familia": "Cítrico Aromático",
-    "intensidad": "Media"
+    "intensidad": "Media",
+    "buscado": true
   },
   {
     "nombre": "Tommy Girl & Boy",
     "tipo": "Unisex",
     "precio": "₡38,000",
     "imagen": "Tommy.jpg",
-    "buscado": false,
-    "notas": {
-      "cabeza": "Limón, Mandarina, Bergamota",
-      "corazon": "Rosa, Jazmín, Freesia",
-      "fondo": "Almizcle, Cedro, Sándalo"
-    },
+    "notas": "Mandarina, Jazmín, Cedro",
     "duracion": "5-7 horas",
     "familia": "Cítrico Floral",
-    "intensidad": "Media"
+    "intensidad": "Media",
+    "buscado": false
   }
 ]
