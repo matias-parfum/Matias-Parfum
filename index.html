@@ -20,7 +20,6 @@
   <div class="search-box">
     <input type="text" id="buscador" placeholder="Buscar perfume..." onkeyup="filtrarPerfumes()">
   </div>
-
   <div class="filter-buttons">
     <button onclick="filtrarTipo('Hombre', event)">Hombre</button>
     <button onclick="filtrarTipo('Mujer', event)">Mujer</button>
@@ -35,19 +34,11 @@
   <div class="grid" id="catalogo"></div>
 </section>
 
-<!-- MODAL FICHA DE PERFUME -->
-<div id="fichaModal" class="modal">
+<!-- MODAL DE PERFUME -->
+<div id="modalPerfume" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="cerrarFicha()">&times;</span>
-    <img id="fichaImagen" src="" alt="">
-    <h2 id="fichaNombre"></h2>
-    <p><strong>Tipo:</strong> <span id="fichaTipo"></span></p>
-    <p><strong>Aroma:</strong> <span id="fichaAroma"></span></p>
-    <p><strong>Notas:</strong> <span id="fichaNotas"></span></p>
-    <p><strong>Intensidad:</strong> <span id="fichaIntensidad"></span></p>
-    <p><strong>Duración:</strong> <span id="fichaDuracion"></span></p>
-    <p><strong>Ocasión:</strong> <span id="fichaOcasión"></span></p>
-    <button class="btn-gold" id="fichaWhatsBtn">Consultar por WhatsApp</button>
+    <span class="close-btn" onclick="cerrarModal()">&times;</span>
+    <div id="modal-body"></div>
   </div>
 </div>
 
