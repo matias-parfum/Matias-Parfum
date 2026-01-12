@@ -90,3 +90,10 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+window.onclick = function(event) {
+  const modal = document.getElementById("modalPerfume");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
