@@ -4,287 +4,359 @@
     "tipo": "Hombre",
     "precio": "₡55,000",
     "imagen": "Dior Sauvage.jpg",
-    "aroma": "Amaderado fresco",
-    "notas": "Bergamota · Pimienta · Ambroxan",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Diario",
-    "buscado": true
+    "buscado": true,
+    "notas": {
+      "cabeza": "Bergamota, Pimienta",
+      "corazon": "Lavanda, Geranio",
+      "fondo": "Ambroxan, Vainilla"
+    },
+    "duracion": "8-10 horas",
+    "familia": "Aromático Fougère",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Bleu de Chanel",
     "tipo": "Hombre",
     "precio": "₡60,000",
     "imagen": "Bleu.png",
-    "aroma": "Cítrico amaderado",
-    "notas": "Limón · Jengibre · Sándalo",
-    "intensidad": "Media",
-    "duracion": "7h",
-    "ocasion": "Noche",
-    "buscado": true
+    "buscado": true,
+    "notas": {
+      "cabeza": "Limón, Menta, Pimienta Rosa",
+      "corazon": "Jengibre, Jazmín, Noz Moscada",
+      "fondo": "Cedro, Sándalo, Incienso"
+    },
+    "duracion": "7-9 horas",
+    "familia": "Amaderado Aromático",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Yves Saint Laurent",
     "tipo": "Hombre",
     "precio": "₡50,000",
     "imagen": "Yves.jpg",
-    "aroma": "Cítrico aromático",
-    "notas": "Manzana · Salvia · Cedro",
-    "intensidad": "Media",
-    "duracion": "7h",
-    "ocasion": "Diario",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Bergamota, Jengibre",
+      "corazon": "Salvia, Geranio",
+      "fondo": "Abeto, Almizcle"
+    },
+    "duracion": "7-8 horas",
+    "familia": "Aromático Fougère",
+    "intensidad": "Media"
   },
   {
     "nombre": "Jean Paul Gaultier Le Male Le Parfum",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡48,000",
     "imagen": "img/lemale.jpg",
-    "aroma": "Dulce amaderado",
-    "notas": "Lavanda · Vainilla · Ámbar",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Noche",
-    "buscado": false
+    "buscado": true,
+    "notas": {
+      "cabeza": "Lavanda, Bergamota",
+      "corazon": "Canela, Comino",
+      "fondo": "Vainilla, Tonka"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Fougère",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Jean Paul Gaultier Ultra Male",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/ultramale.jpg",
-    "aroma": "Dulce especiado",
-    "notas": "Pera · Lavanda · Vainilla",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Noche",
-    "buscado": false
+    "buscado": true,
+    "notas": {
+      "cabeza": "Bergamota, Menta",
+      "corazon": "Canela, Comino",
+      "fondo": "Vainilla, Cedro"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Fougère",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Jean Paul Gaultier Le Male Elixir Eau de Parfum",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡52,000",
     "imagen": "img/elixir.jpg",
-    "aroma": "Amaderado intenso",
-    "notas": "Lavanda · Cardamomo · Vainilla",
-    "intensidad": "Muy intensa",
-    "duracion": "10h",
-    "ocasion": "Eventos",
-    "buscado": false
+    "buscado": true,
+    "notas": {
+      "cabeza": "Bergamota, Lavanda",
+      "corazon": "Canela, Comino",
+      "fondo": "Vainilla, Miel"
+    },
+    "duracion": "9 horas",
+    "familia": "Oriental Fougère",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Jean Paul Gaultier Le Beau",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡49,000",
     "imagen": "img/lebeau.jpg",
-    "aroma": "Dulce fresco",
-    "notas": "Coco · Almizcle · Madera",
-    "intensidad": "Media",
-    "duracion": "7h",
-    "ocasion": "Diario",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Bergamota, Limón",
+      "corazon": "Lavanda, Geranio",
+      "fondo": "Vainilla, Cedro"
+    },
+    "duracion": "7-8 horas",
+    "familia": "Oriental Floral",
+    "intensidad": "Media"
   },
   {
     "nombre": "Jean Paul Gaultier Le Beau Le Parfum",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/parfum.jpg",
-    "aroma": "Dulce intenso",
-    "notas": "Coco · Pachulí · Ámbar",
-    "intensidad": "Intensa",
-    "duracion": "9h",
-    "ocasion": "Noche",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Cítricos",
+      "corazon": "Lavanda, Violeta",
+      "fondo": "Vainilla, Cedro"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Floral",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Jean Paul Gaultier Scandal Pour Homme",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/scandalpourhomme.jpg",
-    "aroma": "Dulce amaderado",
-    "notas": "Miel · Iris · Pachulí",
-    "intensidad": "Intensa",
-    "duracion": "9h",
-    "ocasion": "Eventos",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Bergamota, Limón",
+      "corazon": "Haba Tonka, Canela",
+      "fondo": "Miel, Almizcle"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Amaderado",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Versace Eros Flame",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡52,000",
     "imagen": "img/flame.png",
-    "aroma": "Dulce picante",
-    "notas": "Cítricos · Pimienta roja · Vainilla",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Noche",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Mandarina, Limón",
+      "corazon": "Hojas de Olivo, Pimienta Rosa",
+      "fondo": "Vainilla, Cedro"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Fougère",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Versace Dylan Blue",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/blue.png",
-    "aroma": "Fresco amaderado",
-    "notas": "Bergamota · Pimienta · Almizcle",
-    "intensidad": "Media",
-    "duracion": "7h",
-    "ocasion": "Diario",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Bergamota, Pomelo, Hojas de Higuera",
+      "corazon": "Pimienta Negra, Paprika",
+      "fondo": "Almizcle, Pachulí"
+    },
+    "duracion": "7-8 horas",
+    "familia": "Amaderado Aromático",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Versace Pour Homme",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/homme.png",
-    "aroma": "Cítrico aromático",
-    "notas": "Limón · Neroli · Cedro",
-    "intensidad": "Media",
-    "duracion": "7h",
-    "ocasion": "Diario",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Limón, Neroli, Cedrón",
+      "corazon": "Jazmín, Salvia",
+      "fondo": "Ámbar, Almizcle"
+    },
+    "duracion": "7-8 horas",
+    "familia": "Cítrico Aromático",
+    "intensidad": "Media"
   },
   {
     "nombre": "Versace Oud Noir",
     "tipo": "Hombre",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/noir.png",
-    "aroma": "Amaderado especiado",
-    "notas": "Cardamomo · Pimienta · Oud",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Eventos",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Cardamomo, Pimienta",
+      "corazon": "Rosa, Sándalo",
+      "fondo": "Oud, Ámbar, Vainilla"
+    },
+    "duracion": "8-9 horas",
+    "familia": "Oriental Amaderado",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Libre Yves Saint Laurent",
     "tipo": "Mujer",
     "precio": "₡65,000",
     "imagen": "Libres.jpg",
-    "aroma": "Floral dulce",
-    "notas": "Lavanda · Naranja · Vainilla",
-    "intensidad": "Media",
-    "duracion": "8h",
-    "ocasion": "Diario",
-    "buscado": true
+    "buscado": true,
+    "notas": {
+      "cabeza": "Lavanda, Mandarina",
+      "corazon": "Jazmín, Flor de Azahar",
+      "fondo": "Vainilla, Cedro, Almizcle"
+    },
+    "duracion": "10 horas",
+    "familia": "Floral Oriental",
+    "intensidad": "Alta"
   },
   {
-    "nombre": "Coco Mademoiselle Chanel",
+    "nombre": "Coco Mademoiselle",
     "tipo": "Mujer",
     "precio": "₡60,000",
     "imagen": "cocos.png",
-    "aroma": "Floral amaderado",
-    "notas": "Naranja · Rosa · Pachulí",
-    "intensidad": "Media",
-    "duracion": "8h",
-    "ocasion": "Eventos",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Naranja, Bergamota",
+      "corazon": "Jazmín, Rosa, Lichi",
+      "fondo": "Patchouli, Vainilla, Vetiver"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Floral",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Good Girl Carolina Herrera",
     "tipo": "Mujer",
     "precio": "₡55,000",
     "imagen": "carolina.jpg",
-    "aroma": "Dulce amaderado",
-    "notas": "Almendra · Café · Jazmín",
-    "intensidad": "Intensa",
-    "duracion": "9h",
-    "ocasion": "Noche",
-    "buscado": true
+    "buscado": true,
+    "notas": {
+      "cabeza": "Almendra, Café",
+      "corazon": "Jazmín Sambac, Tuberosa",
+      "fondo": "Cacao, Tonka, Vainilla"
+    },
+    "duracion": "9 horas",
+    "familia": "Oriental Floral",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Jean Paul Gaultier Scandal",
     "tipo": "Mujer",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/scandaleau.jpg",
-    "aroma": "Dulce floral",
-    "notas": "Miel · Jazmín · Pachulí",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Eventos",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Mandarina, Flor de Naranjo",
+      "corazon": "Jazmín, Gardenia",
+      "fondo": "Miel, Almizcle"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Floral",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Jean Paul Gaultier Scandal Le Parfum",
     "tipo": "Mujer",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/scandaledp.jpg",
-    "aroma": "Dulce intenso",
-    "notas": "Miel · Jazmín · Pachulí",
-    "intensidad": "Muy intensa",
-    "duracion": "9h",
-    "ocasion": "Noche",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Mandarina, Flor de Naranjo",
+      "corazon": "Jazmín, Gardenia",
+      "fondo": "Miel, Almizcle"
+    },
+    "duracion": "8 horas",
+    "familia": "Oriental Floral",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Versace Bright Crystal",
     "tipo": "Mujer",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/Crystal.jpg",
-    "aroma": "Floral fresco",
-    "notas": "Granada · Peonía · Almizcle",
-    "intensidad": "Media",
-    "duracion": "7h",
-    "ocasion": "Diario",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Granada, Yuzu, Lichi",
+      "corazon": "Peonía, Magnolio, Loto",
+      "fondo": "Almizcle, Ambar, Madera"
+    },
+    "duracion": "8 horas",
+    "familia": "Floral Frutal",
+    "intensidad": "Media"
   },
   {
     "nombre": "Versace Bright Crystal Absolu",
     "tipo": "Mujer",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/CrystalAbsolu.jpg",
-    "aroma": "Floral intenso",
-    "notas": "Granada · Flor de loto · Almizcle",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Eventos",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Granada, Mandarina",
+      "corazon": "Peonía, Flor de Loto",
+      "fondo": "Almizcle, Ambar, Madera"
+    },
+    "duracion": "9 horas",
+    "familia": "Floral Frutal",
+    "intensidad": "Media"
   },
   {
     "nombre": "Versace Crystal Noir",
     "tipo": "Mujer",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/CrystalNoir.jpg",
-    "aroma": "Dulce especiado",
-    "notas": "Neroli · Pimienta · Almizcle",
-    "intensidad": "Intensa",
-    "duracion": "8h",
-    "ocasion": "Noche",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Cardamomo, Naranja",
+      "corazon": "Jazmín, Nardo",
+      "fondo": "Almizcle, Vainilla, Madera"
+    },
+    "duracion": "8 horas",
+    "familia": "Floral Oriental",
+    "intensidad": "Alta"
   },
   {
     "nombre": "Versace Dylan Blue Pour Femme",
     "tipo": "Mujer",
-    "precio": "₡",
+    "precio": "₡50,000",
     "imagen": "img/BlueFemme.jpg",
-    "aroma": "Fresco floral",
-    "notas": "Bergamota · Jazmín · Almizcle",
-    "intensidad": "Media",
-    "duracion": "7h",
-    "ocasion": "Diario",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Pomelo, Hojas de Higuera",
+      "corazon": "Bergamota, Jazmín",
+      "fondo": "Almizcle, Pachulí, Vainilla"
+    },
+    "duracion": "8 horas",
+    "familia": "Amaderado Floral",
+    "intensidad": "Alta"
   },
   {
     "nombre": "CK One Calvin Klein",
     "tipo": "Unisex",
     "precio": "₡40,000",
     "imagen": "CK.jpg",
-    "aroma": "Cítrico fresco",
-    "notas": "Piña · Limón · Musgo",
-    "intensidad": "Suave",
-    "duracion": "6h",
-    "ocasion": "Diario",
-    "buscado": true
+    "buscado": true,
+    "notas": {
+      "cabeza": "Bergamota, Limón, Piña",
+      "corazon": "Neroli, Jazmín, Loto",
+      "fondo": "Almizcle, Ámbar, Cedro"
+    },
+    "duracion": "6-8 horas",
+    "familia": "Cítrico Aromático",
+    "intensidad": "Media"
   },
   {
     "nombre": "Tommy Girl & Boy",
     "tipo": "Unisex",
     "precio": "₡38,000",
     "imagen": "Tommy.jpg",
-    "aroma": "Fresco floral",
-    "notas": "Mandarina · Rosa · Almizcle",
-    "intensidad": "Media",
-    "duracion": "6h",
-    "ocasion": "Diario",
-    "buscado": false
+    "buscado": false,
+    "notas": {
+      "cabeza": "Limón, Mandarina, Bergamota",
+      "corazon": "Rosa, Jazmín, Freesia",
+      "fondo": "Almizcle, Cedro, Sándalo"
+    },
+    "duracion": "5-7 horas",
+    "familia": "Cítrico Floral",
+    "intensidad": "Media"
   }
 ]
