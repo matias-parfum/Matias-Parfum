@@ -34,27 +34,64 @@ const perfumes = [
   { "nombre": "Tommy Girl & Boy", "tipo": "Unisex", "precio": "₡38,000", "imagen": "Tommy.jpg", "notas": "Frutas, Flores, Almizcle", "duracion": "4-6 horas", "familia": "Cítrico Floral", "intensidad": "Media", "buscado": false }
 ];
 
-// Función para mostrar catálogo con diferenciación por tipo
 function mostrarCatalogo() {
   const contenedor = document.getElementById("catalogo");
   contenedor.innerHTML = "";
 
-  perfumes.forEach(perfume => {
-    if (filtroTipoActivo === "Todos" || perfume.tipo === filtroTipoActivo) {
-      const card = document.createElement("div");
-      card.className = `card ${perfume.tipo.toLowerCase()}`;
-      card.innerHTML = `
-        <img src="${perfume.imagen}" alt="${perfume.nombre}">
-        <h3>${perfume.nombre}</h3>
-        <p class="precio">${perfume.precio}</p>
-        <div class="card-buttons">
-          <button onclick="consultarPerfume('${perfume.nombre}')">Consultar</button>
-          <button onclick="abrirModal('${perfume.nombre}')">Ver ficha</button>
-        </div>
-      `;
-      contenedor.appendChild(card);
-    }
-  });
+  // Solo perfumes marcados como buscado
+  const perfumesFiltrados = perfumes.filter(p => p.buscado);
+
+  // Si está en "Todos", mostrar todos los tipos agrupados
+  if (filtroTipoActivo === "Todos") {
+    const tipos = ["Hombre", "Mujer", "Unisex"];
+    tipos.forEach(tipo => {
+      const perfumesTipo = perfumesFiltrados.filter(p => p.tipo === tipo);
+      if (perfumesTipo.length > 0) {
+        // Título por tipo
+        const titulo = document.createElement("h3");
+        titulo.textContent = tipo + "s";
+        titulo.style.color = "#d4af37";
+        titulo.style.margin = "20px 0 10px 0";
+        contenedor.appendChild(titulo);
+
+        // Cards de cada perfume
+        perfumesTipo.forEach(perfume => {
+          const card = document.createElement("div");
+          card.className = `card ${perfume.tipo.toLowerCase()}`;
+          card.innerHTML = `
+            <span class="tipo-badge">${perfume.tipo}</span>
+            <img src="${perfume.imagen}" alt="${perfume.nombre}">
+            <h3>${perfume.nombre}</h3>
+            <p class="precio">${perfume.precio}</p>
+            <div class="card-buttons">
+              <button onclick="consultarPerfume('${perfume.nombre}')">Consultar</button>
+              <button onclick="abrirModal('${perfume.nombre}')">Ver ficha</button>
+            </div>
+          `;
+          contenedor.appendChild(card);
+        });
+      }
+    });
+  } else {
+    // Si se selecciona un filtro específico
+    perfumesFiltrados
+      .filter(p => p.tipo === filtroTipoActivo)
+      .forEach(perfume => {
+        const card = document.createElement("div");
+        card.className = `card ${perfume.tipo.toLowerCase()}`;
+        card.innerHTML = `
+          <span class="tipo-badge">${perfume.tipo}</span>
+          <img src="${perfume.imagen}" alt="${perfume.nombre}">
+          <h3>${perfume.nombre}</h3>
+          <p class="precio">${perfume.precio}</p>
+          <div class="card-buttons">
+            <button onclick="consultarPerfume('${perfume.nombre}')">Consultar</button>
+            <button onclick="abrirModal('${perfume.nombre}')">Ver ficha</button>
+          </div>
+        `;
+        contenedor.appendChild(card);
+      });
+  }
 }
 
 // Filtros por tipo
