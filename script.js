@@ -102,7 +102,6 @@ function filtrarTipo(tipo, event) {
   mostrarCatalogo();
 }
 
-if (filtroTipoActivo === "Todos") {
   const tipos = ["Hombre", "Mujer", "Unisex"];
   tipos.forEach(tipo => {
     const perfumesTipo = perfumes.filter(p => p.tipo === tipo);
