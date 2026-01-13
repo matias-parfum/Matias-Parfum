@@ -1,3 +1,4 @@
+<script>
 const telefono = "50683674466";
 let filtroTipoActivo = "Todos";
 
@@ -113,3 +114,4 @@ function verFicha(perfume) {
 function cerrarFicha() {
   document.getElementById("fichaModal").style.display = "none";
 }
+</script>
