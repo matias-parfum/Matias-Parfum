@@ -1,21 +1,26 @@
 const telefono = "50683674466";
 let filtroTipoActivo = "Todos";
 
-// Función para abrir WhatsApp con mensaje de perfume específico
+/* ======================
+   WHATSAPP
+====================== */
+
 function consultarPerfume(nombre) {
   const mensaje = `Hola, me gustaría recibir información detallada sobre el perfume "${nombre}", incluyendo disponibilidad y precio. Quedo atento a su respuesta. Muchas gracias.`;
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
 
-// Función para abrir WhatsApp con mensaje general
 function consultarGeneral() {
   const mensaje = "Me gustaría recibir información sobre sus perfumes, disponibilidad y precios.\n\nQuedo atento. Muchas gracias.";
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
 
-// Función de filtrado de perfumes por texto y tipo
+/* ======================
+   FILTROS
+====================== */
+
 function filtrarPerfumes() {
   const texto = document.getElementById("buscador").value.toLowerCase();
   const cards = document.querySelectorAll(".card");
@@ -26,6 +31,7 @@ function filtrarPerfumes() {
     const tipo = card.dataset.tipo;
     const coincideTexto = nombre.includes(texto);
     const coincideTipo = (filtroTipoActivo === "Todos" || tipo === filtroTipoActivo);
+
     card.style.display = (coincideTexto && coincideTipo) ? "block" : "none";
   });
 
@@ -35,132 +41,48 @@ function filtrarPerfumes() {
   });
 }
 
-// Función para cambiar filtro activo
 function filtrarTipo(tipo, event) {
   filtroTipoActivo = tipo;
-
   const botones = document.querySelectorAll(".filter-buttons button");
   botones.forEach(boton => boton.classList.remove("active"));
   event.target.classList.add("active");
-
   filtrarPerfumes();
 }
 
 /* ======================
-   FICHA MODAL PERFUME
+   FICHA PERFUME (MODAL)
 ====================== */
 
-// Abrir ficha con info de la card
-function verFicha(perfume) {
-  document.getElementById("fichaImagen").src = perfume.imagen;
-  document.getElementById("fichaImagen").alt = perfume.nombre;
-  document.getElementById("fichaNombre").textContent = perfume.nombre;
-  document.getElementById("fichaPrecio").textContent = "Precio: " + (perfume.precio || "Consultar");
-  document.getElementById("fichaNotas").textContent = "Notas: " + (perfume.notas || "No especificadas");
-  document.getElementById("fichaTamaño").textContent = "Tamaño: " + (perfume.tamaño || "No especificado");
-  document.getElementById("fichaFamilia").textContent = "Familia: " + (perfume.familia || "No especificada");
-  document.getElementById("fichaDescripcion").textContent = perfume.descripcion || "";
+function abrirFichaDesdeCard(card) {
+  document.getElementById("fichaImagen").src = card.querySelector("img").src;
+  document.getElementById("fichaImagen").alt = card.dataset.nombre;
+  document.getElementById("fichaNombre").textContent = card.dataset.nombre;
+  document.getElementById("fichaPrecio").textContent = "Precio: " + (card.querySelector(".precio")?.textContent || "Consultar");
+  document.getElementById("fichaNotas").textContent = "Notas: " + (card.dataset.notas || "No especificadas");
+  document.getElementById("fichaTamaño").textContent = "Tamaño: " + (card.dataset.tamaño || "No especificado");
+  document.getElementById("fichaFamilia").textContent = "Familia: " + (card.dataset.familia || "No especificada");
+  document.getElementById("fichaDescripcion").textContent = card.dataset.descripcion || "";
 
-  const btnWhats = document.getElementById("fichaWhatsApp");
-  btnWhats.onclick = () => consultarPerfume(perfume.nombre);
+  document.getElementById("fichaWhatsApp").onclick = () => {
+    consultarPerfume(card.dataset.nombre);
+  };
 
   document.getElementById("fichaModal").style.display = "flex";
 }
 
-// Cerrar ficha
 function cerrarFicha() {
   document.getElementById("fichaModal").style.display = "none";
 }
 
-// Modificar los botones “Consultar” de las cards para abrir la ficha
-document.querySelectorAll(".card .consultar-btn").forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const card = btn.closest(".card");
-    const perfume = {
-      nombre: card.dataset.nombre,
-      precio: card.querySelector(".precio")?.textContent || "",
-      imagen: card.querySelector("img")?.src || "",
-      notas: card.dataset.notas || "",
-      tamaño: card.dataset.tamaño || "",
-      familia: card.dataset.familia || "",
-      descripcion: card.dataset.descripcion || ""
-    };
-    verFicha(perfume);
+/* ======================
+   ACTIVAR BOTONES DE LAS CARDS
+====================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".card .consultar-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".card");
+      abrirFichaDesdeCard(card);
+    });
   });
 });
-
-// Datos extra de ejemplo para la ficha (puedes completarlos)
-const detallesPerfumes = {
-  "Dior Sauvage": {
-    notas: "Notas frescas y amaderadas",
-    tamaño: "100ml",
-    familia: "Aromático Fougère",
-    descripcion: "Un perfume potente y elegante para el hombre moderno."
-  },
-  "Bleu de Chanel": {
-    notas: "Notas cítricas y amaderadas",
-    tamaño: "100ml",
-    familia: "Amaderado Aromático",
-    descripcion: "Elegancia y sofisticación en cada gota."
-  },
-  // Agrega aquí los demás perfumes...
-};
-
-// Función para abrir la ficha modal
-function abrirFicha(nombre) {
-  const modal = document.getElementById("fichaModal");
-  const ficha = detallesPerfumes[nombre] || {};
-
-  document.getElementById("fichaNombre").textContent = nombre;
-  document.getElementById("fichaPrecio").textContent = document.querySelector(`.card[data-nombre="${nombre}"] .precio`).textContent;
-  document.getElementById("fichaNotas").textContent = ficha.notas || "";
-  document.getElementById("fichaTamaño").textContent = ficha.tamaño || "";
-  document.getElementById("fichaFamilia").textContent = ficha.familia || "";
-  document.getElementById("fichaDescripcion").textContent = ficha.descripcion || "";
-  document.getElementById("fichaImagen").src = document.querySelector(`.card[data-nombre="${nombre}"] img`).src;
-
-  // Actualiza el botón de WhatsApp dentro de la ficha
-  const fichaBtn = document.getElementById("fichaWhatsApp");
-  fichaBtn.onclick = () => consultarPerfume(nombre);
-
-  modal.style.display = "flex";
-}
-
-// Función para cerrar la ficha
-function cerrarFicha() {
-  document.getElementById("fichaModal").style.display = "none";
-}
-
-// Cambia los botones de consultar de las cards para abrir el modal
-document.querySelectorAll(".card .consultar-btn").forEach(btn => {
-  btn.onclick = function() {
-    const nombre = this.closest(".card").dataset.nombre;
-    abrirFicha(nombre);
-  };
-});
-
-// ABRIR FICHA
-function abrirFicha(nombre) {
-  const card = [...document.querySelectorAll('.card')].find(c => c.dataset.nombre === nombre);
-  if (!card) return;
-
-  document.getElementById('fichaImagen').src = card.querySelector('img').src;
-  document.getElementById('fichaNombre').textContent = card.dataset.nombre;
-  document.getElementById('fichaPrecio').textContent = card.querySelector('.precio').textContent;
-  document.getElementById('fichaNotas').textContent = card.dataset.notas || '';
-  document.getElementById('fichaTamaño').textContent = card.dataset.tamaño || '';
-  document.getElementById('fichaFamilia').textContent = card.dataset.familia || '';
-  document.getElementById('fichaDescripcion').textContent = card.dataset.descripcion || '';
-
-  // botón WhatsApp de la ficha
-  const fichaBtn = document.getElementById('fichaWhatsApp');
-  fichaBtn.onclick = () => consultarPerfume(nombre);
-
-  document.getElementById('fichaModal').style.display = 'block';
-}
-
-// CERRAR FICHA
-function cerrarFicha() {
-  document.getElementById('fichaModal').style.display = 'none';
-}
