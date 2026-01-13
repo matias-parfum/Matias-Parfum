@@ -65,19 +65,42 @@ function filtrarTipo(tipo, event) {
   mostrarCatalogo();
 }
 
-// Búsqueda por nombre
-function filtrarPerfumes() {
-  const texto = document.getElementById("buscador").value.toLowerCase();
-  const contenedor = document.getElementById("catalogo");
-  contenedor.innerHTML = "";
+if (filtroTipoActivo === "Todos") {
+  const tipos = ["Hombre", "Mujer", "Unisex"];
+  tipos.forEach(tipo => {
+    const perfumesTipo = perfumes.filter(p => p.tipo === tipo);
+    if (perfumesTipo.length > 0) {
+      const titulo = document.createElement("h3");
+      titulo.textContent = tipo + "s"; // ejemplo: Hombre → Hombres
+      titulo.style.color = "#d4af37"; // dorado
+      titulo.style.margin = "20px 0 10px 0";
+      contenedor.appendChild(titulo);
 
-  perfumes.forEach(perfume => {
-    const coincideTipo = filtroTipoActivo === "Todos" || perfume.tipo === filtroTipoActivo;
-    const coincideTexto = perfume.nombre.toLowerCase().includes(texto);
-    if (coincideTipo && coincideTexto) {
+      perfumesTipo.forEach(perfume => {
+        const card = document.createElement("div");
+        card.className = `card ${perfume.tipo.toLowerCase()}`;
+        card.innerHTML = `
+          <span class="tipo-badge">${perfume.tipo}</span>
+          <img src="${perfume.imagen}" alt="${perfume.nombre}">
+          <h3>${perfume.nombre}</h3>
+          <p class="precio">${perfume.precio}</p>
+          <div class="card-buttons">
+            <button onclick="consultarPerfume('${perfume.nombre}')">Consultar</button>
+            <button onclick="abrirModal('${perfume.nombre}')">Ver ficha</button>
+          </div>
+        `;
+        contenedor.appendChild(card);
+      });
+    }
+  });
+} else {
+  perfumes
+    .filter(perfume => perfume.tipo === filtroTipoActivo)
+    .forEach(perfume => {
       const card = document.createElement("div");
       card.className = `card ${perfume.tipo.toLowerCase()}`;
       card.innerHTML = `
+        <span class="tipo-badge">${perfume.tipo}</span>
         <img src="${perfume.imagen}" alt="${perfume.nombre}">
         <h3>${perfume.nombre}</h3>
         <p class="precio">${perfume.precio}</p>
@@ -87,8 +110,7 @@ function filtrarPerfumes() {
         </div>
       `;
       contenedor.appendChild(card);
-    }
-  });
+    });
 }
 
 // WhatsApp por perfume
