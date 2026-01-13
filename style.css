@@ -330,3 +330,78 @@ body {
 .close-btn:hover {
   color: #fff;
 }
+
+/* MODAL / FICHA PERFUME */
+.modal {
+  display: none; /* por defecto oculto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #111;
+  color: #e5c07b;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #d4af37;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.modal-content p {
+  margin: 5px 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #d4af37;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+#fichaWhatsApp {
+  margin-top: 15px;
+  padding: 10px 28px;
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#fichaWhatsApp:hover {
+  background: #d4af37;
+  color: #000;
+}
