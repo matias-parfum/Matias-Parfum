@@ -180,6 +180,18 @@
       filtrarPerfumes();
     }
 
+    <!-- MODAL / FICHA DEL PERFUME -->
+<div id="modalFicha" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarFicha()">&times;</span>
+    <img id="ficha-img" src="" alt="Perfume">
+    <h2 id="ficha-nombre"></h2>
+    <p class="precio" id="ficha-precio"></p>
+    <p id="ficha-notas"></p>
+    <button class="consultar-btn" id="ficha-consultar" onclick="">Consultar</button>
+  </div>
+</div>
+
     // INICIAR
     mostrarPerfumes();
   </script>
