@@ -3,7 +3,6 @@ let filtroTipoActivo = "Todos";
 
 // JSON completo de perfumes
 const perfumes = [
-  // HOMBRES
   { "nombre": "Dior Sauvage", "tipo": "Hombre", "precio": "₡55,000", "imagen": "Dior Sauvage.jpg", "notas": "Bergamota, Pimienta, Ambroxan", "duracion": "8-10 horas", "familia": "Aromático Fougère", "intensidad": "Alta", "buscado": true },
   { "nombre": "Bleu de Chanel", "tipo": "Hombre", "precio": "₡60,000", "imagen": "Bleu.png", "notas": "Limón, Incienso, Cedro", "duracion": "7-9 horas", "familia": "Amaderado Aromático", "intensidad": "Alta", "buscado": true },
   { "nombre": "Yves Saint Laurent", "tipo": "Hombre", "precio": "₡50,000", "imagen": "Yves.jpg", "notas": "Limón, Menta, Jengibre", "duracion": "6-8 horas", "familia": "Amaderado Especiado", "intensidad": "Media", "buscado": false },
@@ -35,7 +34,7 @@ const perfumes = [
   { "nombre": "Tommy Girl & Boy", "tipo": "Unisex", "precio": "₡38,000", "imagen": "Tommy.jpg", "notas": "Frutas, Flores, Almizcle", "duracion": "4-6 horas", "familia": "Cítrico Floral", "intensidad": "Media", "buscado": false }
 ];
 
-// Funciones de catálogo dinámico, filtros, búsqueda y modal (igual que antes)
+// Función para mostrar catálogo con diferenciación por tipo
 function mostrarCatalogo() {
   const contenedor = document.getElementById("catalogo");
   contenedor.innerHTML = "";
@@ -43,7 +42,7 @@ function mostrarCatalogo() {
   perfumes.forEach(perfume => {
     if (filtroTipoActivo === "Todos" || perfume.tipo === filtroTipoActivo) {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className = `card ${perfume.tipo.toLowerCase()}`;
       card.innerHTML = `
         <img src="${perfume.imagen}" alt="${perfume.nombre}">
         <h3>${perfume.nombre}</h3>
@@ -58,14 +57,15 @@ function mostrarCatalogo() {
   });
 }
 
+// Filtros por tipo
 function filtrarTipo(tipo, event) {
   filtroTipoActivo = tipo;
-  const botones = document.querySelectorAll(".filter-buttons button");
-  botones.forEach(boton => boton.classList.remove("active"));
+  document.querySelectorAll(".filter-buttons button").forEach(btn => btn.classList.remove("active"));
   event.target.classList.add("active");
   mostrarCatalogo();
 }
 
+// Búsqueda por nombre
 function filtrarPerfumes() {
   const texto = document.getElementById("buscador").value.toLowerCase();
   const contenedor = document.getElementById("catalogo");
@@ -76,7 +76,7 @@ function filtrarPerfumes() {
     const coincideTexto = perfume.nombre.toLowerCase().includes(texto);
     if (coincideTipo && coincideTexto) {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className = `card ${perfume.tipo.toLowerCase()}`;
       card.innerHTML = `
         <img src="${perfume.imagen}" alt="${perfume.nombre}">
         <h3>${perfume.nombre}</h3>
@@ -91,18 +91,19 @@ function filtrarPerfumes() {
   });
 }
 
+// WhatsApp por perfume
 function consultarPerfume(nombre) {
   const mensaje = `Hola, me gustaría recibir información sobre "${nombre}", incluyendo disponibilidad y precio. Muchas gracias.`;
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+  window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 
+// WhatsApp general
 function consultarGeneral() {
   const mensaje = "Me gustaría recibir información sobre sus perfumes, disponibilidad y precios. Muchas gracias.";
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+  window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 
+// Modal de perfume
 function abrirModal(nombre) {
   const perfume = perfumes.find(p => p.nombre === nombre);
   if (!perfume) return;
@@ -147,9 +148,8 @@ function cerrarModal() {
 
 window.onclick = function(event) {
   const modal = document.getElementById("modalPerfume");
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+  if (event.target == modal) modal.style.display = "none";
 }
 
+// Inicializar catálogo
 document.addEventListener("DOMContentLoaded", mostrarCatalogo);
