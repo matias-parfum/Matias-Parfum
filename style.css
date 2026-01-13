@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -41,11 +42,13 @@ body {
   border-radius: 8px;
 }
 
+/* IMAGEN UNIFORME */
 .card img {
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  margin-bottom: 20px;
+  width: 200px;        /* tamaño uniforme */
+  height: 200px;       /* tamaño uniforme */
+  object-fit: cover;   /* recorta manteniendo proporción */
+  margin: 0 auto 15px auto; /* centrado horizontal */
+  display: block;
   transition: transform 0.3s;
 }
 
@@ -53,24 +56,10 @@ body {
   transform: scale(1.08);
 }
 
+/* TITULO Y PRECIO */
 .card h3 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 18px;
-}
-
-.card button {
-  padding: 10px 28px;
-  background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 6px;
-}
-
-.card button:hover {
-  background: #d4af37;
-  color: #000;
 }
 
 .precio {
@@ -80,6 +69,7 @@ body {
   font-size: 1.1rem;
 }
 
+/* BOTONES DENTRO DE LAS CARDS */
 .card-buttons {
   display: flex;
   justify-content: center; 
@@ -87,6 +77,22 @@ body {
   margin: 15px 0 10px 0;
 }
 
+.card button {
+  padding: 10px 28px;
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* HOVER CARD */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -170,6 +176,7 @@ body {
   border: 2px solid #d4af37;
   box-shadow: 0 0 12px #d4af37, 0 0 24px #d4af37, 0 0 36px #d4af37;
   transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 /* BLOG */
@@ -251,9 +258,9 @@ body {
   transform: scale(1.2);
 }
 
-/* MODAL / FICHA DEL PERFUME */
+/* MODAL / FICHA PERFUME */
 .modal {
-  display: none;
+  display: none; /* oculto por defecto */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -283,6 +290,7 @@ body {
   width: 60%;
   height: auto;
   margin-bottom: 15px;
+  object-fit: contain;
 }
 
 .modal-content h3 {
@@ -292,10 +300,10 @@ body {
 
 .modal-content p {
   margin: 5px 0;
-  font-size: 16px;
 }
 
-.modal-content .consultar-btn {
+.modal-content .consultar-btn,
+.modal-content .close-btn {
   padding: 10px 28px;
   border: 1px solid #d4af37;
   background: transparent;
@@ -305,7 +313,8 @@ body {
   border-radius: 6px;
 }
 
-.modal-content .consultar-btn:hover {
+.modal-content .consultar-btn:hover,
+.modal-content .close-btn:hover {
   background: #d4af37;
   color: #000;
 }
@@ -314,17 +323,4 @@ body {
   position: absolute;
   top: 12px;
   right: 15px;
-  background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  padding: 5px 12px;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.close-btn:hover {
-  background: #d4af37;
-  color: #000;
 }
