@@ -45,3 +45,51 @@ function filtrarTipo(tipo, event) {
 
   filtrarPerfumes();
 }
+
+// Modal para "Ver ficha"
+function abrirModal(nombre) {
+  const perfume = perfumes.find(p => p.nombre === nombre);
+  if (!perfume) return;
+
+  let modal = document.getElementById("modalPerfume");
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "modalPerfume";
+    modal.style.position = "fixed";
+    modal.style.top = 0;
+    modal.style.left = 0;
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.backgroundColor = "rgba(0,0,0,0.8)";
+    modal.style.display = "flex";
+    modal.style.justifyContent = "center";
+    modal.style.alignItems = "center";
+    modal.style.zIndex = 9999;
+    document.body.appendChild(modal);
+  }
+
+  modal.innerHTML = `
+    <div style="background:#111;padding:20px;border:1px solid #d4af37;max-width:400px;width:90%;text-align:center;position:relative;">
+      <span onclick="cerrarModal()" style="position:absolute;top:10px;right:15px;cursor:pointer;color:#d4af37;font-size:20px;">&times;</span>
+      <img src="${perfume.imagen}" alt="${perfume.nombre}" style="width:100%;height:250px;object-fit:contain;margin-bottom:15px;">
+      <h3>${perfume.nombre}</h3>
+      <p class="precio">${perfume.precio}</p>
+      <p><strong>Notas:</strong> ${perfume.notas}</p>
+      <p><strong>Duración:</strong> ${perfume.duracion}</p>
+      <p><strong>Familia:</strong> ${perfume.familia}</p>
+      <p><strong>Intensidad:</strong> ${perfume.intensidad}</p>
+    </div>
+  `;
+
+  modal.style.display = "flex";
+}
+
+function cerrarModal() {
+  const modal = document.getElementById("modalPerfume");
+  if (modal) modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("modalPerfume");
+  if (event.target == modal) modal.style.display = "none";
+};
