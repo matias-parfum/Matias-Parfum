@@ -1,4 +1,3 @@
-
 const telefono = "50683674466";
 let filtroTipoActivo = "Todos";
 
@@ -47,7 +46,11 @@ function filtrarTipo(tipo, event) {
   filtrarPerfumes();
 }
 
-// ABRIR FICHA
+/* ======================
+   FICHA MODAL PERFUME
+====================== */
+
+// Abrir ficha con info de la card
 function verFicha(perfume) {
   document.getElementById("fichaImagen").src = perfume.imagen;
   document.getElementById("fichaImagen").alt = perfume.nombre;
@@ -64,15 +67,16 @@ function verFicha(perfume) {
   document.getElementById("fichaModal").style.display = "flex";
 }
 
-// CERRAR FICHA
+// Cerrar ficha
 function cerrarFicha() {
   document.getElementById("fichaModal").style.display = "none";
 }
 
-// Hacer que las cards abran la ficha
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("dblclick", () => {
-    // Construimos objeto con info mínima
+// Modificar los botones “Consultar” de las cards para abrir la ficha
+document.querySelectorAll(".card .consultar-btn").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const card = btn.closest(".card");
     const perfume = {
       nombre: card.dataset.nombre,
       precio: card.querySelector(".precio")?.textContent || "",
