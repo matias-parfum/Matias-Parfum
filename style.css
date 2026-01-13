@@ -105,14 +105,16 @@ body {
 }
 
 .hero-text .btn-gold {
-  margin-top: 100px;
-  padding: 14px 38px;
+  margin-top: 60px;
+  padding: 16px 44px;
   background: transparent;
   border: 2px solid #d4af37;
   color: #d4af37;
   font-size: 16px;
+  letter-spacing: 1.5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 0 18px rgba(212,175,55,0.35);
 }
 
 .hero-text .btn-gold:hover {
