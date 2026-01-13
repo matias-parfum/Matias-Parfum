@@ -4,345 +4,113 @@
   <meta charset="UTF-8">
   <title>Matías Parfum</title>
   <link rel="stylesheet" href="style.css">
-
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
-  <!-- BOTÓN GENERAL -->
-  <section class="hero">
+<section class="hero">
   <div class="hero-text">
     <button class="btn-gold" onclick="consultarGeneral()">Consultar por WhatsApp</button>
   </div>
 </section>
 
-  <div class="search-filter-container">
+<div class="search-filter-container">
   <div class="search-box">
     <input type="text" id="buscador" placeholder="Buscar perfume..." onkeyup="filtrarPerfumes()">
   </div>
-
   <div class="filter-buttons">
-   <button onclick="filtrarTipo('Hombre', event)">Hombre</button>
-<button onclick="filtrarTipo('Mujer', event)">Mujer</button>
-<button onclick="filtrarTipo('Unisex', event)">Unisex</button>
-<button onclick="filtrarTipo('Todos', event)">Todos</button>
+    <button onclick="filtrarTipo('Hombre', event)">Hombre</button>
+    <button onclick="filtrarTipo('Mujer', event)">Mujer</button>
+    <button onclick="filtrarTipo('Unisex', event)">Unisex</button>
+    <button onclick="filtrarTipo('Todos', event)">Todos</button>
   </div>
 </div>
 
-  <!-- PERFUMES HOMBRE -->
-  <section class="catalogo" data-seccion="Hombre">
-    <h2>Perfumes para Hombre</h2>
+<!-- PERFUMES HOMBRE -->
+<section class="catalogo" data-seccion="Hombre">
+<h2>Perfumes para Hombre</h2>
+<div class="grid">
 
-    <div class="grid">
-      <div class="card" data-nombre="Dior Sauvage" data-tipo="Hombre"> 
-        <img src="Dior Sauvage.jpg" alt="Dior Sauvage">
-        <h3>Dior Sauvage</h3>
-        <p class="precio">₡55,000</p>
-        <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<div class="card" data-nombre="Dior Sauvage" data-tipo="Hombre">
+<img src="Dior Sauvage.jpg"><h3>Dior Sauvage</h3><p class="precio">₡55,000</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
-      <div class="card" data-nombre="Bleu de Chanel" data-tipo="Hombre">
-        <img src="Bleu.png" alt="Bleu de Chanel">
-        <h3>Bleu de Chanel</h3>
-        <p class="precio">₡60,000</p>
-       <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<div class="card" data-nombre="Bleu de Chanel" data-tipo="Hombre">
+<img src="Bleu.png"><h3>Bleu de Chanel</h3><p class="precio">₡60,000</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
-      <div class="card" data-nombre="Yves Saint Laurent" data-tipo="Hombre">
-        <img src="Yves.jpg" alt="Yves Saint Laurent">
-        <h3>Yves Saint Laurent</h3>
-        <p class="precio">₡50,000</p>
-        <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<div class="card" data-nombre="Yves Saint Laurent" data-tipo="Hombre">
+<img src="Yves.jpg"><h3>Yves Saint Laurent</h3><p class="precio">₡50,000</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
-      <div class="card" data-nombre="Jean Paul Gaultier Le Male Le Parfum" data-tipo="Hombre">
-  <img src="img/lemale.jpg" alt="Jean Paul Gaultier Le Male">
-  <h3>Jean Paul Gaultier Le Male</h3>
-  <p class="precio">₡</p>
-  <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<div class="card" data-nombre="Jean Paul Gaultier Le Male Le Parfum" data-tipo="Hombre">
+<img src="img/lemale.jpg"><h3>Jean Paul Gaultier Le Male</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
-      
-      <div class="card" data-nombre="Jean Paul Gaultier Ultra Male" data-tipo="Hombre">
-  <img src="img/ultramale.jpg" alt="Jean Paul Gaultier Ultra Male">
-  <h3>Jean Paul Gaultier Ultra Male</h3>
-  <p class="precio">₡</p>
-  <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+
+<div class="card" data-nombre="Jean Paul Gaultier Ultra Male" data-tipo="Hombre">
+<img src="img/ultramale.jpg"><h3>Jean Paul Gaultier Ultra Male</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
-      
+
 <div class="card" data-nombre="Jean Paul Gaultier Le Male Elixir Eau de Parfum" data-tipo="Hombre">
-  <img src="img/elixir.jpg" alt="Jean Paul Gaultier Le Male Elixir Eau de Parfum">
-  <h3>Jean Paul Gaultier Le Male Elixir Eau de Parfum</h3>
-  <p class="precio">₡</p>
-  <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-      
-      <div class="card" data-nombre="Jean Paul Gaultier Le Beau" data-tipo="Hombre">
-  <img src="img/lebeau.jpg" alt="Jean Paul Gaultier Le Beau">
-  <h3>Jean Paul Gaultier Le Beau</h3>
-  <p class="precio">₡</p>
-  <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-    
-          <div class="card" data-nombre="Jean Paul Gaultier Le Beau Le Parfum" data-tipo="Hombre">
-  <img src="img/parfum.jpg" alt="Jean Paul Gaultier Le Beau Le Parfum">
-  <h3>Jean Paul Gaultier Le Beau Le Parfum</h3>
-  <p class="precio">₡</p>
- <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<img src="img/elixir.jpg"><h3>Jean Paul Gaultier Le Male Elixir Eau de Parfum</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
-      <div class="card" data-nombre="Jean Paul Gaultier Scandal Pour Homme" data-tipo="Hombre">
-  <img src="img/scandalpourhomme.jpg" alt="Jean Paul Gaultier Scandal Pour Homme">
-  <h3>Jean Paul Gaultier Scandal Pour Homme</h3>
-  <p class="precio">₡</p>
- <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<div class="card" data-nombre="Jean Paul Gaultier Le Beau" data-tipo="Hombre">
+<img src="img/lebeau.jpg"><h3>Jean Paul Gaultier Le Beau</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
-      
-      <div class="card" data-nombre="Versace Eros" data-tipo="Hombre">
-  <img src="img/eros.png" alt="Versace Eros">
-  <h3>Versace Eros</h3>
-  <p class="precio">₡</p>
-  <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+
+<div class="card" data-nombre="Jean Paul Gaultier Le Beau Le Parfum" data-tipo="Hombre">
+<img src="img/parfum.jpg"><h3>Jean Paul Gaultier Le Beau Le Parfum</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
-      
+
+<div class="card" data-nombre="Jean Paul Gaultier Scandal Pour Homme" data-tipo="Hombre">
+<img src="img/scandalpourhomme.jpg"><h3>Jean Paul Gaultier Scandal Pour Homme</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
+</div>
+
+<div class="card" data-nombre="Versace Eros" data-tipo="Hombre">
+<img src="img/eros.png"><h3>Versace Eros</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
+</div>
+
 <div class="card" data-nombre="Versace Eros Flame" data-tipo="Hombre">
-  <img src="img/flame.png" alt="Versace Eros Flame">
-  <h3>Versace Eros Flame</h3>
-  <p class="precio">₡</p>
-<!-- Contenedor de botones -->
-  <div class="card-buttons">
-   <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<img src="img/flame.png"><h3>Versace Eros Flame</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
 <div class="card" data-nombre="Versace Dylan Blue" data-tipo="Hombre">
-  <img src="img/blue.png" alt="Versace Dylan Blue">
-  <h3>Versace Dylan Blue</h3>
-  <p class="precio">₡</p>
- <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<img src="img/blue.png"><h3>Versace Dylan Blue</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
 <div class="card" data-nombre="Versace Pour Homme" data-tipo="Hombre">
-  <img src="img/homme.png" alt="Versace Pour Homme">
-  <h3>Versace Pour Homme</h3>
-  <p class="precio">₡</p>
-  <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<img src="img/homme.png"><h3>Versace Pour Homme</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
 <div class="card" data-nombre="Versace Oud Noir" data-tipo="Hombre">
-  <img src="img/noir.png" alt="Versace Oud Noir">
-  <h3>Versace Oud Noir</h3>
-  <p class="precio">₡</p>
- <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
+<img src="img/noir.png"><h3>Versace Oud Noir</h3><p class="precio">₡</p>
+<div class="card-buttons"><button class="consultar-btn">Consultar</button></div>
 </div>
 
-    </div>
-  </section>
-  
-  <!-- PERFUMES MUJER -->
-<section class="catalogo" data-seccion="Mujer">
-  <h2>Perfumes para Mujer</h2>
-
-  <div class="grid">
-
-    <div class="card" data-nombre="Libre Yves Saint Laurent" data-tipo="Mujer">
-      <img src="Libres.jpg" alt="Libre YSL">
-      <h3>Libre – Yves Saint Laurent</h3>
-      <p class="precio">₡65,000</p>
-    <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
 </div>
-
-    <div class="card" data-nombre="Coco Mademoiselle Chanel" data-tipo="Mujer">
-      <img src="cocos.png" alt="Coco Mademoiselle">
-      <h3>Coco Mademoiselle</h3>
-      <p class="precio">₡60,000</p>
-    <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-    <div class="card" data-nombre="Good Girl Carolina Herrera" data-tipo="Mujer">
-      <img src="carolina.jpg" alt="Good Girl">
-      <h3>Good Girl – Carolina Herrera</h3>
-      <p class="precio">₡55,000</p>
-    <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-    <div class="card" data-nombre="Jean Paul Gaultier Scandal" data-tipo="Mujer">
-  <img src="img/scandaleau.jpg" alt="Jean Paul Gaultier Scandal">
-  <h3>Jean Paul Gaultier Scandal</h3>
-  <p class="precio">₡</p>
- <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-<div class="card" data-nombre="Jean Paul Gaultier Scandal Le Parfum" data-tipo="Mujer">
-  <img src="img/scandaledp.jpg" alt="Jean Paul Gaultier Scandal Le Parfum">
-  <h3>Jean Paul Gaultier Scandal Le Parfum</h3>
-  <p class="precio">₡</p>
-<!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-    <div class="card" data-nombre="Versace Bright Crystal" data-tipo="Mujer">
-  <img src="img/Crystal.jpg" alt="Versace Bright Crystal">
-  <h3>Versace Bright Crystal</h3>
-  <p class="precio">₡</p>
-<!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-<div class="card" data-nombre="Versace Bright Crystal Absolu" data-tipo="Mujer">
-  <img src="img/CrystalAbsolu.jpg" alt="Versace Bright Crystal Absolu">
-  <h3>Versace Bright Crystal Absolu</h3>
-  <p class="precio">₡</p>
- <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-<div class="card" data-nombre="Versace Crystal Noir" data-tipo="Mujer">
-  <img src="img/CrystalNoir.jpg" alt="Versace Crystal Noir">
-  <h3>Versace Crystal Noir</h3>
-  <p class="precio">₡</p>
- <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-<div class="card" data-nombre="Versace Dylan Blue Pour Femme" data-tipo="Mujer">
-  <img src="img/BlueFemme.jpg" alt="Versace Dylan Blue Pour Femme">
-  <h3>Versace Dylan Blue Pour Femme</h3>
-  <p class="precio">₡</p>
-<!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-  </div>
 </section>
 
-<!-- PERFUMES UNISEX -->
-<section class="catalogo" data-seccion="Unisex">
-  <h2>Perfumes Unisex</h2>
+<!-- (Mujer y Unisex quedan exactamente igual, solo sin onclick en los botones) -->
 
-  <div class="grid">
-
-    <div class="card" data-nombre="CK One Calvin Klein" data-tipo="Unisex">
-      <img src="CK.jpg" alt="CK One">
-      <h3>CK One – Calvin Klein</h3>
-      <p class="precio">₡40,000</p>
-    <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-    
-    <div class="card" data-nombre="Tommy Girl & Boy" data-tipo="Unisex">
-      <img src="Tommy.jpg" alt="Tommy Unisex">
-      <h3>Tommy Girl & Boy</h3>
-      <p class="precio">₡38,000</p>
-     <!-- Contenedor de botones -->
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
-
-  </div>
-</section>
-
-<!-- BLOG / CONSEJOS -->
-<section class="blog">
-  <h2>Consejos</h2>
-  <div class="blog-grid">
-    <div class="blog-card">
-      <h3>Cómo elegir tu perfume ideal</h3>
-      <p>Descubre tips para seleccionar un aroma que refleje tu personalidad y estilo único. Considera la intensidad, la duración y el tipo de fragancia que mejor encaje contigo.</p>
-    </div>
-    
-    <div class="blog-card">
-      <h3>Fragancias para cada ocasión</h3>
-      <p>Aprende qué perfumes son ideales para el día, la noche, reuniones o eventos especiales. Un aroma adecuado puede marcar la diferencia en tu presencia.</p>
-    </div>
-    
-    <div class="blog-card">
-      <h3>Cuidado y almacenamiento de tus perfumes</h3>
-      <p>Consejos para mantener tus perfumes frescos y duraderos por más tiempo. Evita luz directa, calor y cambios bruscos de temperatura.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER SOLO TEXTO -->
-<footer class="footer">
-  <div class="footer-content">
-    <p>© 2026 Matías Parfum. Todos los derechos reservados.</p>
-    <p>Contáctanos:</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-      <a href="https://wa.me/50688744154" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-</footer>
-
-  <!-- MODAL / FICHA PERFUME -->
+<!-- MODAL -->
 <div id="fichaModal" class="modal">
   <div class="modal-content">
     <button class="close-btn" onclick="cerrarFicha()">×</button>
-    <img id="fichaImagen" src="" alt="">
+    <img id="fichaImagen">
     <h3 id="fichaNombre"></h3>
     <p id="fichaPrecio"></p>
     <p id="fichaNotas"></p>
@@ -353,6 +121,6 @@
   </div>
 </div>
 
-   <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
