@@ -46,7 +46,6 @@ body {
   object-fit: contain;
   margin-bottom: 20px;
   transition: transform 0.3s;
-  cursor: pointer;
 }
 
 .card img:hover {
@@ -74,14 +73,15 @@ body {
 
 .precio {
   font-weight: bold;
-  color: #bfa055;
+  color: #bfa055; /* color dorado */
   margin: 5px 0;
   font-size: 1.1rem;
 }
 
+/* BOTONES DENTRO DE LAS CARDS */
 .card-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   gap: 10px;
   margin: 15px 0 10px 0;
 }
@@ -252,95 +252,8 @@ body {
   transform: scale(1.2);
 }
 
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
+.icon-redes {
+  width: 30px;
+  height: 30px;
 }
 
-.modal-content {
-  background-color: #111;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #d4af37;
-  width: 90%;
-  max-width: 500px;
-  color: #e5c07b;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.modal-content img {
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-.modal-content .btn-gold {
-  margin-top: 20px;
-  padding: 10px 30px;
-  font-size: 16px;
-}
-
-/* Badge de tipo de perfume */
-.card .tipo-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-/* Colores por tipo */
-.card.hombre .tipo-badge {
-  background-color: #bfa055; /* dorado */
-}
-
-.card.mujer .tipo-badge {
-  background-color: #d46fa5; /* rosa elegante */
-}
-
-.card.unisex .tipo-badge {
-  background-color: #5fa5d4; /* azul suave */
-}
-
-/* Espaciado extra en el grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 35px; /* un poco más de espacio */
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 600px) {
-  .modal-content {
-    padding: 15px;
-    width: 95%;
-  }
-
-  .modal-content img {
-    max-height: 200px;
-    width: 100%;
-    height: auto;
-  }
-}
-
-.card .tipo-badge {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card .tipo-badge:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 8px #fff;
-}
