@@ -105,6 +105,19 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)
+  );
 }
 
 .hero-text .btn-gold {
