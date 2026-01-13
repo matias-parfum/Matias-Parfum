@@ -46,3 +46,42 @@ function filtrarTipo(tipo, event) {
 
   filtrarPerfumes();
 }
+
+// ABRIR FICHA
+function verFicha(perfume) {
+  document.getElementById("fichaImagen").src = perfume.imagen;
+  document.getElementById("fichaImagen").alt = perfume.nombre;
+  document.getElementById("fichaNombre").textContent = perfume.nombre;
+  document.getElementById("fichaPrecio").textContent = "Precio: " + (perfume.precio || "Consultar");
+  document.getElementById("fichaNotas").textContent = "Notas: " + (perfume.notas || "No especificadas");
+  document.getElementById("fichaTamaño").textContent = "Tamaño: " + (perfume.tamaño || "No especificado");
+  document.getElementById("fichaFamilia").textContent = "Familia: " + (perfume.familia || "No especificada");
+  document.getElementById("fichaDescripcion").textContent = perfume.descripcion || "";
+
+  const btnWhats = document.getElementById("fichaWhatsApp");
+  btnWhats.onclick = () => consultarPerfume(perfume.nombre);
+
+  document.getElementById("fichaModal").style.display = "flex";
+}
+
+// CERRAR FICHA
+function cerrarFicha() {
+  document.getElementById("fichaModal").style.display = "none";
+}
+
+// Hacer que las cards abran la ficha
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("dblclick", () => {
+    // Construimos objeto con info mínima
+    const perfume = {
+      nombre: card.dataset.nombre,
+      precio: card.querySelector(".precio")?.textContent || "",
+      imagen: card.querySelector("img")?.src || "",
+      notas: card.dataset.notas || "",
+      tamaño: card.dataset.tamaño || "",
+      familia: card.dataset.familia || "",
+      descripcion: card.dataset.descripcion || ""
+    };
+    verFicha(perfume);
+  });
+});
