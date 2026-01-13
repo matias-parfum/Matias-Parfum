@@ -89,32 +89,29 @@ body {
 /* HERO */
 .hero {
   width: 100%;
-  height: 90vh;
-  background-image: linear-gradient(
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.85)
-  ), url("portada.png");
-  background-size: cover;
+  height: 70vh;
+  max-height: 700px;
+  background-image: url("portada.png");
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 .hero-text .btn-gold {
-  margin-top: 60px;
-  padding: 16px 44px;
+  margin-top: 100px;
+  padding: 14px 38px;
   background: transparent;
   border: 2px solid #d4af37;
   color: #d4af37;
   font-size: 16px;
-  letter-spacing: 1.5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 18px rgba(212,175,55,0.35);
 }
 
 .hero-text .btn-gold:hover {
@@ -258,24 +255,4 @@ body {
 .icon-redes {
   width: 30px;
   height: 30px;
-}
-
-.hero-text h1 {
-  font-size: 58px;
-  letter-spacing: 4px;
-  color: #d4af37;
-}
-
-.hero-slogan {
-  margin-top: 15px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #e5c07b;
-}
-
-.hero-sub {
-  margin-top: 10px;
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  color: #c9b46b;
 }
