@@ -316,3 +316,19 @@ body {
   margin-top: 0;
 }
 
+/* RESETEO TOTAL DEL HERO */
+.hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* QUITAR MÁRGENES INTERNOS DEL TEXTO */
+.hero h1,
+.hero p {
+  margin: 0;
+}
+
+/* CONTROLAR SEPARACIÓN MANUAL */
+.hero-text {
+  padding-top: 120px;
+}
