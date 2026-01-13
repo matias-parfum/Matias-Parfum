@@ -100,7 +100,12 @@
       {nombre: "Dior Sauvage", tipo: "Hombre", precio: "₡55,000", imagen: "Dior Sauvage.jpg", notas: "Bergamota, pimienta, lavanda", tamaño: "100 ml", familia: "Aromática Fougère", descripcion: "Aroma fresco y moderno para el hombre seguro de sí mismo"},
       {nombre: "Bleu de Chanel", tipo: "Hombre", precio: "₡60,000", imagen: "Bleu.png", notas: "Limón, jengibre, sándalo", tamaño: "100 ml", familia: "Aromática Amaderada", descripcion: "Elegante y sofisticado para cualquier ocasión"},
       {nombre: "Yves Saint Laurent", tipo: "Hombre", precio: "₡50,000", imagen: "Yves.jpg", notas: "Lavanda, bergamota, geranio", tamaño: "100 ml", familia: "Amaderada Aromática", descripcion: "Clásico y atemporal"},
-      // AGREGAR AQUÍ EL RESTO DE PERFUMES CON TAMAÑO, FAMILIA Y DESCRIPCIÓN
+      // MUJER
+      {nombre: "Libre – Yves Saint Laurent", tipo: "Mujer", precio: "₡65,000", imagen: "Libres.jpg", notas: "Lavanda, flor de azahar, vainilla", tamaño: "90 ml", familia: "Floral Aromática", descripcion: "Fragancia femenina y moderna"},
+      {nombre: "Coco Mademoiselle", tipo: "Mujer", precio: "₡60,000", imagen: "cocos.png", notas: "Naranja, jazmín, rosa", tamaño: "100 ml", familia: "Floral Oriental", descripcion: "Elegante y sensual"},
+      // UNISEX
+      {nombre: "CK One – Calvin Klein", tipo: "Unisex", precio: "₡40,000", imagen: "CK.jpg", notas: "Naranja, limón, piña", tamaño: "100 ml", familia: "Cítrica Aromática", descripcion: "Frescura universal para todos"},
+      {nombre: "Tommy Girl & Boy", tipo: "Unisex", precio: "₡38,000", imagen: "Tommy.jpg", notas: "Manzana, cítricos, rosa", tamaño: "100 ml", familia: "Floral Cítrica", descripcion: "Divertido y fresco"}
     ];
 
     // FUNCIONES WHATSAPP
@@ -125,6 +130,7 @@
       };
 
       perfumes.forEach(perfume => {
+        if(!contenedores[perfume.tipo]) return;
         const card = document.createElement("div");
         card.className = "card";
         card.dataset.nombre = perfume.nombre;
@@ -135,7 +141,7 @@
           <p class="precio">${perfume.precio}</p>
           <div class="card-buttons">
             <button class="consultar-btn" onclick="consultarPerfume('${perfume.nombre}')">Consultar</button>
-            <button class="ficha-btn" onclick="verFicha(perfume)">Ver ficha</button>
+            <button class="ficha-btn" onclick='verFicha(${JSON.stringify(perfume).replace(/'/g,"\\'")})'>Ver ficha</button>
           </div>
         `;
         contenedores[perfume.tipo].appendChild(card);
