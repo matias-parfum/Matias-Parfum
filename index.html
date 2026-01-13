@@ -75,6 +75,21 @@
     </div>
   </footer>
 
+  <!-- MODAL / FICHA PERFUME -->
+  <div id="fichaModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="cerrarFicha()">Cerrar</button>
+      <img id="fichaImagen" src="" alt="">
+      <h3 id="fichaNombre"></h3>
+      <p id="fichaPrecio"></p>
+      <p id="fichaNotas"></p>
+      <p id="fichaTamaño"></p>
+      <p id="fichaFamilia"></p>
+      <p id="fichaDescripcion"></p>
+      <button class="consultar-btn" id="fichaWhatsApp">Consultar por WhatsApp</button>
+    </div>
+  </div>
+
   <!-- SCRIPT -->
   <script>
     const telefono = "50683674466";
@@ -82,35 +97,10 @@
 
     const perfumes = [
       // HOMBRE
-      {nombre: "Dior Sauvage", tipo: "Hombre", precio: "₡55,000", imagen: "Dior Sauvage.jpg", notas: "Notas: Bergamota, pimienta, lavanda"},
-      {nombre: "Bleu de Chanel", tipo: "Hombre", precio: "₡60,000", imagen: "Bleu.png", notas: "Notas: Limón, jengibre, sándalo"},
-      {nombre: "Yves Saint Laurent", tipo: "Hombre", precio: "₡50,000", imagen: "Yves.jpg", notas: "Notas: Lavanda, bergamota, geranio"},
-      {nombre: "Jean Paul Gaultier Le Male", tipo: "Hombre", precio: "₡", imagen: "img/lemale.jpg", notas: "Notas: Menta, lavanda, vainilla"},
-      {nombre: "Jean Paul Gaultier Ultra Male", tipo: "Hombre", precio: "₡", imagen: "img/ultramale.jpg", notas: "Notas: Pera, vainilla, ámbar"},
-      {nombre: "Jean Paul Gaultier Le Male Elixir Eau de Parfum", tipo: "Hombre", precio: "₡", imagen: "img/elixir.jpg", notas: "Notas: Bergamota, canela, vainilla"},
-      {nombre: "Jean Paul Gaultier Le Beau", tipo: "Hombre", precio: "₡", imagen: "img/lebeau.jpg", notas: "Notas: Coco, bergamota, vainilla"},
-      {nombre: "Jean Paul Gaultier Le Beau Le Parfum", tipo: "Hombre", precio: "₡", imagen: "img/parfum.jpg", notas: "Notas: Coco, vainilla, ámbar"},
-      {nombre: "Jean Paul Gaultier Scandal Pour Homme", tipo: "Hombre", precio: "₡", imagen: "img/scandalpourhomme.jpg", notas: "Notas: Miel, tonka, cuero"},
-      {nombre: "Versace Eros", tipo: "Hombre", precio: "₡", imagen: "img/eros.png", notas: "Notas: Menta, limón, manzana"},
-      {nombre: "Versace Eros Flame", tipo: "Hombre", precio: "₡", imagen: "img/flame.png", notas: "Notas: Bergamota, pomelo, pimienta"},
-      {nombre: "Versace Dylan Blue", tipo: "Hombre", precio: "₡", imagen: "img/blue.png", notas: "Notas: Bergamota, pomelo, pimienta negra"},
-      {nombre: "Versace Pour Homme", tipo: "Hombre", precio: "₡", imagen: "img/homme.png", notas: "Notas: Limón, neroli, cedro"},
-      {nombre: "Versace Oud Noir", tipo: "Hombre", precio: "₡", imagen: "img/noir.png", notas: "Notas: Oud, pimienta, madera"},
-
-      // MUJER
-      {nombre: "Libre – Yves Saint Laurent", tipo: "Mujer", precio: "₡65,000", imagen: "Libres.jpg", notas: "Notas: Lavanda, flor de azahar, vainilla"},
-      {nombre: "Coco Mademoiselle", tipo: "Mujer", precio: "₡60,000", imagen: "cocos.png", notas: "Notas: Naranja, jazmín, rosa"},
-      {nombre: "Good Girl – Carolina Herrera", tipo: "Mujer", precio: "₡55,000", imagen: "carolina.jpg", notas: "Notas: Almendra, café, jazmín"},
-      {nombre: "Jean Paul Gaultier Scandal", tipo: "Mujer", precio: "₡", imagen: "img/scandaleau.jpg", notas: "Notas: Naranja, miel, gardenia"},
-      {nombre: "Jean Paul Gaultier Scandal Le Parfum", tipo: "Mujer", precio: "₡", imagen: "img/scandaledp.jpg", notas: "Notas: Flor de azahar, miel, jazmín"},
-      {nombre: "Versace Bright Crystal", tipo: "Mujer", precio: "₡", imagen: "img/Crystal.jpg", notas: "Notas: Granada, peonía, loto"},
-      {nombre: "Versace Bright Crystal Absolu", tipo: "Mujer", precio: "₡", imagen: "img/CrystalAbsolu.jpg", notas: "Notas: Frutas, peonía, ámbar"},
-      {nombre: "Versace Crystal Noir", tipo: "Mujer", precio: "₡", imagen: "img/CrystalNoir.jpg", notas: "Notas: Pimienta rosa, gardenia, ámbar"},
-      {nombre: "Versace Dylan Blue Pour Femme", tipo: "Mujer", precio: "₡", imagen: "img/BlueFemme.jpg", notas: "Notas: Pomelo, manzana, jazmín"},
-
-      // UNISEX
-      {nombre: "CK One – Calvin Klein", tipo: "Unisex", precio: "₡40,000", imagen: "CK.jpg", notas: "Notas: Naranja, limón, piña"},
-      {nombre: "Tommy Girl & Boy", tipo: "Unisex", precio: "₡38,000", imagen: "Tommy.jpg", notas: "Notas: Manzana, cítricos, rosa"}
+      {nombre: "Dior Sauvage", tipo: "Hombre", precio: "₡55,000", imagen: "Dior Sauvage.jpg", notas: "Bergamota, pimienta, lavanda", tamaño: "100 ml", familia: "Aromática Fougère", descripcion: "Aroma fresco y moderno para el hombre seguro de sí mismo"},
+      {nombre: "Bleu de Chanel", tipo: "Hombre", precio: "₡60,000", imagen: "Bleu.png", notas: "Limón, jengibre, sándalo", tamaño: "100 ml", familia: "Aromática Amaderada", descripcion: "Elegante y sofisticado para cualquier ocasión"},
+      {nombre: "Yves Saint Laurent", tipo: "Hombre", precio: "₡50,000", imagen: "Yves.jpg", notas: "Lavanda, bergamota, geranio", tamaño: "100 ml", familia: "Amaderada Aromática", descripcion: "Clásico y atemporal"},
+      // AGREGAR AQUÍ EL RESTO DE PERFUMES CON TAMAÑO, FAMILIA Y DESCRIPCIÓN
     ];
 
     // FUNCIONES WHATSAPP
@@ -126,7 +116,7 @@
       window.open(url, "_blank");
     }
 
-    // FUNCION PARA MOSTRAR PERFUMES
+    // MOSTRAR PERFUMES
     function mostrarPerfumes() {
       const contenedores = {
         "Hombre": document.getElementById("hombre-grid"),
@@ -145,11 +135,32 @@
           <p class="precio">${perfume.precio}</p>
           <div class="card-buttons">
             <button class="consultar-btn" onclick="consultarPerfume('${perfume.nombre}')">Consultar</button>
-            <button class="ficha-btn" onclick="alert('${perfume.notas.replace(/'/g,"\\'")}')">Ver ficha</button>
+            <button class="ficha-btn" onclick="verFicha(perfume)">Ver ficha</button>
           </div>
         `;
         contenedores[perfume.tipo].appendChild(card);
       });
+    }
+
+    // MODAL / FICHA
+    function verFicha(perfume) {
+      document.getElementById("fichaImagen").src = perfume.imagen;
+      document.getElementById("fichaImagen").alt = perfume.nombre;
+      document.getElementById("fichaNombre").textContent = perfume.nombre;
+      document.getElementById("fichaPrecio").textContent = "Precio: " + perfume.precio;
+      document.getElementById("fichaNotas").textContent = "Notas: " + perfume.notas;
+      document.getElementById("fichaTamaño").textContent = "Tamaño: " + (perfume.tamaño || "No especificado");
+      document.getElementById("fichaFamilia").textContent = "Familia: " + (perfume.familia || "No especificado");
+      document.getElementById("fichaDescripcion").textContent = perfume.descripcion || "";
+      
+      const btnWhats = document.getElementById("fichaWhatsApp");
+      btnWhats.onclick = () => consultarPerfume(perfume.nombre);
+
+      document.getElementById("fichaModal").style.display = "flex";
+    }
+
+    function cerrarFicha() {
+      document.getElementById("fichaModal").style.display = "none";
     }
 
     // FILTROS
@@ -180,22 +191,9 @@
       filtrarPerfumes();
     }
 
-    <!-- MODAL / FICHA DEL PERFUME -->
-<div id="modalFicha" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="cerrarFicha()">&times;</span>
-    <img id="ficha-img" src="" alt="Perfume">
-    <h2 id="ficha-nombre"></h2>
-    <p class="precio" id="ficha-precio"></p>
-    <p id="ficha-notas"></p>
-    <button class="consultar-btn" id="ficha-consultar" onclick="">Consultar</button>
-  </div>
-</div>
-
     // INICIAR
     mostrarPerfumes();
   </script>
 
 </body>
 </html>
-
