@@ -1,21 +1,21 @@
 const telefono = "50683674466";
 let filtroTipoActivo = "Todos";
 
-// Función para abrir WhatsApp con mensaje de perfume específico
+// WhatsApp por perfume específico
 function consultarPerfume(nombre) {
   const mensaje = `Hola, me gustaría recibir información detallada sobre el perfume "${nombre}", incluyendo disponibilidad y precio. Quedo atento a su respuesta. Muchas gracias.`;
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
 
-// Función para abrir WhatsApp con mensaje general
+// WhatsApp general
 function consultarGeneral() {
   const mensaje = "Me gustaría recibir información sobre sus perfumes, disponibilidad y precios.\n\nQuedo atento. Muchas gracias.";
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
 
-// Función de filtrado de perfumes por texto y tipo
+// Filtrar perfumes por texto y tipo
 function filtrarPerfumes() {
   const texto = document.getElementById("buscador").value.toLowerCase();
   const cards = document.querySelectorAll(".card");
@@ -35,18 +35,16 @@ function filtrarPerfumes() {
   });
 }
 
-// Función para cambiar filtro activo
+// Cambiar filtro activo
 function filtrarTipo(tipo, event) {
   filtroTipoActivo = tipo;
-
   const botones = document.querySelectorAll(".filter-buttons button");
   botones.forEach(boton => boton.classList.remove("active"));
   event.target.classList.add("active");
-
   filtrarPerfumes();
 }
 
-// Modal para "Ver ficha"
+// Modal clásico (alternativo)
 function abrirModal(nombre) {
   const perfume = perfumes.find(p => p.nombre === nombre);
   if (!perfume) return;
@@ -75,9 +73,10 @@ function abrirModal(nombre) {
       <h3>${perfume.nombre}</h3>
       <p class="precio">${perfume.precio}</p>
       <p><strong>Notas:</strong> ${perfume.notas}</p>
-      <p><strong>Duración:</strong> ${perfume.duracion}</p>
-      <p><strong>Familia:</strong> ${perfume.familia}</p>
-      <p><strong>Intensidad:</strong> ${perfume.intensidad}</p>
+      <p><strong>Tamaño:</strong> ${perfume.tamaño || 'No especificado'}</p>
+      <p><strong>Familia:</strong> ${perfume.familia || 'No especificado'}</p>
+      <p><strong>Intensidad/Descripción:</strong> ${perfume.intensidad || perfume.descripcion || 'No especificado'}</p>
+      <button onclick="consultarPerfume('${perfume.nombre}')" class="consultar-btn">Consultar WhatsApp</button>
     </div>
   `;
 
@@ -92,8 +91,9 @@ function cerrarModal() {
 window.onclick = function(event) {
   const modal = document.getElementById("modalPerfume");
   if (event.target == modal) modal.style.display = "none";
-};
+}
 
+// Modal ficha moderna
 function verFicha(perfume) {
   document.getElementById("fichaImagen").src = perfume.imagen;
   document.getElementById("fichaImagen").alt = perfume.nombre;
