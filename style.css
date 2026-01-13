@@ -322,3 +322,25 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .modal-content img {
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card .tipo-badge {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card .tipo-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px #fff;
+}
