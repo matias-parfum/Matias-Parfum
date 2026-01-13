@@ -89,3 +89,53 @@ document.querySelectorAll(".card .consultar-btn").forEach(btn => {
     verFicha(perfume);
   });
 });
+
+// Datos extra de ejemplo para la ficha (puedes completarlos)
+const detallesPerfumes = {
+  "Dior Sauvage": {
+    notas: "Notas frescas y amaderadas",
+    tamaño: "100ml",
+    familia: "Aromático Fougère",
+    descripcion: "Un perfume potente y elegante para el hombre moderno."
+  },
+  "Bleu de Chanel": {
+    notas: "Notas cítricas y amaderadas",
+    tamaño: "100ml",
+    familia: "Amaderado Aromático",
+    descripcion: "Elegancia y sofisticación en cada gota."
+  },
+  // Agrega aquí los demás perfumes...
+};
+
+// Función para abrir la ficha modal
+function abrirFicha(nombre) {
+  const modal = document.getElementById("fichaModal");
+  const ficha = detallesPerfumes[nombre] || {};
+
+  document.getElementById("fichaNombre").textContent = nombre;
+  document.getElementById("fichaPrecio").textContent = document.querySelector(`.card[data-nombre="${nombre}"] .precio`).textContent;
+  document.getElementById("fichaNotas").textContent = ficha.notas || "";
+  document.getElementById("fichaTamaño").textContent = ficha.tamaño || "";
+  document.getElementById("fichaFamilia").textContent = ficha.familia || "";
+  document.getElementById("fichaDescripcion").textContent = ficha.descripcion || "";
+  document.getElementById("fichaImagen").src = document.querySelector(`.card[data-nombre="${nombre}"] img`).src;
+
+  // Actualiza el botón de WhatsApp dentro de la ficha
+  const fichaBtn = document.getElementById("fichaWhatsApp");
+  fichaBtn.onclick = () => consultarPerfume(nombre);
+
+  modal.style.display = "flex";
+}
+
+// Función para cerrar la ficha
+function cerrarFicha() {
+  document.getElementById("fichaModal").style.display = "none";
+}
+
+// Cambia los botones de consultar de las cards para abrir el modal
+document.querySelectorAll(".card .consultar-btn").forEach(btn => {
+  btn.onclick = function() {
+    const nombre = this.closest(".card").dataset.nombre;
+    abrirFicha(nombre);
+  };
+});
