@@ -257,3 +257,23 @@ body {
   width: 30px;
   height: 30px;
 }
+
+.hero-text h1 {
+  font-size: 58px;
+  letter-spacing: 4px;
+  color: #d4af37;
+}
+
+.hero-slogan {
+  margin-top: 15px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #e5c07b;
+}
+
+.hero-sub {
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: #c9b46b;
+}
