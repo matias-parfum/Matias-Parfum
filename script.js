@@ -139,3 +139,28 @@ document.querySelectorAll(".card .consultar-btn").forEach(btn => {
     abrirFicha(nombre);
   };
 });
+
+// ABRIR FICHA
+function abrirFicha(nombre) {
+  const card = [...document.querySelectorAll('.card')].find(c => c.dataset.nombre === nombre);
+  if (!card) return;
+
+  document.getElementById('fichaImagen').src = card.querySelector('img').src;
+  document.getElementById('fichaNombre').textContent = card.dataset.nombre;
+  document.getElementById('fichaPrecio').textContent = card.querySelector('.precio').textContent;
+  document.getElementById('fichaNotas').textContent = card.dataset.notas || '';
+  document.getElementById('fichaTamaño').textContent = card.dataset.tamaño || '';
+  document.getElementById('fichaFamilia').textContent = card.dataset.familia || '';
+  document.getElementById('fichaDescripcion').textContent = card.dataset.descripcion || '';
+
+  // botón WhatsApp de la ficha
+  const fichaBtn = document.getElementById('fichaWhatsApp');
+  fichaBtn.onclick = () => consultarPerfume(nombre);
+
+  document.getElementById('fichaModal').style.display = 'block';
+}
+
+// CERRAR FICHA
+function cerrarFicha() {
+  document.getElementById('fichaModal').style.display = 'none';
+}
