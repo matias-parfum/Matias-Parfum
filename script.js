@@ -1,4 +1,3 @@
-
 const telefono = "50683674466";
 let filtroTipoActivo = "Todos";
 
