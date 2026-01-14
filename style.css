@@ -27,7 +27,7 @@ body {
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+  grid-template-columns: repeat(3, minmax(150px, 1fr)); /* Siempre 3 columnas, mínimo 150px */
   gap: 30px;
 }
 
@@ -276,7 +276,7 @@ body {
   }
 
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* Mantener 3 columnas en móvil */
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* Mantener 3 columnas mínimo 150px */
     gap: 15px;
   }
 
@@ -326,7 +326,7 @@ body {
   }
 
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas también en tablet */
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 columnas con mínimo */
     gap: 20px;
   }
 
@@ -370,7 +370,7 @@ body {
   }
 
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 columnas con mínimo */
     gap: 30px;
   }
 
