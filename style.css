@@ -38,9 +38,6 @@ body {
   text-align: center;
   border: 1px solid rgba(212, 175, 55, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  
-  display: flex;
-  flex-direction: column;
 }
 
 .card img {
@@ -86,7 +83,7 @@ body {
   display: flex;
   justify-content: center; 
   gap: 10px;
-  margin: auto;
+  margin: 15px 0 10px 0;
 }
 
 /* HERO */
