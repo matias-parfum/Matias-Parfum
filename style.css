@@ -256,3 +256,19 @@ body {
   width: 30px;
   height: 30px;
 }
+
+/* BOTÓN MÁS INFO */
+.info-btn {
+  padding: 10px 22px;
+  background: transparent;
+  border: 1px dashed #bfa055;
+  color: #bfa055;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.info-btn:hover {
+  background: #bfa055;
+  color: #000;
+}
