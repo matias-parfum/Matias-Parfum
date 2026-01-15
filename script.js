@@ -45,3 +45,26 @@ function filtrarTipo(tipo, event) {
 
   filtrarPerfumes();
 }
+
+// INFORMACIÓN DE PERFUMES
+const infoPerfumes = {
+  "Dior Sauvage": {
+    familia: "Aromática Fougère",
+    duracion: "8 – 10 horas",
+    notas: {
+      salida: "Bergamota de Calabria",
+      corazon: "Lavanda, pimienta",
+      fondo: "Ambroxan, cedro"
+    }
+  },
+
+  "Bleu de Chanel": {
+    familia: "Amaderada Aromática",
+    duracion: "7 – 9 horas",
+    notas: {
+      salida: "Pomelo, limón",
+      corazon: "Jengibre, nuez moscada",
+      fondo: "Incienso, sándalo"
+    }
+  }
+};
