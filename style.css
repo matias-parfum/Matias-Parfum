@@ -256,3 +256,37 @@ body {
   width: 30px;
   height: 30px;
 }
+
+.extra-filters{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.extra-filters select{
+  background:#0b0b0b;
+  color:#e5c07b;
+  border:1px solid #e5c07b;
+  padding:10px 12px;
+  border-radius:8px;
+  outline:none;
+}
+
+.extra-filters select:focus{
+  box-shadow:0 0 0 2px rgba(229,192,123,.25);
+}
+
+.btn-clear{
+  background:transparent;
+  color:#e5c07b;
+  border:1px solid #e5c07b;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.btn-clear:hover{
+  filter:brightness(1.15);
+}
