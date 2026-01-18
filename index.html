@@ -18,6 +18,22 @@
 
   <div class="search-filter-container">
   <div class="search-box">
+    <div class="extra-filters">
+  <select id="filtroMarca" onchange="filtrarMarca(this.value)">
+    <option value="Todos">Marca (Todas)</option>
+  </select>
+
+  <select id="filtroPrecio" onchange="filtrarPrecio(this.value)">
+    <option value="Todos">Precio (Todos)</option>
+    <option value="0-30000">Hasta ₡30,000</option>
+    <option value="30001-50000">₡30,001 – ₡50,000</option>
+    <option value="50001-70000">₡50,001 – ₡70,000</option>
+    <option value="70001-9999999">₡70,000+</option>
+  </select>
+
+  <button class="btn-clear" onclick="limpiarFiltrosExtra()">Limpiar</button>
+</div>
+
     <input type="text" id="buscador" placeholder="Buscar perfume..." onkeyup="filtrarPerfumes()">
   </div>
 
