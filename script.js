@@ -45,3 +45,142 @@ function filtrarTipo(tipo, event) {
 
   filtrarPerfumes();
 }
+
+// ====== FILTROS EXTRA (Marca + Precio) ======
+let tipoSeleccionado = "Todos";
+let marcaSeleccionada = "Todos";
+let precioSeleccionado = "Todos";
+
+function normalizarTexto(t=""){
+  return t.toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+}
+
+function obtenerPrecio(card){
+  const p = card.querySelector(".precio");
+  if(!p) return null;
+  const soloNums = (p.textContent || "").replace(/[^\d]/g, "");
+  if(!soloNums) return null; // si dice "Consultar" o está vacío
+  return parseInt(soloNums, 10);
+}
+
+function obtenerMarca(card){
+  // 1) si algún día querés poner data-marca, ya queda soportado:
+  if(card.dataset.marca) return card.dataset.marca.trim();
+
+  // 2) inferir desde el nombre (h3 o data-nombre)
+  const nombre = card.dataset.nombre || (card.querySelector("h3")?.textContent || "");
+  const n = normalizarTexto(nombre);
+
+  // Mapeos para marcas de varias palabras
+  const mapas = [
+    { key: "jean paul gaultier", marca: "Jean Paul Gaultier" },
+    { key: "yves saint laurent", marca: "Yves Saint Laurent" },
+    { key: "bleu de chanel", marca: "Chanel" },
+    { key: "coco mademoiselle", marca: "Chanel" },
+    { key: "dior", marca: "Dior" },
+    { key: "versace", marca: "Versace" },
+    { key: "azzaro", marca: "Azzaro" },
+    { key: "valentino", marca: "Valentino" },
+    { key: "armani", marca: "Giorgio Armani" },
+    { key: "calvin klein", marca: "Calvin Klein" },
+    { key: "ck", marca: "Calvin Klein" },
+    { key: "tommy", marca: "Tommy Hilfiger" },
+    { key: "carolina herrera", marca: "Carolina Herrera" }
+  ];
+
+  for (const m of mapas){
+    if(n.includes(m.key)) return m.marca;
+  }
+
+  // fallback: primera palabra capitalizada
+  const primera = nombre.trim().split(" ")[0] || "Otra";
+  return primera;
+}
+
+function aplicarFiltros(){
+  const query = normalizarTexto(document.getElementById("buscador")?.value || "");
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const nombre = normalizarTexto(card.dataset.nombre || card.querySelector("h3")?.textContent || "");
+    const tipo = (card.dataset.tipo || "Todos").trim();
+    const marca = obtenerMarca(card);
+
+    // filtro por buscador
+    const pasaBusqueda = !query || nombre.includes(query);
+
+    // filtro por tipo
+    const pasaTipo = (tipoSeleccionado === "Todos") || (tipo === tipoSeleccionado);
+
+    // filtro por marca
+    const pasaMarca = (marcaSeleccionada === "Todos") || (marca === marcaSeleccionada);
+
+    // filtro por precio
+    let pasaPrecio = true;
+    if(precioSeleccionado !== "Todos"){
+      const precio = obtenerPrecio(card);
+      if(precio === null){
+        // si no hay precio numérico, lo ocultamos cuando hay filtro de precio activo
+        pasaPrecio = false;
+      } else {
+        const [min,max] = precioSeleccionado.split("-").map(x => parseInt(x,10));
+        pasaPrecio = precio >= min && precio <= max;
+      }
+    }
+
+    card.style.display = (pasaBusqueda && pasaTipo && pasaMarca && pasaPrecio) ? "" : "none";
+  });
+}
+
+// Hooks: conectar con tus filtros actuales (sin cambiar tu HTML)
+function filtrarTipo(tipo, event){
+  tipoSeleccionado = tipo;
+  // si tenías estilos "activo" en botones, dejalos como los tengas (no lo toco)
+  aplicarFiltros();
+}
+
+function filtrarPerfumes(){
+  aplicarFiltros();
+}
+
+function filtrarMarca(valor){
+  marcaSeleccionada = valor;
+  aplicarFiltros();
+}
+
+function filtrarPrecio(valor){
+  precioSeleccionado = valor;
+  aplicarFiltros();
+}
+
+function limpiarFiltrosExtra(){
+  marcaSeleccionada = "Todos";
+  precioSeleccionado = "Todos";
+  const selMarca = document.getElementById("filtroMarca");
+  const selPrecio = document.getElementById("filtroPrecio");
+  if(selMarca) selMarca.value = "Todos";
+  if(selPrecio) selPrecio.value = "Todos";
+  aplicarFiltros();
+}
+
+// Llenar marcas al cargar
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("filtroMarca");
+  if(!select) return;
+
+  const cards = document.querySelectorAll(".card");
+  const marcas = new Set();
+
+  cards.forEach(card => marcas.add(obtenerMarca(card)));
+
+  // Orden alfabético
+  [...marcas].sort((a,b) => a.localeCompare(b)).forEach(marca => {
+    const opt = document.createElement("option");
+    opt.value = marca;
+    opt.textContent = marca;
+    select.appendChild(opt);
+  });
+
+  // aplicar estado inicial
+  aplicarFiltros();
+});
