@@ -290,3 +290,66 @@ body {
 .btn-clear:hover{
   filter:brightness(1.15);
 }
+
+/* ====== Layout más limpio para filtros ====== */
+.search-filter-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: grid;
+  gap: 12px;
+}
+
+/* Fila 1: Buscador + Marca + Precio + Limpiar */
+.search-box,
+.extra-filters{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Buscador un poco más protagonista */
+.search-box input{
+  min-width: 260px;
+  width: 320px;
+}
+
+/* Selects y botón Limpiar más compactos */
+.extra-filters select,
+.extra-filters .btn-clear{
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+
+/* Fila 2: botones Hombre/Mujer/Unisex/Todos centrados */
+.filter-buttons{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botones de tipo más delgados y “pro” */
+.filter-buttons button{
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+/* En móvil: todo apilado, cómodo */
+@media (max-width: 680px){
+  .search-box input{
+    width: 100%;
+    min-width: 0;
+  }
+  .search-box, .extra-filters{
+    justify-content: stretch;
+  }
+  .extra-filters select,
+  .extra-filters .btn-clear{
+    flex: 1;
+    min-width: 140px;
+  }
+}
