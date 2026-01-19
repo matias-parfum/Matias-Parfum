@@ -353,3 +353,36 @@ body {
     min-width: 140px;
   }
 }
+
+.confianza {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.confianza h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.confianza p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #e5c07b;
+  margin-bottom: 30px;
+}
+
+.confianza-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.confianza-items span {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 10px 18px;
+  font-size: 14px;
+}
