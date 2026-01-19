@@ -1,8 +1,16 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Georgia", serif;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
 }
 
 body {
@@ -368,18 +376,18 @@ body {
 }
 
 .confianza h2{
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 2px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .confianza p{
   max-width: 850px;
   margin: 0 auto 18px;
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.9;
   color: #e5c07b;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .confianza-items{
