@@ -354,35 +354,51 @@ body {
   }
 }
 
-.confianza {
-  max-width: 900px;
-  margin: 0 auto 60px;
-  padding: 40px 20px;
+/* SECCIÓN CONFIANZA (estilo lujo, acorde a la página) */
+.confianza{
+  max-width: 1100px;
+  margin: 40px auto 30px;
+  padding: 28px 22px;
   text-align: center;
+
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 30px rgba(0,0,0,0.45);
+  border-radius: 14px;
 }
 
-.confianza h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.confianza h2{
+  font-size: 22px;
   letter-spacing: 2px;
+  margin-bottom: 14px;
 }
 
-.confianza p {
-  font-size: 15px;
+.confianza p{
+  max-width: 850px;
+  margin: 0 auto 18px;
+  font-size: 14px;
   line-height: 1.8;
   color: #e5c07b;
-  margin-bottom: 30px;
+  opacity: 0.95;
 }
 
-.confianza-items {
+.confianza-items{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.confianza-items span{
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 15px;
-}
+  gap: 8px;
 
-.confianza-items span {
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  padding: 10px 18px;
-  font-size: 14px;
+  padding: 10px 12px;
+  font-size: 13px;
+
+  background: #0b0b0b;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
 }
