@@ -410,3 +410,29 @@ body {
   border: 1px solid rgba(212, 175, 55, 0.35);
   border-radius: 999px;
 }
+
+.intro {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.intro p {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto 16px;
+  color: #ddd;
+}
+
+.intro .slogan {
+  margin-top: 22px;
+  font-style: italic;
+  color: #e5c07b;
+}
