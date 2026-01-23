@@ -108,34 +108,70 @@
 
   </main>
 
-  <!-- JS: cantidad, tabs y WhatsApp -->
-  <script>
-    // Cantidad
-    const qtyInput = document.getElementById('qtyInput');
-    document.getElementById('qtyMinus').onclick = () => {
-      qtyInput.value = Math.max(1, parseInt(qtyInput.value, 10) - 1);
-    };
-    document.getElementById('qtyPlus').onclick = () => {
-      qtyInput.value = parseInt(qtyInput.value, 10) + 1;
-    };
+ <!-- JS: cantidad, precio dinámico, tabs y WhatsApp -->
+<script>
+  // Elementos
+  const qtyInput = document.getElementById('qtyInput');
+  const priceDisplay = document.getElementById('priceDisplay');
 
-    // Tabs
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-      });
+  // Precio unitario tomado del HTML (data-price)
+  const PRICE_UNIT = parseInt(priceDisplay.dataset.price, 10);
+
+  // Formato moneda CRC
+  function formatCRC(value){
+    return "₡" + value.toLocaleString("es-CR");
+  }
+
+  // Actualiza el precio total según cantidad
+  function updatePrice(){
+    const qty = parseInt(qtyInput.value, 10);
+    const total = PRICE_UNIT * qty;
+    priceDisplay.innerText = formatCRC(total);
+  }
+
+  // Botón menos
+  document.getElementById('qtyMinus').onclick = () => {
+    qtyInput.value = Math.max(1, parseInt(qtyInput.value, 10) - 1);
+    updatePrice();
+  };
+
+  // Botón más
+  document.getElementById('qtyPlus').onclick = () => {
+    qtyInput.value = parseInt(qtyInput.value, 10) + 1;
+    updatePrice();
+  };
+
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
+  });
 
-    // WhatsApp
-    document.getElementById('btnConsultar').onclick = () => {
-      const qty = qtyInput.value;
-      const msg = `Hola Matías, quiero consultar por Azzaro Wanted Tonic. Tamaño: 100 ML. Cantidad: ${qty}.`;
-      window.open("https://wa.me/50683674466?text=" + encodeURIComponent(msg), "_blank");
-    };
-  </script>
+  // WhatsApp con cantidad y TOTAL
+  document.getElementById('btnConsultar').onclick = () => {
+    const qty = parseInt(qtyInput.value, 10);
+    const total = PRICE_UNIT * qty;
+
+    const msg =
+      `Hola Matías, quiero consultar por Azzaro Wanted Tonic.\n` +
+      `Tamaño: 100 ML\n` +
+      `Cantidad: ${qty}\n` +
+      `Total: ${formatCRC(total)}`;
+
+    window.open(
+      "https://wa.me/50683674466?text=" + encodeURIComponent(msg),
+      "_blank"
+    );
+  };
+
+  // Inicializa el precio al cargar la página
+  updatePrice();
+</script>
+
 
 </body>
 </html>
