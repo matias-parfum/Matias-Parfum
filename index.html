@@ -87,14 +87,30 @@
     <div class="grid">
 
       <div class="card" data-nombre="AZZARO WANTED TONIC 100ML EDT" data-tipo="Hombre">
-      <img src="img/WANTEDTONIC.png" alt="AZZARO WANTED TONIC 100ML EDT">
-      <h3>AZZARO WANTED TONIC 100ML EDT</h3>
-      <p class="precio">₡34,000</p>
-    <!-- Contenedor de botones -->
+
+  <!-- Opción 1: Click en la imagen abre la página del producto -->
+  <a href="productos/azzaro-wanted-tonic-100ml-edt.html" class="card-link">
+    <img src="img/WANTEDTONIC.png" alt="AZZARO WANTED TONIC 100ML EDT">
+  </a>
+
+  <!-- Opción 1 (también): Click en el nombre abre la página del producto -->
+  <h3>
+    <a href="productos/azzaro-wanted-tonic-100ml-edt.html" class="title-link">
+      AZZARO WANTED TONIC 100ML EDT
+    </a>
+  </h3>
+
+  <p class="precio">₡34,000</p>
+
+  <!-- Opción 2: Botón Consultar sigue abriendo WhatsApp como siempre -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
       
       <div class="card" data-nombre="AZZARO WANTED BY NIGHT 100ML EDP" data-tipo="Hombre">
       <img src="img/BYNIGHT.png" alt="AZZARO WANTED BY NIGHT 100ML EDP">
