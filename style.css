@@ -676,3 +676,15 @@ body {
   .product-grid{ grid-template-columns:1fr; gap:22px; }
   .qty-row{ grid-template-columns:1fr; }
 }
+
+.card-link{ display:block; }
+.card-link img{ cursor:pointer; }
+
+.title-link{
+  color:inherit;
+  text-decoration:none;
+}
+.title-link:hover{
+  text-decoration:underline;
+}
+
