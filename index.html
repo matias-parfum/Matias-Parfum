@@ -140,14 +140,30 @@
 
       
       <div class="card" data-nombre="AZZARO WANTED 100ML EDP" data-tipo="Hombre">
-      <img src="img/WANTEDEDPn.png" alt="AZZARO WANTED 100ML EDP">
-      <h3>AZZARO WANTED 100ML EDP</h3>
-      <p class="precio">₡45,000</p>
-    <!-- Contenedor de botones -->
+
+  <!-- Opción 1: click en imagen abre la página del producto -->
+  <a href="productos/azzaro-wanted-100ml-edp.html" class="card-link">
+    <img src="img/WANTEDEDPn.png" alt="AZZARO WANTED 100ML EDP">
+  </a>
+
+  <!-- Opción 1 también: click en el nombre abre la página del producto -->
+  <h3>
+    <a href="productos/azzaro-wanted-100ml-edp.html" class="title-link">
+      AZZARO WANTED 100ML EDP
+    </a>
+  </h3>
+
+  <p class="precio">₡45,000</p>
+
+  <!-- Opción 2: botón Consultar (WhatsApp) como siempre -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
 
       <div class="card" data-nombre="AZZARO CHROME 100ML EDP" data-tipo="Hombre">
       <img src="img/CHROMEEDPn.png" alt="AZZARO CHROME 100ML EDP">
