@@ -299,14 +299,30 @@
 </div>
 
       <div class="card" data-nombre="STRONGER WITH YOU 100ML EDT GIORGIO ARMANI" data-tipo="Hombre">
-      <img src="img/EDTSTRONGER.jpeg" alt="STRONGER WITH YOU 100ML EDT GIORGIO ARMANI">
-      <h3>STRONGER WITH YOU 100ML EDT GIORGIO ARMANI</h3>
-      <p class="precio">₡50,000</p>
-    <!-- Contenedor de botones -->
+
+  <!-- Opción 1: click en imagen abre la página del producto -->
+  <a href="productos/stronger-with-you-100ml-edt.html" class="card-link">
+    <img src="img/EDTSTRONGER.jpeg" alt="STRONGER WITH YOU 100ML EDT GIORGIO ARMANI">
+  </a>
+
+  <!-- Opción 1 también: click en el nombre -->
+  <h3>
+    <a href="productos/stronger-with-you-100ml-edt.html" class="title-link">
+      STRONGER WITH YOU 100ML EDT
+    </a>
+  </h3>
+
+  <p class="precio">₡50,000</p>
+
+  <!-- Opción 2: WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
 
       <div class="card" data-nombre="ARMANI CODE 125ML EDP " data-tipo="Hombre">
       <img src="img/ARMANICODE.jpg" alt="ARMANI CODE 125ML EDP ">
