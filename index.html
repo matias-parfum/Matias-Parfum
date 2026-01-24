@@ -220,14 +220,31 @@
 
       
       <div class="card" data-nombre="AZZARO CHROME 100ML EDT" data-tipo="Hombre">
-      <img src="img/AZZAROCHROM.png" alt="AZZARO CHROME 100ML EDT">
-      <h3>AZZARO CHROME 100ML EDT</h3>
-      <p class="precio">₡35,000</p>
-    <!-- Contenedor de botones -->
+
+  <!-- Opción 1: click en imagen abre la página del producto -->
+  <a href="productos/azzaro-chrome-100ml-edt.html" class="card-link">
+    <img src="img/AZZAROCHROM.png" alt="AZZARO CHROME 100ML EDT">
+  </a>
+
+  <!-- Opción 1 también: click en el nombre -->
+  <h3>
+    <a href="productos/azzaro-chrome-100ml-edt.html" class="title-link">
+      AZZARO CHROME 100ML EDT
+    </a>
+  </h3>
+
+  <p class="precio">₡35,000</p>
+
+  <!-- Opción 2: WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn"
+      onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
 
       <div class="card" data-nombre="STRONGER WITH YOU ABSOLUTELY 100ML EDP GIORGIO ARMANI" data-tipo="Hombre">
       <img src="img/ABSOLUTELYEDP.jpg" alt="STRONGER WITH YOU ABSOLUTELY 100ML EDP GIORGIO ARMANI">
