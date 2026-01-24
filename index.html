@@ -273,14 +273,29 @@
 </div>
 
 
-      <div class="card" data-nombre="STRONGER WITH YOU INTENSELY 100ML EDP GIORGIO ARMANI" data-tipo="Hombre">
-      <img src="img/StrongerEDP.jpg" alt="STRONGER WITH YOU INTENSELY 100ML EDP GIORGIO ARMANI">
-      <h3>STRONGER WITH YOU INTENSELY 100ML EDP GIORGIO ARMANI</h3>
-      <p class="precio">₡56,500</p>
-    <!-- Contenedor de botones -->
+<div class="card" data-nombre="STRONGER WITH YOU INTENSELY 100ML EDP GIORGIO ARMANI" data-tipo="Hombre">
+
+  <!-- Opción 1: click en imagen abre la página del producto -->
+  <a href="productos/stronger-with-you-intensely-100ml-edp.html" class="card-link">
+    <img src="img/StrongerEDP.jpg" alt="STRONGER WITH YOU INTENSELY 100ML EDP GIORGIO ARMANI">
+  </a>
+
+  <!-- Opción 1 también: click en el nombre -->
+  <h3>
+    <a href="productos/stronger-with-you-intensely-100ml-edp.html" class="title-link">
+      STRONGER WITH YOU INTENSELY 100ML EDP
+    </a>
+  </h3>
+
+  <p class="precio">₡56,500</p>
+
+  <!-- Opción 2: WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
 
       <div class="card" data-nombre="STRONGER WITH YOU 100ML EDT GIORGIO ARMANI" data-tipo="Hombre">
