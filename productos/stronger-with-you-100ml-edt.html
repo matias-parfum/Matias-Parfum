@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Stronger With You EDT Original en Costa Rica | Matías Parfum</title>
+  <meta name="description" content="Stronger With You EDT 100% original en Costa Rica. Elegí cantidad y consultá por WhatsApp con Matías Parfum." />
+
+  <link rel="canonical" href="https://matiasparfum.com/productos/stronger-with-you-100ml-edt.html">
+  <link rel="stylesheet" href="/style.css">
+
+  <meta property="og:title" content="Stronger With You EDT | Matías Parfum" />
+  <meta property="og:description" content="Perfume original en Costa Rica. Elegí cantidad y consultá por WhatsApp." />
+  <meta property="og:type" content="product" />
+  <meta property="og:url" content="https://matiasparfum.com/productos/stronger-with-you-100ml-edt.html" />
+  <meta property="og:image" content="https://matiasparfum.com/img/EDTSTRONGER.jpeg" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a href="/index.html" class="logo">Matías Parfum</a>
+    <a class="top-cta" href="https://wa.me/50683674466">WhatsApp</a>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="/index.html">Inicio</a>
+    <span>/</span>
+    <a href="/index.html#hombre">Perfumes</a>
+    <span>/</span>
+    <a href="/index.html#armani">Giorgio Armani</a>
+    <span>/</span>
+    <strong>Stronger With You EDT</strong>
+  </nav>
+
+  <main class="product-page">
+
+    <section class="product-shell">
+      <div class="product-grid">
+
+        <!-- Imagen -->
+        <div class="product-media">
+          <img src="/img/EDTSTRONGER.jpeg" alt="Stronger With You 100ML EDT Giorgio Armani" />
+        </div>
+
+        <!-- Info -->
+        <div class="product-info">
+          <p class="brand">GIORGIO ARMANI</p>
+          <h1 class="product-title">STRONGER WITH YOU</h1>
+          <p class="product-desc">Perfume 100% original • Envíos en Costa Rica</p>
+
+          <!-- Precio dinámico -->
+          <p class="price" id="priceDisplay" data-price="50000">₡50.000</p>
+
+          <!-- Tamaño -->
+          <div class="opt-block">
+            <p class="opt-label">Tamaño</p>
+            <div class="sizes">
+              <button class="size-btn active" type="button" data-size="100 ML">100 ML</button>
+            </div>
+          </div>
+
+          <!-- Cantidad + Consultar -->
+          <div class="qty-row">
+            <div class="qty">
+              <button type="button" class="qty-btn" id="qtyMinus">−</button>
+              <input id="qtyInput" class="qty-input" type="text" value="1" readonly />
+              <button type="button" class="qty-btn" id="qtyPlus">+</button>
+            </div>
+
+            <button class="btn-consultar" id="btnConsultar" type="button">
+              CONSULTAR
+            </button>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <div class="tab-head">
+              <button class="tab-btn active" type="button" data-tab="desc">DESCRIPCIÓN</button>
+              <button class="tab-btn" type="button" data-tab="notes">NOTAS</button>
+            </div>
+
+            <div class="tab-body">
+              <div class="tab-panel active" id="tab-desc">
+                <p>
+                  Stronger With You EDT es una fragancia cálida y moderna, dulce pero elegante.
+                  Ideal para salidas, citas y clima fresco: muy “cozy” y seductora sin ser pesada.
+                </p>
+              </div>
+
+              <!-- NOTAS REALES -->
+              <div class="tab-panel" id="tab-notes">
+                <ul class="info-list">
+                  <li><strong>Salida:</strong> Cardamomo, pimienta rosa, hojas de violeta</li>
+                  <li><strong>Corazón:</strong> Salvia</li>
+                  <li><strong>Fondo:</strong> Castaña (azucarada), vainilla, notas amaderadas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <p class="backlink"><a href="/index.html">← Volver al catálogo</a></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS: cantidad, precio dinámico, tabs y WhatsApp -->
+  <script>
+    const qtyInput = document.getElementById('qtyInput');
+    const priceDisplay = document.getElementById('priceDisplay');
+    const PRICE_UNIT = parseInt(priceDisplay.dataset.price, 10);
+
+    function formatCRC(value){
+      return "₡" + value.toLocaleString("es-CR");
+    }
+
+    function updatePrice(){
+      const qty = parseInt(qtyInput.value, 10);
+      const total = PRICE_UNIT * qty;
+      priceDisplay.innerText = formatCRC(total);
+    }
+
+    document.getElementById('qtyMinus').onclick = () => {
+      qtyInput.value = Math.max(1, parseInt(qtyInput.value, 10) - 1);
+      updatePrice();
+    };
+
+    document.getElementById('qtyPlus').onclick = () => {
+      qtyInput.value = parseInt(qtyInput.value, 10) + 1;
+      updatePrice();
+    };
+
+    // Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // WhatsApp con TOTAL
+    document.getElementById('btnConsultar').onclick = () => {
+      const qty = parseInt(qtyInput.value, 10);
+      const total = PRICE_UNIT * qty;
+
+      const msg =
+        `Hola Matías, quiero consultar por Stronger With You EDT.\n` +
+        `Tamaño: 100 ML\n` +
+        `Cantidad: ${qty}\n` +
+        `Total: ${formatCRC(total)}`;
+
+      window.open(
+        "https://wa.me/50683674466?text=" + encodeURIComponent(msg),
+        "_blank"
+      );
+    };
+
+    updatePrice();
+  </script>
+
+</body>
+</html>
