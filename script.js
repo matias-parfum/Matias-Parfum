@@ -154,14 +154,42 @@ function filtrarPrecio(valor){
 }
 
 function limpiarFiltrosExtra(){
+  // Reset marca y precio (tu lógica)
   marcaSeleccionada = "Todos";
   precioSeleccionado = "Todos";
+
   const selMarca = document.getElementById("filtroMarca");
   const selPrecio = document.getElementById("filtroPrecio");
-  if(selMarca) selMarca.value = "Todos";
-  if(selPrecio) selPrecio.value = "Todos";
+  if (selMarca) selMarca.value = "Todos";
+  if (selPrecio) selPrecio.value = "Todos";
+
+  // ✅ Reset buscador
+  const buscador = document.getElementById("buscador");
+  if (buscador) buscador.value = "";
+
+  // ✅ Reset tipo (Hombre/Mujer/Unisex/Todos)
+  // OJO: poné aquí el nombre REAL de tu variable de tipo si es otra.
+  // Ejemplos comunes: tipoSeleccionado, filtroTipo, tipoActual...
+  if (typeof tipoSeleccionado !== "undefined") {
+    tipoSeleccionado = "Todos";
+  } else if (typeof filtroTipo !== "undefined") {
+    filtroTipo = "Todos";
+  }
+
+  // ✅ Quitar resaltado "activo" en botones (si lo usás)
+  document.querySelectorAll(".filter-buttons button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  // (Opcional) dejar "Todos" marcado como activo
+  const btnTodos = Array.from(document.querySelectorAll(".filter-buttons button"))
+    .find(b => (b.textContent || "").trim().toLowerCase() === "todos");
+  if (btnTodos) btnTodos.classList.add("active");
+
+  // Aplicar filtros (tu función)
   aplicarFiltros();
 }
+
 
 // Llenar marcas al cargar
 document.addEventListener("DOMContentLoaded", () => {
