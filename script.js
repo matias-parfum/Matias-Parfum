@@ -184,7 +184,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // aplicar estado inicial
   aplicarFiltros();
 });
-
-document.querySelectorAll('.san-valentin .consultar-btn').forEach(btn => {
-  btn.textContent = 'Regalar este perfume ❤️';
-});
