@@ -835,3 +835,27 @@ body {
   transform: translateY(-1px);
   filter: brightness(1.08);
 }
+
+/* ===== SAN VALENTÍN MOBILE AJUSTES ===== */
+@media (max-width: 768px) {
+  .san-valentin-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .san-valentin .valentin-card {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .valentin-badge {
+    font-size: 0.78rem;
+    padding: 5px 9px;
+  }
+
+  .san-valentin .valentin-card .consultar-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
