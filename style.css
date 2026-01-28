@@ -688,18 +688,25 @@ body {
   text-decoration:underline;
 }
 
-/* ===== HERO SAN VALENTÍN – MATÍAS PARFUM (FINAL LIMPIO) ===== */
+/* =========================
+   HERO SAN VALENTÍN – MATÍAS PARFUM (LIMPIO + SEPARACIÓN)
+   ========================= */
+
+/* HERO full width y separado del contenido de abajo */
 .hero-valentin{
   width: 100vw;
   margin-left: calc(50% - 50vw); /* full width aunque haya contenedores */
   background: url("img/hero-valentin.jpg") center 25% / cover no-repeat;
   min-height: 52vh;
   overflow: hidden;
+
+  /* ✅ separa el hero del resto (PC) */
+  margin-bottom: 70px;
 }
 
-/* Overlay uniforme, sin franjas */
+/* Overlay uniforme (sin franjas raras) */
 .hero-overlay{
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0, 0, 0, 0.12); /* ✅ menos oscuro = colores más reales */
   width: 100%;
   min-height: 52vh;
   padding: 40px 20px;
@@ -713,7 +720,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  align-items: center;
+  padding-bottom: 22px; /* ✅ baja el botón sin “lineas” */
 }
 
 /* Botón San Valentín (premium) */
@@ -725,40 +733,43 @@ body {
   font-size: 1.05rem;
   border-radius: 999px;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.3px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+
+  /* ✅ sombra elegante pero sin “banda” rara */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-  backdrop-filter: blur(6px);
 }
 
 .btn-valentin:hover{
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-  filter: brightness(1.08);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.45);
+  filter: brightness(1.06);
 }
 
 /* ===== HERO RESPONSIVE (MÓVIL = BANNER REAL, NO POSTER) ===== */
 @media (max-width: 768px){
 
-  /* Clave: usar ALTURA de banner, no min-height */
   .hero-valentin{
     min-height: auto;
-    height: clamp(220px, 38vw, 320px); /* banner */
-    background: url("img/hero-valentin.jpg") center/contain no-repeat;
-    background-color: #000; /* relleno elegante */
+    height: clamp(220px, 38vw, 320px); /* ✅ banner */
+    background: url("img/hero-valentin.jpg") center / contain no-repeat;
+    background-color: #000;
+
+    /* ✅ separa el hero del resto (móvil/tablet) */
+    margin-bottom: 55px;
   }
 
   .hero-overlay{
     min-height: auto;
     height: 100%;
-    padding: 14px 12px 18px;
-    background: rgba(0,0,0,0.10); /* menos oscuro para color real */
+    padding: 12px 12px 16px;
+    background: rgba(0,0,0,0.08); /* ✅ casi nada de overlay */
     align-items: flex-end;
   }
 
   .hero-content{
-    margin-bottom: 0;
+    padding-bottom: 10px;
   }
 
   .btn-valentin{
@@ -771,10 +782,15 @@ body {
 @media (max-width: 480px){
   .hero-valentin{
     height: clamp(210px, 46vw, 300px);
+    margin-bottom: 48px; /* ✅ aún más aire en pantallas pequeñas */
   }
 }
 
-/* ===== SECCIÓN SAN VALENTÍN ===== */
+
+/* =========================
+   SECCIÓN SAN VALENTÍN
+   ========================= */
+
 .san-valentin{
   text-align: center;
   padding: 50px 20px 20px;
@@ -792,7 +808,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* ===== GRID SAN VALENTÍN (4 / 2 / 1) ===== */
+/* ===== GRID (4 / 2 / 1) ===== */
 .san-valentin-grid{
   display: grid;
   gap: 22px;
@@ -811,7 +827,7 @@ body {
   }
 }
 
-/* ===== CARDS SAN VALENTÍN (ESTILO ESPECIAL) ===== */
+/* ===== CARDS ESPECIALES ===== */
 .san-valentin .valentin-card{
   position: relative;
   border: 1px solid rgba(212, 175, 55, 0.35);
@@ -825,7 +841,11 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 20%, rgba(139, 29, 44, 0.18), transparent 55%);
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(139, 29, 44, 0.18),
+    transparent 55%
+  );
   pointer-events: none;
 }
 
@@ -844,25 +864,25 @@ body {
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 900;
   border: 1px solid rgba(212, 175, 55, 0.3);
   box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
-/* Botón especial en cards */
+/* Botón especial cards */
 .san-valentin .valentin-card .consultar-btn{
   background: linear-gradient(135deg, #8b1d2c, #c81d3a);
   color: #fff;
   border: 1px solid rgba(212, 175, 55, 0.35);
   border-radius: 999px;
   padding: 10px 18px;
-  font-weight: 800;
+  font-weight: 900;
   transition: transform .2s ease, filter .2s ease;
 }
 
 .san-valentin .valentin-card .consultar-btn:hover{
   transform: translateY(-1px);
-  filter: brightness(1.08);
+  filter: brightness(1.06);
 }
 
 /* Botón ancho en tablet/móvil */
