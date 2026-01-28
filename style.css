@@ -688,69 +688,25 @@ body {
   text-decoration:underline;
 }
 
-/* =========================
-   HERO SAN VALENTÍN – BOTÓN MÁS ABAJO + ESTILO
-   (Pegar al final del CSS)
-   ========================= */
-
-/* Asegura que el contenedor del hero pueda posicionar bien el contenido */
-.hero-valentin{
-  position: relative;
+/* ===== BOTÓN SAN VALENTÍN (SOLO HERO) ===== */
+.hero-valentin button,
+.hero-valentin .btn-gold,
+.hero-valentin .btn-valentin {
+  background: linear-gradient(135deg, #8b1d2c, #c81d3a) !important;
+  color: #fff !important;
+  border: 1px solid rgba(212, 175, 55, 0.55) !important;
+  padding: 14px 34px !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35) !important;
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease !important;
 }
 
-/* Baja el contenido (botón) */
-.hero-valentin .hero-text{
-  display: flex;
-  justify-content: center;
-  /* ✅ Ajusta esta distancia para bajarlo más/menos */
-  margin-top: 260px;
-  padding-bottom: 30px;
-}
-
-/* Si en tu HTML el botón es .btn-gold dentro del hero, lo estilizamos en modo San Valentín */
-.hero-valentin .btn-gold{
-  background: linear-gradient(135deg, #8b1d2c, #c81d3a);
-  color: #fff;
-  border: 1px solid rgba(212,175,55,0.40);
-  padding: 14px 34px;
-  font-size: 1.05rem;
-  border-radius: 999px;
-  font-weight: 800;
-  letter-spacing: 0.3px;
-  cursor: pointer;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
-}
-
-.hero-valentin .btn-gold:hover{
-  transform: translateY(-2px);
-  filter: brightness(1.07);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.45);
-}
-
-/* Mini “glow” romántico alrededor del botón */
-.hero-valentin .btn-gold{
-  position: relative;
-}
-.hero-valentin .btn-gold::after{
-  content: "";
-  position: absolute;
-  inset: -10px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(200,29,58,0.22), transparent 60%);
-  z-index: -1;
-}
-
-/* ===== MÓVIL: baja menos para que no tape texto ===== */
-@media (max-width: 768px){
-  .hero-valentin .hero-text{
-    margin-top: 170px; /* ✅ ajusta aquí si querés más abajo/arriba en teléfono */
-    padding-bottom: 20px;
-  }
-
-  .hero-valentin .btn-gold{
-    width: min(340px, 92%);
-    padding: 12px 20px;
-    font-size: 1rem;
-  }
+.hero-valentin button:hover,
+.hero-valentin .btn-gold:hover,
+.hero-valentin .btn-valentin:hover {
+  transform: translateY(-2px) !important;
+  filter: brightness(1.06) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.45) !important;
 }
