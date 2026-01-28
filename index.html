@@ -2498,7 +2498,21 @@
   </div>
 </footer>
 
-   <script src="script.js"></script>
+<!-- SCRIPT SAN VALENTÍN (SE OCULTA SOLO EN MARZO) -->
+<script>
+  (function () {
+    const hoy = new Date();
+    const anio = hoy.getFullYear();
+    const marzo = new Date(anio, 2, 1); // 1 de marzo
+
+    if (hoy >= marzo) {
+      const heroValentin = document.getElementById("hero-valentin");
+      if (heroValentin) heroValentin.style.display = "none";
+    }
+  })();
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
 
