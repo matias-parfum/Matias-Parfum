@@ -836,26 +836,36 @@ body {
   filter: brightness(1.08);
 }
 
-/* ===== SAN VALENTÍN MOBILE AJUSTES ===== */
-@media (max-width: 768px) {
-  .san-valentin-grid {
-    display: grid;
+/* ===== GRID SAN VALENTÍN RESPONSIVE (FIX DEFINITIVO) ===== */
+.san-valentin-grid{
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Tablets y celulares: 2x2 */
+@media (max-width: 1024px){
+  .san-valentin-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celulares pequeños: 1 columna */
+@media (max-width: 520px){
+  .san-valentin-grid{
     grid-template-columns: 1fr;
-    gap: 18px;
+  }
+}
+
+/* Ajustes visuales mobile */
+@media (max-width: 1024px){
+  .san-valentin .valentin-card{
+    width: 100%;
   }
 
-  .san-valentin .valentin-card {
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .valentin-badge {
-    font-size: 0.78rem;
-    padding: 5px 9px;
-  }
-
-  .san-valentin .valentin-card .consultar-btn {
+  .san-valentin .valentin-card .consultar-btn{
     width: 100%;
     padding: 12px 0;
   }
 }
+
