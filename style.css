@@ -699,7 +699,7 @@ body {
 
 /* Overlay uniforme, sin franjas */
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.30);
+  background: rgba(0, 0, 0, 0.18);
   width: 100%;
   min-height: 52vh;
   padding: 40px 20px;
