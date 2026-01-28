@@ -154,7 +154,7 @@ function filtrarPrecio(valor){
 }
 
 function limpiarFiltrosExtra(){
-  // Reset marca y precio (tu lógica)
+  // Reset marca y precio
   marcaSeleccionada = "Todos";
   precioSeleccionado = "Todos";
 
@@ -163,33 +163,26 @@ function limpiarFiltrosExtra(){
   if (selMarca) selMarca.value = "Todos";
   if (selPrecio) selPrecio.value = "Todos";
 
-  // ✅ Reset buscador
+  // Reset buscador
   const buscador = document.getElementById("buscador");
   if (buscador) buscador.value = "";
 
-  // ✅ Reset tipo (Hombre/Mujer/Unisex/Todos)
-  // OJO: poné aquí el nombre REAL de tu variable de tipo si es otra.
-  // Ejemplos comunes: tipoSeleccionado, filtroTipo, tipoActual...
-  if (typeof tipoSeleccionado !== "undefined") {
-    tipoSeleccionado = "Todos";
-  } else if (typeof filtroTipo !== "undefined") {
-    filtroTipo = "Todos";
-  }
+  // Reset tipo (ajustá el nombre si tu variable se llama diferente)
+  if (typeof tipoSeleccionado !== "undefined") tipoSeleccionado = "Todos";
+  if (typeof filtroTipo !== "undefined") filtroTipo = "Todos";
 
-  // ✅ Quitar resaltado "activo" en botones (si lo usás)
-  document.querySelectorAll(".filter-buttons button").forEach(btn => {
-    btn.classList.remove("active");
+  // Quitar estados visuales de botones
+  const botones = document.querySelectorAll(".filter-buttons button");
+  botones.forEach(btn => {
+    btn.classList.remove("active", "selected", "current");
+    btn.blur(); // ✅ evita que quede “pegado” por focus
   });
 
-  // (Opcional) dejar "Todos" marcado como activo
-  const btnTodos = Array.from(document.querySelectorAll(".filter-buttons button"))
-    .find(b => (b.textContent || "").trim().toLowerCase() === "todos");
-  if (btnTodos) btnTodos.classList.add("active");
+  // ✅ Quitar focus general (por si el foco quedó en “Todos”)
+  if (document.activeElement) document.activeElement.blur();
 
-  // Aplicar filtros (tu función)
   aplicarFiltros();
 }
-
 
 // Llenar marcas al cargar
 document.addEventListener("DOMContentLoaded", () => {
