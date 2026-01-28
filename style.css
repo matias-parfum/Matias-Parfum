@@ -688,36 +688,36 @@ body {
   text-decoration:underline;
 }
 
-/* ===== HERO SAN VALENTÍN – MATÍAS PARFUM (FINAL DEFINITIVO) ===== */
-.hero-valentin {
+/* ===== HERO SAN VALENTÍN – MATÍAS PARFUM (FINAL LIMPIO) ===== */
+.hero-valentin{
   width: 100vw;
-  margin-left: calc(50% - 50vw); /* fuerza full width aunque haya contenedores */
+  margin-left: calc(50% - 50vw); /* full width aunque haya contenedores */
   background: url("img/hero-valentin.jpg") center 25% / cover no-repeat;
   min-height: 52vh;
   overflow: hidden;
 }
 
 /* Overlay uniforme, sin franjas */
-.hero-overlay {
+.hero-overlay{
   background: rgba(0, 0, 0, 0.18);
   width: 100%;
   min-height: 52vh;
   padding: 40px 20px;
   display: flex;
-  justify-content: center;   /* centra horizontal */
-  align-items: flex-end;     /* baja el contenido */
+  justify-content: center;
+  align-items: flex-end; /* contenido abajo */
 }
 
 /* Contenedor del botón */
-.hero-content {
+.hero-content{
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;       /* ajusta altura del botón */
+  margin-bottom: 30px;
 }
 
 /* Botón San Valentín (premium) */
-.btn-valentin {
+.btn-valentin{
   background: linear-gradient(135deg, #8b1d2c, #c81d3a);
   color: #fff;
   border: 1px solid rgba(212, 175, 55, 0.35);
@@ -725,61 +725,94 @@ body {
   font-size: 1.05rem;
   border-radius: 999px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.3px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
   backdrop-filter: blur(6px);
 }
 
-.btn-valentin:hover {
+.btn-valentin:hover{
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
   filter: brightness(1.08);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .hero-valentin { min-height: 45vh; }
-  .hero-overlay { min-height: 45vh; }
-  .hero-content { margin-bottom: 22px; }
-  .btn-valentin {
-    padding: 12px 26px;
+/* ===== HERO RESPONSIVE (MÓVIL = BANNER REAL, NO POSTER) ===== */
+@media (max-width: 768px){
+
+  /* Clave: usar ALTURA de banner, no min-height */
+  .hero-valentin{
+    min-height: auto;
+    height: clamp(220px, 38vw, 320px); /* banner */
+    background: url("img/hero-valentin.jpg") center/contain no-repeat;
+    background-color: #000; /* relleno elegante */
+  }
+
+  .hero-overlay{
+    min-height: auto;
+    height: 100%;
+    padding: 14px 12px 18px;
+    background: rgba(0,0,0,0.10); /* menos oscuro para color real */
+    align-items: flex-end;
+  }
+
+  .hero-content{
+    margin-bottom: 0;
+  }
+
+  .btn-valentin{
+    width: min(320px, 92%);
+    padding: 12px 20px;
     font-size: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-valentin { min-height: 40vh; }
-  .hero-overlay { min-height: 40vh; }
+@media (max-width: 480px){
+  .hero-valentin{
+    height: clamp(210px, 46vw, 300px);
+  }
 }
 
 /* ===== SECCIÓN SAN VALENTÍN ===== */
-.san-valentin {
+.san-valentin{
   text-align: center;
   padding: 50px 20px 20px;
 }
 
-.san-valentin h2 {
+.san-valentin h2{
   color: #d4af37;
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
-.san-valentin-sub {
-  color: #555;
+.san-valentin-sub{
+  color: #bdbdbd; /* mejor en fondo oscuro */
   font-size: 1rem;
   margin-bottom: 30px;
 }
 
-.san-valentin-grid {
+/* ===== GRID SAN VALENTÍN (4 / 2 / 1) ===== */
+.san-valentin-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1024px){
+  .san-valentin-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px){
+  .san-valentin-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== CARDS SAN VALENTÍN (ESTILO ESPECIAL) ===== */
-.san-valentin .valentin-card {
+.san-valentin .valentin-card{
   position: relative;
   border: 1px solid rgba(212, 175, 55, 0.35);
   background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(6,6,6,0.98));
@@ -788,25 +821,21 @@ body {
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.san-valentin .valentin-card::before {
+.san-valentin .valentin-card::before{
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at 50% 20%,
-    rgba(139, 29, 44, 0.18),
-    transparent 55%
-  );
+  background: radial-gradient(circle at 50% 20%, rgba(139, 29, 44, 0.18), transparent 55%);
   pointer-events: none;
 }
 
-.san-valentin .valentin-card:hover {
+.san-valentin .valentin-card:hover{
   transform: translateY(-4px);
   box-shadow: 0 20px 44px rgba(0,0,0,0.45);
 }
 
-/* Badge San Valentín */
-.valentin-badge {
+/* Badge */
+.valentin-badge{
   position: absolute;
   top: 12px;
   left: 12px;
@@ -815,75 +844,32 @@ body {
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   border: 1px solid rgba(212, 175, 55, 0.3);
   box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
-/* Botón especial solo en San Valentín */
-.san-valentin .valentin-card .consultar-btn {
+/* Botón especial en cards */
+.san-valentin .valentin-card .consultar-btn{
   background: linear-gradient(135deg, #8b1d2c, #c81d3a);
   color: #fff;
   border: 1px solid rgba(212, 175, 55, 0.35);
   border-radius: 999px;
   padding: 10px 18px;
-  font-weight: 700;
+  font-weight: 800;
   transition: transform .2s ease, filter .2s ease;
 }
 
-.san-valentin .valentin-card .consultar-btn:hover {
+.san-valentin .valentin-card .consultar-btn:hover{
   transform: translateY(-1px);
   filter: brightness(1.08);
 }
 
-/* ===== GRID SAN VALENTÍN RESPONSIVE (FIX DEFINITIVO) ===== */
-.san-valentin-grid{
-  display: grid;
-  gap: 22px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-/* Tablets y celulares: 2x2 */
+/* Botón ancho en tablet/móvil */
 @media (max-width: 1024px){
-  .san-valentin-grid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Celulares pequeños: 1 columna */
-@media (max-width: 520px){
-  .san-valentin-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Ajustes visuales mobile */
-@media (max-width: 1024px){
-  .san-valentin .valentin-card{
-    width: 100%;
-  }
-
   .san-valentin .valentin-card .consultar-btn{
     width: 100%;
     padding: 12px 0;
   }
 }
 
-/* ===== HERO SAN VALENTÍN: FIX MÓVIL (NO SE CORTA) ===== */
-@media (max-width: 768px) {
-  .hero-valentin{
-    min-height: 52vh;          /* menos alto en teléfono */
-    background-size: contain;  /* muestra el banner completo */
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-color: #000;    /* relleno elegante */
-  }
-
-  .hero-overlay{
-    background: rgba(0,0,0,0.15); /* menos oscuro en móvil */
-  }
-
-  .btn-valentin{
-    margin-top: 14px;
-  }
-}
