@@ -689,37 +689,46 @@ body {
 }
 
 /* =========================
-   HERO SAN VALENTÍN – MATÍAS PARFUM (CORREGIDO + LIMPIO)
+   HERO SAN VALENTÍN – MATÍAS PARFUM (DEFINITIVO, SIN RECORTES FEOS)
    ========================= */
 
-/* HERO (PC): banner grande, sin “corte” agresivo */
+/* HERO (PC) */
 .hero-valentin{
   width: 100%;
+  /* ✅ Usa ALTURA real en vez de vh (vh recorta feo en pantallas grandes) */
+  height: clamp(360px, 34vw, 620px);
+
   background-image: url("img/hero-valentin.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
-  /* ✅ ajusta el encuadre para que no corte arriba */
-  background-position: center 35%;
+  /* ✅ Ajusta el encuadre para no cortar logo/título arriba */
+  background-position: center 18%;
 
-  min-height: 52vh;
   overflow: hidden;
 
-  /* ✅ separa del contenido de abajo */
+  /* ✅ aire con la sección de abajo */
   margin: 0 0 70px 0;
+  position: relative;
 }
 
-/* Overlay uniforme */
+/* Overlay uniforme (suave y sin franjas) */
 .hero-overlay{
-  background: rgba(0,0,0,0.06); /* ✅ menos oscuro = color más real */
   width: 100%;
-  min-height: 52vh;
+  height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: flex-end;
 
-  padding: 24px 16px;
+  padding: 18px 14px;
+
+  /* ✅ overlay tipo “fade” (no apaga la imagen) */
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.02),
+    rgba(0,0,0,0.14)
+  );
 }
 
 /* Contenedor del botón */
@@ -729,8 +738,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  /* ✅ aire del botón */
-  padding-bottom: 24px;
+  /* ✅ separa botón del borde inferior */
+  padding-bottom: 14px;
 }
 
 /* Botón premium */
@@ -738,48 +747,40 @@ body {
   background: linear-gradient(135deg, #8b1d2c, #c81d3a);
   color: #fff;
   border: 1px solid rgba(212,175,55,0.35);
-  padding: 14px 34px;
-  font-size: 1.05rem;
+  padding: 13px 32px;
+  font-size: 1.02rem;
   border-radius: 999px;
   cursor: pointer;
   font-weight: 800;
   letter-spacing: 0.3px;
 
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
   transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
 }
 
 .btn-valentin:hover{
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.45);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.40);
   filter: brightness(1.06);
 }
 
-/* ===== MÓVIL: banner completo (sin recorte) ===== */
+/* ✅ MÓVIL: banner COMPLETO (sin recorte) */
 @media (max-width: 768px){
   .hero-valentin{
-    min-height: auto;
-
-    /* ✅ altura de banner real */
-    height: clamp(240px, 55vw, 360px);
-
-    /* ✅ muestra imagen completa */
-    background-size: contain;
-    background-position: center;
-    background-color: #000;
-
+    height: clamp(240px, 58vw, 380px);
+    background-size: contain;          /* ✅ muestra todo */
+    background-position: center center;
+    background-color: #000;            /* ✅ relleno elegante */
     margin-bottom: 55px;
   }
 
   .hero-overlay{
-    min-height: auto;
-    height: 100%;
-    background: rgba(0,0,0,0.03); /* ✅ casi nada de overlay */
+    background: rgba(0,0,0,0.05);      /* ✅ casi nada de overlay */
     padding: 12px 12px 16px;
   }
 
   .hero-content{
-    padding-bottom: 12px;
+    padding-bottom: 10px;
   }
 
   .btn-valentin{
@@ -791,7 +792,7 @@ body {
 
 @media (max-width: 480px){
   .hero-valentin{
-    height: clamp(230px, 62vw, 360px);
+    height: clamp(230px, 68vw, 380px);
     margin-bottom: 48px;
   }
 }
@@ -855,10 +856,10 @@ body {
   box-shadow: 0 20px 44px rgba(0,0,0,0.45);
 }
 
-/* ✅ Imagen dentro de la card (para que se vea más pro) */
+/* ✅ Imagen consistente */
 .san-valentin .valentin-card img{
   width: 100%;
-  height: 240px;
+  aspect-ratio: 1 / 1;                /* ✅ cuadrada y pro */
   object-fit: cover;
   display: block;
   border-bottom: 1px solid rgba(212,175,55,0.15);
