@@ -869,3 +869,21 @@ body {
   }
 }
 
+/* ===== HERO SAN VALENTÍN: FIX MÓVIL (NO SE CORTA) ===== */
+@media (max-width: 768px) {
+  .hero-valentin{
+    min-height: 52vh;          /* menos alto en teléfono */
+    background-size: contain;  /* muestra el banner completo */
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000;    /* relleno elegante */
+  }
+
+  .hero-overlay{
+    background: rgba(0,0,0,0.15); /* menos oscuro en móvil */
+  }
+
+  .btn-valentin{
+    margin-top: 14px;
+  }
+}
