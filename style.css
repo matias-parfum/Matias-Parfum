@@ -753,3 +753,27 @@ body {
   .hero-valentin { min-height: 40vh; }
   .hero-overlay { min-height: 40vh; }
 }
+
+/* ===== SECCIÓN SAN VALENTÍN ===== */
+.san-valentin {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+.san-valentin h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.san-valentin-sub {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.san-valentin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
