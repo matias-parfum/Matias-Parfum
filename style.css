@@ -688,36 +688,35 @@ body {
   text-decoration:underline;
 }
 
-/* ===== HERO SAN VALENTÍN – MATÍAS PARFUM (FINAL LIMPIO) ===== */
+/* ===== HERO SAN VALENTÍN – MATÍAS PARFUM (CENTRADO FIX) ===== */
 .hero-valentin {
-  width: 100%;
+  width: 100vw;                 /* ocupa toda la pantalla */
+  margin-left: calc(50% - 50vw);/* elimina cualquier padding/margen del contenedor padre */
   background: url("img/hero-valentin.jpg") center top / cover no-repeat;
   min-height: 52vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
   overflow: hidden;
 }
 
-/* Overlay uniforme (SIN franjas ni sombras raras) */
+/* Overlay uniforme, centrado real */
 .hero-overlay {
   background: rgba(0, 0, 0, 0.30);
   width: 100%;
-  height: 100%;
+  min-height: 52vh;             /* asegura altura */
   padding: 40px 20px;
   display: flex;
-  align-items: flex-end;   /* baja el botón */
-  justify-content: center;
+  justify-content: center;      /* centra horizontal */
+  align-items: flex-end;        /* baja el contenido */
 }
 
 /* Contenedor del botón */
 .hero-content {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;      /* centra el botón */
   margin-bottom: 60px;
 }
 
-/* Botón San Valentín – elegante y premium */
+/* Botón San Valentín */
 .btn-valentin {
   background: linear-gradient(135deg, #8b1d2c, #c81d3a);
   color: #fff;
@@ -738,22 +737,15 @@ body {
   filter: brightness(1.08);
 }
 
-/* ===== RESPONSIVE ===== */
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-valentin {
-    min-height: 45vh;
-  }
-  .hero-content {
-    margin-bottom: 30px;
-  }
-  .btn-valentin {
-    padding: 12px 26px;
-    font-size: 1rem;
-  }
+  .hero-valentin { min-height: 45vh; }
+  .hero-overlay { min-height: 45vh; }
+  .hero-content { margin-bottom: 30px; }
+  .btn-valentin { padding: 12px 26px; font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
-  .hero-valentin {
-    min-height: 40vh;
-  }
+  .hero-valentin { min-height: 40vh; }
+  .hero-overlay { min-height: 40vh; }
 }
