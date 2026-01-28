@@ -688,25 +688,38 @@ body {
   text-decoration:underline;
 }
 
-/* ===== BOTÓN SAN VALENTÍN (SOLO HERO) ===== */
-.hero-valentin button,
-.hero-valentin .btn-gold,
-.hero-valentin .btn-valentin {
-  background: linear-gradient(135deg, #8b1d2c, #c81d3a) !important;
-  color: #fff !important;
-  border: 1px solid rgba(212, 175, 55, 0.55) !important;
-  padding: 14px 34px !important;
-  border-radius: 999px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.3px !important;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35) !important;
-  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease !important;
+/* ===== SAN VALENTÍN: CENTRADO PRO ===== */
+.san-valentin{
+  width: 100%;
+  max-width: 1200px;   /* ajusta si querés más ancho */
+  margin: 0 auto;      /* centra toda la sección */
+  padding: 50px 16px 20px;
+  text-align: center;
 }
 
-.hero-valentin button:hover,
-.hero-valentin .btn-gold:hover,
-.hero-valentin .btn-valentin:hover {
-  transform: translateY(-2px) !important;
-  filter: brightness(1.06) !important;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.45) !important;
+/* Grid centrado */
+.san-valentin-grid{
+  display: grid;
+  gap: 22px;
+  justify-content: center; /* centra el grid cuando sobran espacios */
+  grid-template-columns: repeat(4, minmax(230px, 260px)); /* cards “parejas” */
+}
+
+/* Responsivo */
+@media (max-width: 1100px){
+  .san-valentin-grid{
+    grid-template-columns: repeat(2, minmax(230px, 260px));
+  }
+}
+
+@media (max-width: 560px){
+  .san-valentin-grid{
+    grid-template-columns: minmax(240px, 340px); /* 1 columna centrada */
+  }
+}
+
+/* Que cada card quede centrada dentro de su celda */
+.san-valentin .valentin-card{
+  width: 100%;
+  margin: 0 auto;
 }
