@@ -715,7 +715,10 @@ body {
   text-align: center;
   color: #fff;
   max-width: 820px;
+  display: flex;
+  justify-content: center;
 }
+
 
 .hero-valentin h1 {
   color: #d4af37;
