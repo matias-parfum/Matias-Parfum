@@ -688,35 +688,35 @@ body {
   text-decoration:underline;
 }
 
-/* ===== HERO SAN VALENTÍN – MATÍAS PARFUM (CENTRADO FIX) ===== */
+/* ===== HERO SAN VALENTÍN – MATÍAS PARFUM (FINAL DEFINITIVO) ===== */
 .hero-valentin {
-  width: 100vw;                 /* ocupa toda la pantalla */
-  margin-left: calc(50% - 50vw);/* elimina cualquier padding/margen del contenedor padre */
-  background: url("img/hero-valentin.jpg") center top / cover no-repeat;
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* fuerza full width aunque haya contenedores */
+  background: url("img/hero-valentin.jpg") center 25% / cover no-repeat;
   min-height: 52vh;
   overflow: hidden;
 }
 
-/* Overlay uniforme, centrado real */
+/* Overlay uniforme, sin franjas */
 .hero-overlay {
   background: rgba(0, 0, 0, 0.30);
   width: 100%;
-  min-height: 52vh;             /* asegura altura */
+  min-height: 52vh;
   padding: 40px 20px;
   display: flex;
-  justify-content: center;      /* centra horizontal */
-  align-items: flex-end;        /* baja el contenido */
+  justify-content: center;   /* centra horizontal */
+  align-items: flex-end;     /* baja el contenido */
 }
 
 /* Contenedor del botón */
 .hero-content {
   width: 100%;
   display: flex;
-  justify-content: center;      /* centra el botón */
-  margin-bottom: 60px;
+  justify-content: center;
+  margin-bottom: 30px;       /* ajusta altura del botón */
 }
 
-/* Botón San Valentín */
+/* Botón San Valentín (premium) */
 .btn-valentin {
   background: linear-gradient(135deg, #8b1d2c, #c81d3a);
   color: #fff;
@@ -728,7 +728,8 @@ body {
   font-weight: 600;
   letter-spacing: 0.3px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.35);
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  backdrop-filter: blur(6px);
 }
 
 .btn-valentin:hover {
@@ -737,12 +738,15 @@ body {
   filter: brightness(1.08);
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-valentin { min-height: 45vh; }
   .hero-overlay { min-height: 45vh; }
-  .hero-content { margin-bottom: 30px; }
-  .btn-valentin { padding: 12px 26px; font-size: 1rem; }
+  .hero-content { margin-bottom: 22px; }
+  .btn-valentin {
+    padding: 12px 26px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
