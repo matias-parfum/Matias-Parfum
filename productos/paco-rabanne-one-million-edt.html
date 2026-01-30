@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Paco Rabanne One Million EDT Original en Costa Rica | Matías Parfum</title>
-  <meta name="description" content="Paco Rabanne One Million EDT 100% original en Costa Rica. Elegí tamaño y cantidad y consultá por WhatsApp." />
+  <title>Paco Rabanne One Million EDT 100ML Original en Costa Rica | Matías Parfum</title>
+  <meta name="description" content="Paco Rabanne One Million EDT 100ML 100% original en Costa Rica. Elegí tamaño y cantidad y consultá por WhatsApp con Matías Parfum." />
 
   <link rel="canonical" href="https://matiasparfum.com/productos/paco-rabanne-one-million-edt.html">
   <link rel="stylesheet" href="/style.css">
@@ -25,14 +25,18 @@
 
   <!-- Imagen -->
   <div class="product-media">
-    <img src="/img/PACO RABANNE ONE MILLION 200ML EDT.png" alt="Paco Rabanne One Million EDT">
+    <img src="/img/PACO RABANNE ONE MILLION 200ML EDT.png"
+         alt="Paco Rabanne One Million EDT 100ML y 200ML">
   </div>
 
   <!-- Info -->
   <div class="product-info">
     <p class="brand">PACO RABANNE</p>
-    <h1 class="product-title">ONE MILLION EDT</h1>
-    <p class="product-desc">Perfume 100% original • Envíos en Costa Rica</p>
+    <h1 class="product-title">ONE MILLION EDT 100ML</h1>
+    <p class="product-desc">
+      Perfume 100% original • Envíos en Costa Rica <br>
+      Tamaño base: <strong>100 ML</strong>
+    </p>
 
     <!-- Precio -->
     <p class="price" id="priceDisplay" data-price="46000">₡46.000</p>
@@ -80,14 +84,14 @@
   const sizeButtons = document.querySelectorAll('.size-btn');
   const qtyInput = document.getElementById('qtyInput');
 
-  let PRICE_UNIT = 46000;
+  let PRICE_UNIT = 46000; // 100ML por defecto
 
   function formatCRC(v){
     return "₡" + v.toLocaleString("es-CR");
   }
 
   function updatePrice(){
-    const qty = parseInt(qtyInput.value);
+    const qty = parseInt(qtyInput.value, 10);
     priceDisplay.innerText = formatCRC(PRICE_UNIT * qty);
   }
 
@@ -95,24 +99,24 @@
     btn.addEventListener('click', () => {
       sizeButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      PRICE_UNIT = parseInt(btn.dataset.price);
+      PRICE_UNIT = parseInt(btn.dataset.price, 10);
       updatePrice();
     });
   });
 
   document.getElementById('qtyMinus').onclick = () => {
-    qtyInput.value = Math.max(1, qtyInput.value - 1);
+    qtyInput.value = Math.max(1, parseInt(qtyInput.value, 10) - 1);
     updatePrice();
   };
 
   document.getElementById('qtyPlus').onclick = () => {
-    qtyInput.value = parseInt(qtyInput.value) + 1;
+    qtyInput.value = parseInt(qtyInput.value, 10) + 1;
     updatePrice();
   };
 
   document.getElementById('btnConsultar').onclick = () => {
     const size = document.querySelector('.size-btn.active').dataset.size;
-    const qty = qtyInput.value;
+    const qty = parseInt(qtyInput.value, 10);
     const total = PRICE_UNIT * qty;
 
     const msg =
