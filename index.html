@@ -275,15 +275,31 @@
 
 </div>
     
-      <div class="card" data-nombre="JEAN PAUL GAULTIER LE BEAU PARADISE GARDEN 125ML EDP " data-tipo="Hombre">
-  <img src="img/PARADISE1.jpg" alt="JEAN PAUL GAULTIER LE BEAU PARADISE GARDEN 125ML EDP ">
-  <h3>JEAN PAUL GAULTIER LE BEAU PARADISE GARDEN 125ML EDP </h3>
+      <div class="card" data-nombre="JEAN PAUL GAULTIER LE BEAU PARADISE GARDEN 125ML EDP" data-tipo="Hombre">
+
+  <!-- Opción 1: click en imagen abre la página -->
+  <a href="productos/jean-paul-gaultier-le-beau-paradise-garden-125ml-edp.html" class="card-link">
+    <img src="img/PARADISE1.jpg" alt="JEAN PAUL GAULTIER LE BEAU PARADISE GARDEN 125ML EDP">
+  </a>
+
+  <!-- Click en nombre -->
+  <h3>
+    <a href="productos/jean-paul-gaultier-le-beau-paradise-garden-125ml-edp.html" class="title-link">
+      JEAN PAUL GAULTIER LE BEAU PARADISE GARDEN 125ML EDP
+    </a>
+  </h3>
+
   <p class="precio">₡65,000</p>
- <!-- Contenedor de botones -->
+
+  <!-- WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
 
       <div class="card" data-nombre="Jean Paul Gaultier LE MALE 125ML EDT" data-tipo="Hombre">
   <img src="img/lemaleEDT1.jpg" alt="Jean Paul Gaultier LE MALE 125ML EDT">
