@@ -330,13 +330,31 @@
 
       <!-- ONE MILLION -->
 <div class="card" data-nombre="PACO RABANNE ONE MILLION GOLD 100ML EDP" data-tipo="Hombre">
-  <img src="img/PACO RABANNE ONE MILLION GOLD 100ML EDP.png" alt="PACO RABANNE ONE MILLION GOLD 100ML EDP">
-  <h3>PACO RABANNE ONE MILLION GOLD 100ML EDP</h3>
+
+  <!-- Opción 1: click en imagen abre la página -->
+  <a href="productos/paco-rabanne-one-million-gold-100ml-edp.html" class="card-link">
+    <img src="img/PACO RABANNE ONE MILLION GOLD 100ML EDP.png" alt="PACO RABANNE ONE MILLION GOLD 100ML EDP">
+  </a>
+
+  <!-- Click en nombre -->
+  <h3>
+    <a href="productos/paco-rabanne-one-million-gold-100ml-edp.html" class="title-link">
+      PACO RABANNE ONE MILLION GOLD 100ML EDP
+    </a>
+  </h3>
+
   <p class="precio">₡54,000</p>
+
+  <!-- WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn"
+      onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
 
 <div class="card" data-nombre="PACO RABANNE ONE MILLION ROYAL 100ML PARFUM" data-tipo="Hombre">
   <img src="img/PACO RABANNE ONE MILLION ROYAL 100ML PARFUM.png" alt="PACO RABANNE ONE MILLION ROYAL 100ML PARFUM">
