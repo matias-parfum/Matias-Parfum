@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Paco Rabanne One Million EDT Original en Costa Rica | Matías Parfum</title>
+  <meta name="description" content="Paco Rabanne One Million EDT 100% original en Costa Rica. Elegí tamaño y cantidad y consultá por WhatsApp." />
+
+  <link rel="canonical" href="https://matiasparfum.com/productos/paco-rabanne-one-million-edt.html">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <a href="/index.html" class="logo">Matías Parfum</a>
+  <a class="top-cta" href="https://wa.me/50683674466">WhatsApp</a>
+</header>
+
+<main class="product-page">
+
+<section class="product-shell">
+<div class="product-grid">
+
+  <!-- Imagen -->
+  <div class="product-media">
+    <img src="/img/PACO RABANNE ONE MILLION 200ML EDT.png" alt="Paco Rabanne One Million EDT">
+  </div>
+
+  <!-- Info -->
+  <div class="product-info">
+    <p class="brand">PACO RABANNE</p>
+    <h1 class="product-title">ONE MILLION EDT</h1>
+    <p class="product-desc">Perfume 100% original • Envíos en Costa Rica</p>
+
+    <!-- Precio -->
+    <p class="price" id="priceDisplay" data-price="46000">₡46.000</p>
+
+    <!-- TAMAÑOS -->
+    <div class="opt-block">
+      <p class="opt-label">Tamaño</p>
+      <div class="sizes">
+        <button class="size-btn active"
+          data-size="100 ML"
+          data-price="46000">
+          100 ML
+        </button>
+
+        <button class="size-btn"
+          data-size="200 ML"
+          data-price="64000">
+          200 ML
+        </button>
+      </div>
+    </div>
+
+    <!-- Cantidad + Consultar -->
+    <div class="qty-row">
+      <div class="qty">
+        <button class="qty-btn" id="qtyMinus">−</button>
+        <input id="qtyInput" class="qty-input" value="1" readonly>
+        <button class="qty-btn" id="qtyPlus">+</button>
+      </div>
+
+      <button class="btn-consultar" id="btnConsultar">
+        CONSULTAR
+      </button>
+    </div>
+
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- JS -->
+<script>
+  const priceDisplay = document.getElementById('priceDisplay');
+  const sizeButtons = document.querySelectorAll('.size-btn');
+  const qtyInput = document.getElementById('qtyInput');
+
+  let PRICE_UNIT = 46000;
+
+  function formatCRC(v){
+    return "₡" + v.toLocaleString("es-CR");
+  }
+
+  function updatePrice(){
+    const qty = parseInt(qtyInput.value);
+    priceDisplay.innerText = formatCRC(PRICE_UNIT * qty);
+  }
+
+  sizeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      sizeButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      PRICE_UNIT = parseInt(btn.dataset.price);
+      updatePrice();
+    });
+  });
+
+  document.getElementById('qtyMinus').onclick = () => {
+    qtyInput.value = Math.max(1, qtyInput.value - 1);
+    updatePrice();
+  };
+
+  document.getElementById('qtyPlus').onclick = () => {
+    qtyInput.value = parseInt(qtyInput.value) + 1;
+    updatePrice();
+  };
+
+  document.getElementById('btnConsultar').onclick = () => {
+    const size = document.querySelector('.size-btn.active').dataset.size;
+    const qty = qtyInput.value;
+    const total = PRICE_UNIT * qty;
+
+    const msg =
+      `Hola Matías, quiero consultar por Paco Rabanne One Million EDT.\n` +
+      `Tamaño: ${size}\nCantidad: ${qty}\nTotal: ${formatCRC(total)}`;
+
+    window.open(
+      "https://wa.me/50683674466?text=" + encodeURIComponent(msg),
+      "_blank"
+    );
+  };
+
+  updatePrice();
+</script>
+
+</body>
+</html>
