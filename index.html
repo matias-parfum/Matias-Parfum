@@ -302,14 +302,31 @@
 
 
       <div class="card" data-nombre="Jean Paul Gaultier LE MALE 125ML EDT" data-tipo="Hombre">
-  <img src="img/lemaleEDT1.jpg" alt="Jean Paul Gaultier LE MALE 125ML EDT">
-  <h3>Jean Paul Gaultier LE MALE 125ML EDT</h3>
+
+  <!-- Opción 1: click en imagen abre la página -->
+  <a href="productos/jean-paul-gaultier-le-male-125ml-edt.html" class="card-link">
+    <img src="img/lemaleEDT1.jpg" alt="Jean Paul Gaultier LE MALE 125ML EDT">
+  </a>
+
+  <!-- Click en nombre -->
+  <h3>
+    <a href="productos/jean-paul-gaultier-le-male-125ml-edt.html" class="title-link">
+      Jean Paul Gaultier LE MALE 125ML EDT
+    </a>
+  </h3>
+
   <p class="precio">₡47,000</p>
- <!-- Contenedor de botones -->
+
+  <!-- WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn"
+      onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
 
       <!-- ONE MILLION -->
 <div class="card" data-nombre="PACO RABANNE ONE MILLION GOLD 100ML EDP" data-tipo="Hombre">
