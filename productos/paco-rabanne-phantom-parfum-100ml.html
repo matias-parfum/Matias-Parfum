@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Paco Rabanne Phantom Parfum 100ML Original en Costa Rica | Matías Parfum</title>
+  <meta name="description" content="Paco Rabanne Phantom Parfum 100ML 100% original en Costa Rica. Elegí cantidad y consultá por WhatsApp con Matías Parfum." />
+
+  <link rel="canonical" href="https://matiasparfum.com/productos/paco-rabanne-phantom-parfum-100ml.html">
+  <link rel="stylesheet" href="/style.css">
+
+  <meta property="og:title" content="Paco Rabanne Phantom Parfum 100ML | Matías Parfum" />
+  <meta property="og:description" content="Perfume original en Costa Rica. Elegí cantidad y consultá por WhatsApp." />
+  <meta property="og:type" content="product" />
+  <meta property="og:url" content="https://matiasparfum.com/productos/paco-rabanne-phantom-parfum-100ml.html" />
+  <meta property="og:image" content="https://matiasparfum.com/img/PACO%20RABANNE%20PHANTOM%20100ML%20PARFUM.png" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <a href="/index.html" class="logo">Matías Parfum</a>
+  <a class="top-cta" href="https://wa.me/50683674466">WhatsApp</a>
+</header>
+
+<nav class="breadcrumb">
+  <a href="/index.html">Inicio</a>
+  <span>/</span>
+  <a href="/index.html#hombre">Perfumes</a>
+  <span>/</span>
+  <a href="/index.html#paco">Paco Rabanne</a>
+  <span>/</span>
+  <strong>Phantom Parfum</strong>
+</nav>
+
+<main class="product-page">
+
+<section class="product-shell">
+<div class="product-grid">
+
+  <!-- Imagen -->
+  <div class="product-media">
+    <img src="/img/PACO RABANNE PHANTOM 100ML PARFUM.png" alt="Paco Rabanne Phantom Parfum 100ML" />
+  </div>
+
+  <!-- Info -->
+  <div class="product-info">
+    <p class="brand">PACO RABANNE</p>
+    <h1 class="product-title">PHANTOM PARFUM</h1>
+    <p class="product-desc">Perfume 100% original • Envíos en Costa Rica</p>
+
+    <!-- Precio -->
+    <p class="price" id="priceDisplay" data-price="58000">₡58.000</p>
+
+    <!-- Tamaño -->
+    <div class="opt-block">
+      <p class="opt-label">Tamaño</p>
+      <div class="sizes">
+        <button class="size-btn active" data-size="100 ML">100 ML</button>
+      </div>
+    </div>
+
+    <!-- Cantidad -->
+    <div class="qty-row">
+      <div class="qty">
+        <button class="qty-btn" id="qtyMinus">−</button>
+        <input id="qtyInput" class="qty-input" value="1" readonly>
+        <button class="qty-btn" id="qtyPlus">+</button>
+      </div>
+
+      <button class="btn-consultar" id="btnConsultar">
+        CONSULTAR
+      </button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab-head">
+        <button class="tab-btn active" data-tab="desc">DESCRIPCIÓN</button>
+        <button class="tab-btn" data-tab="notes">NOTAS</button>
+      </div>
+
+      <div class="tab-body">
+        <div class="tab-panel active" id="tab-desc">
+          <p>
+            Phantom Parfum es la versión más oscura y potente de la línea Phantom.
+            Más intensa, más nocturna y con un fondo balsámico–vainilla muy adictivo.
+            Ideal para noches, salidas y clima fresco.
+          </p>
+        </div>
+
+        <div class="tab-panel" id="tab-notes">
+          <ul class="info-list">
+            <li><strong>Salida:</strong> Ruibarbo, cardamomo, bergamota</li>
+            <li><strong>Corazón:</strong> Lavanda, pachulí, geranio</li>
+            <li><strong>Fondo:</strong> Vainilla, bálsamo de Tolú, vetiver</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="backlink"><a href="/index.html">← Volver al catálogo</a></p>
+  </div>
+
+</div>
+</section>
+
+</main>
+
+<script>
+  const qtyInput = document.getElementById('qtyInput');
+  const priceDisplay = document.getElementById('priceDisplay');
+  const PRICE_UNIT = parseInt(priceDisplay.dataset.price, 10);
+
+  function formatCRC(v){
+    return "₡" + v.toLocaleString("es-CR");
+  }
+
+  function updatePrice(){
+    const q = parseInt(qtyInput.value);
+    priceDisplay.innerText = formatCRC(PRICE_UNIT * q);
+  }
+
+  document.getElementById('qtyMinus').onclick = () => {
+    qtyInput.value = Math.max(1, qtyInput.value - 1);
+    updatePrice();
+  };
+
+  document.getElementById('qtyPlus').onclick = () => {
+    qtyInput.value = parseInt(qtyInput.value) + 1;
+    updatePrice();
+  };
+
+  document.getElementById('btnConsultar').onclick = () => {
+    const qty = qtyInput.value;
+    const total = PRICE_UNIT * qty;
+
+    const msg =
+      `Hola Matías, quiero consultar por Paco Rabanne Phantom Parfum.\n` +
+      `Tamaño: 100 ML\nCantidad: ${qty}\nTotal: ${formatCRC(total)}`;
+
+    window.open(
+      "https://wa.me/50683674466?text=" + encodeURIComponent(msg),
+      "_blank"
+    );
+  };
+
+  updatePrice();
+</script>
+
+</body>
+</html>
