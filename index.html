@@ -251,13 +251,28 @@
 </div>
       
       <div class="card" data-nombre="Jean Paul Gaultier Le Beau" data-tipo="Hombre">
-  <img src="img/lebea1.jpg" alt="Jean Paul Gaultier Le Beau">
-  <h3>Jean Paul Gaultier Le Beau</h3>
+
+  <!-- Opción 1: click en imagen abre la página del producto -->
+  <a href="productos/jean-paul-gaultier-le-beau-edt.html" class="card-link">
+    <img src="img/lebea1.jpg" alt="Jean Paul Gaultier Le Beau">
+  </a>
+
+  <!-- Opción 1 también: click en el nombre -->
+  <h3>
+    <a href="productos/jean-paul-gaultier-le-beau-edt.html" class="title-link">
+      Jean Paul Gaultier Le Beau
+    </a>
+  </h3>
+
   <p class="precio">₡55,000</p>
-  <!-- Contenedor de botones -->
+
+  <!-- Opción 2: WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
     
       <div class="card" data-nombre="JEAN PAUL GAULTIER LE BEAU PARADISE GARDEN 125ML EDP " data-tipo="Hombre">
