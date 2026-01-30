@@ -408,22 +408,29 @@
 </div>
 
 
-<div class="card" data-nombre="PACO RABANNE ONE MILLION 100ML EDT" data-tipo="Hombre">
-  <img src="img/PACO RABANNE ONE MILLION 200ML EDT.png" alt="PACO RABANNE ONE MILLION 100ML EDT">
-  <h3>PACO RABANNE ONE MILLION 100ML EDT</h3>
-  <p class="precio">₡46,000</p>
-  <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
-  </div>
-</div>
+<div class="card" data-nombre="PACO RABANNE ONE MILLION EDT" data-tipo="Hombre">
 
-<div class="card" data-nombre="PACO RABANNE ONE MILLION 200ML EDT" data-tipo="Hombre">
-  <img src="img/PACO RABANNE ONE MILLION 200ML EDT.png" alt="PACO RABANNE ONE MILLION 200ML EDT">
-  <h3>PACO RABANNE ONE MILLION 200ML EDT</h3>
-  <p class="precio">₡64,000</p>
+  <!-- Imagen clickeable -->
+  <a href="productos/paco-rabanne-one-million-edt.html" class="card-link">
+    <img src="img/PACO RABANNE ONE MILLION 200ML EDT.png" alt="Paco Rabanne One Million EDT">
+  </a>
+
+  <!-- Nombre clickeable -->
+  <h3>
+    <a href="productos/paco-rabanne-one-million-edt.html" class="title-link">
+      PACO RABANNE ONE MILLION EDT
+    </a>
+  </h3>
+
+  <p class="precio">Desde ₡46,000</p>
+
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn"
+      onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
 
 <!-- PHANTOM -->
