@@ -200,14 +200,31 @@
 
 
       <div class="card" data-nombre="JEAN PAUL GAULTIER LE MALE ELIXIR ABSOLU 125ML EDP" data-tipo="Hombre">
-  <img src="img/ELIXIRABSOLU1.jpg" alt="JEAN PAUL GAULTIER LE MALE ELIXIR ABSOLU 125ML EDP">
-  <h3>JEAN PAUL GAULTIER LE MALE ELIXIR ABSOLU 125ML EDP</h3>
+
+  <!-- Opción 1: click en imagen abre la página -->
+  <a href="productos/jean-paul-gaultier-le-male-elixir-absolu-125ml-edp.html" class="card-link">
+    <img src="img/ELIXIRABSOLU1.jpg" alt="JEAN PAUL GAULTIER LE MALE ELIXIR ABSOLU 125ML EDP">
+  </a>
+
+  <!-- Click en nombre -->
+  <h3>
+    <a href="productos/jean-paul-gaultier-le-male-elixir-absolu-125ml-edp.html" class="title-link">
+      JEAN PAUL GAULTIER LE MALE ELIXIR ABSOLU 125ML EDP
+    </a>
+  </h3>
+
   <p class="precio">₡71,000</p>
- <!-- Contenedor de botones -->
+
+  <!-- WhatsApp directo -->
   <div class="card-buttons">
-    <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
+    <button class="consultar-btn"
+      onclick="consultarPerfume(this.closest('.card').dataset.nombre)">
+      Consultar
+    </button>
   </div>
+
 </div>
+
 
       <div class="card" data-nombre="Jean Paul Gaultier Le Beau Le Parfum" data-tipo="Hombre">
   <img src="img/parfum1.jpg" alt="Jean Paul Gaultier Le Beau Le Parfum">
