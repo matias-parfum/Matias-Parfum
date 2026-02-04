@@ -730,10 +730,10 @@ body {
 }
 
 /* ===============================
-   CARDS ESTILO ELIVI (CLON VISUAL)
+   CARDS ESTILO ELIVI (SIN TOCAR HTML)
    =============================== */
 
-.perfume-card {
+.card {
   background: #1a1a1a; /* gris exacto tipo Elivi */
   border-radius: 22px;
   padding: 18px;
@@ -744,7 +744,7 @@ body {
 }
 
 /* Imagen */
-.perfume-card img {
+.card img {
   width: 100%;
   height: 340px;
   object-fit: cover;
@@ -752,33 +752,24 @@ body {
   display: block;
 }
 
-/* Info nombre + precio */
-.perfume-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.perfume-info h3 {
+/* Nombre + precio (ya existen en tu HTML) */
+.card h3 {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
   color: #ffffff;
   line-height: 1.4;
-  max-width: 70%;
 }
 
-.perfume-info .precio {
+.card .precio {
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
   opacity: 0.9;
-  white-space: nowrap;
 }
 
-/* Botón inferior */
-.btn-consultar {
+/* Botón Consultar */
+.card .consultar-btn {
   margin-top: auto;
   padding: 12px 0;
   border-radius: 12px;
@@ -791,6 +782,6 @@ body {
   transition: all 0.25s ease;
 }
 
-.btn-consultar:hover {
+.card .consultar-btn:hover {
   opacity: 0.85;
 }
