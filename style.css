@@ -728,3 +728,69 @@ body {
   outline: none;
   box-shadow: none;
 }
+
+/* ===============================
+   CARDS ESTILO ELIVI (CLON VISUAL)
+   =============================== */
+
+.perfume-card {
+  background: #1a1a1a; /* gris exacto tipo Elivi */
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.55);
+}
+
+/* Imagen */
+.perfume-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Info nombre + precio */
+.perfume-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.perfume-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+  line-height: 1.4;
+  max-width: 70%;
+}
+
+.perfume-info .precio {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* Botón inferior */
+.btn-consultar {
+  margin-top: auto;
+  padding: 12px 0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-consultar:hover {
+  opacity: 0.85;
+}
