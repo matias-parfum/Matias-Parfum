@@ -909,3 +909,83 @@ body {
   font-size: 15px;     /* antes ~13 */
   font-weight: 600;
 }
+
+/* ===============================
+   HERO PRINCIPAL – MATÍAS PARFUM
+   =============================== */
+
+.hero-principal {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(212,175,55,0.08), transparent 60%),
+    linear-gradient(180deg, #0f0f0f, #0b0b0b);
+  text-align: center;
+  padding: 0 22px;
+}
+
+.hero-principal-content {
+  max-width: 640px;
+}
+
+/* Texto pequeño superior */
+.hero-eyebrow {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 16px;
+}
+
+/* Título principal */
+.hero-principal h1 {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+  color: #ffffff;
+}
+
+/* Texto descriptivo */
+.hero-principal p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cccccc;
+  margin-bottom: 36px;
+}
+
+/* Botón CTA */
+.hero-cta {
+  padding: 14px 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,175,55,0.85);
+  background: transparent;
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: rgba(212,175,55,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-principal {
+    min-height: 70vh;
+  }
+
+  .hero-principal h1 {
+    font-size: 34px;
+  }
+
+  .hero-principal p {
+    font-size: 15px;
+  }
+}
