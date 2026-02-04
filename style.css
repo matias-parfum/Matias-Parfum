@@ -799,3 +799,93 @@ body {
 .consultar-btn:hover {
   background: rgba(212,175,55,0.08);
 }
+
+/* ===============================
+   HERO ESTILO ELIVI – MATÍAS PARFUM
+   =============================== */
+
+.hero-elivi {
+  width: 100%;
+  min-height: 90vh;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+}
+
+.hero-elivi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* TEXTO */
+.hero-elivi-text h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #e5c07b;
+}
+
+.hero-elivi-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 420px;
+  color: #ddd;
+  margin-bottom: 32px;
+}
+
+/* BOTÓN */
+.hero-consultar {
+  padding: 14px 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,175,55,0.8);
+  background: transparent;
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-consultar:hover {
+  background: rgba(212,175,55,0.08);
+}
+
+/* IMAGEN ABSTRACTA */
+.hero-elivi-image {
+  position: relative;
+  height: 520px;
+}
+
+.abstract-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(212,175,55,0.15), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.06), transparent 55%),
+    linear-gradient(180deg, #151515, #0c0c0c);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-elivi-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-elivi-text p {
+    margin: 0 auto 32px;
+  }
+
+  .hero-elivi-image {
+    height: 360px;
+  }
+}
