@@ -818,3 +818,41 @@ body {
     font-size:46px;
   }
 }
+
+/* ==========================
+   HERO EDITORIAL – FONDO INTEGRADO
+   ========================== */
+
+.hero-editorial{
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 70% 50%, rgba(212,175,55,0.22), transparent 55%),
+    url("img/portadanueva.png") no-repeat right center,
+    #0b0b0b;
+  background-size: 700px, cover;
+  overflow: hidden;
+}
+
+/* Capa para fundir el fondo con el texto */
+.hero-editorial::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    #0b0b0b 35%,
+    rgba(11,11,11,0.9) 60%,
+    rgba(11,11,11,0.65) 100%
+  );
+  pointer-events:none;
+}
+
+/* Asegura que el texto quede por encima */
+.hero-container,
+.hero-content{
+  position: relative;
+  z-index: 2;
+}
