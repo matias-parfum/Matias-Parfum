@@ -853,3 +853,43 @@ body {
 .card .precio {
   margin-bottom: 26px;
 }
+
+/* ===============================
+   AJUSTE MÓVIL – ESTILO ELIVI
+   =============================== */
+
+@media (max-width: 768px) {
+
+  /* Card más compacta */
+  .card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  /* Imagen más equilibrada */
+  .card img {
+    height: 260px;
+    border-radius: 18px;
+  }
+
+  /* Título legible en móvil */
+  .card h3 {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+
+  /* Precio más claro */
+  .card .precio {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  /* Botón cómodo para el dedo */
+  .card .consultar-btn {
+    padding: 16px 0;
+    font-size: 14px;
+    border-radius: 16px;
+  }
+
+}
