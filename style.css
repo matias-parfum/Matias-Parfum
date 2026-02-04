@@ -821,3 +821,26 @@ body {
   border-radius: 14px;
   padding: 14px 0;
 }
+
+/* ===== PULIDO FINAL ESTILO ELIVI ===== */
+
+/* Gris un poco más suave y elegante */
+.card {
+  background: #1c1c1c;
+}
+
+/* Más aire antes del botón */
+.card .precio {
+  margin-bottom: 22px;
+}
+
+/* Botón un poco más “Elivi” */
+.card .consultar-btn {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* Imagen aún más integrada */
+.card img {
+  border-radius: 20px;
+}
