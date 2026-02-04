@@ -844,3 +844,12 @@ body {
 .card img {
   border-radius: 20px;
 }
+
+/* Ajuste editorial final */
+.card h3 {
+  margin-top: 6px;
+}
+
+.card .precio {
+  margin-bottom: 26px;
+}
