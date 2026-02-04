@@ -818,9 +818,3 @@ body {
     font-size:46px;
   }
 }
-
-.hero-editorial{
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-}
