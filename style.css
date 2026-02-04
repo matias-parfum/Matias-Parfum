@@ -856,3 +856,24 @@ body {
   position: relative;
   z-index: 2;
 }
+
+.hero-content{
+  max-width: 520px;
+  margin-left: 6vw;
+}
+
+.hero-editorial::before{
+  content:"";
+  position:absolute;
+  left:6vw;
+  top:20%;
+  width:1px;
+  height:60%;
+  background:linear-gradient(
+    to bottom,
+    transparent,
+    rgba(212,175,55,0.35),
+    transparent
+  );
+  z-index:1;
+}
