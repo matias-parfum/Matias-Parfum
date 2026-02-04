@@ -893,3 +893,19 @@ body {
   }
 
 }
+
+/* ===============================
+   AJUSTE TAMAÑO TEXTO + PRECIO
+   =============================== */
+
+/* Nombre del perfume */
+.card h3 {
+  font-size: 15.5px;   /* antes ~13–14 */
+  line-height: 1.55;
+}
+
+/* Precio */
+.card .precio {
+  font-size: 15px;     /* antes ~13 */
+  font-weight: 600;
+}
