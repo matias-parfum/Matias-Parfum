@@ -728,3 +728,24 @@ body {
   outline: none;
   box-shadow: none;
 }
+
+.card-buttons {
+  margin-top: 14px;
+}
+
+.consultar-btn {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.consultar-btn:hover {
+  background: #d4af37;
+  color: #000;
+}
