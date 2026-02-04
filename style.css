@@ -728,3 +728,23 @@ body {
   outline: none;
   box-shadow: none;
 }
+
+/* ===============================
+   CARDS REDONDAS – MATÍAS PARFUM
+   =============================== */
+
+/* Card general */
+.card {
+  border-radius: 22px;
+  overflow: hidden; /* clave para que la imagen respete el borde */
+}
+
+/* Imagen dentro de la card */
+.card img {
+  border-radius: 16px;
+}
+
+/* Botón (opcional, más suave) */
+.card .consultar-btn {
+  border-radius: 14px;
+}
