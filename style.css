@@ -100,7 +100,7 @@ body {
   height: 70vh;
   max-height: 700px;
   background-image: url("portada1.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000;
