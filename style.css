@@ -785,3 +785,39 @@ body {
 .card .consultar-btn:hover {
   opacity: 0.85;
 }
+
+/* ===== AJUSTE FINO ESTILO ELIVI ===== */
+
+/* Más aire interno en la card */
+.card {
+  padding: 22px;
+}
+
+/* Imagen más integrada (menos marco) */
+.card img {
+  border-radius: 18px;
+  margin-bottom: 16px;
+}
+
+/* Títulos más editoriales */
+.card h3 {
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+}
+
+/* Precio alineado y más limpio */
+.card .precio {
+  text-align: left;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+
+/* Botón más ancho, más protagonista */
+.card .consultar-btn {
+  width: 100%;
+  border-radius: 14px;
+  padding: 14px 0;
+}
