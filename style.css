@@ -931,3 +931,75 @@ body {
     display:none;
   }
 }
+
+/* ==========================
+   HERO EDITORIAL (DESKTOP + MOBILE)
+   ========================== */
+
+.hero-editorial{
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 70% 50%, rgba(212,175,55,0.22), transparent 55%),
+    url("img/portadanueva.png") no-repeat right center,
+    #0b0b0b;
+  background-size: 700px, cover;
+  overflow: hidden;
+}
+
+.hero-editorial::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    #0b0b0b 35%,
+    rgba(11,11,11,0.9) 60%,
+    rgba(11,11,11,0.65) 100%
+  );
+  pointer-events:none;
+}
+
+.hero-container,
+.hero-content{
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content{
+  max-width: 520px;
+  margin-left: 6vw;
+  transform: translateY(-20px);
+}
+
+/* ========= MOBILE FIX ========= */
+@media (max-width: 768px){
+
+  .hero-editorial{
+    min-height: 90vh;
+    background:
+      radial-gradient(circle at 50% 75%, rgba(212,175,55,0.25), transparent 60%),
+      url("img/portadanueva.png") no-repeat center bottom,
+      #0b0b0b;
+    background-size: 120%, cover;
+  }
+
+  .hero-content{
+    margin-left: 0;
+    max-width: 92%;
+    text-align: left;   /* si quieres centrado: cambia a center */
+    transform: translateY(-10px);
+    margin: 0 auto;
+  }
+
+  .hero-content h1{
+    font-size: 42px;
+    letter-spacing: 4px;
+  }
+
+  .hero-btn{
+    padding: 16px 48px;
+  }
+}
