@@ -749,3 +749,79 @@ body {
   background: #d4af37;
   color: #000;
 }
+
+/* ===============================
+   CARDS ESTILO EDITORIAL (IGUAL A LA IMAGEN GUÍA)
+   =============================== */
+
+.card {
+  background: linear-gradient(180deg, #0c0c0c, #090909);
+  padding: 26px 22px 24px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow:
+    inset 0 0 0 1px rgba(212,175,55,0.08),
+    0 18px 40px rgba(0,0,0,0.65);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Imagen protagonista, como vitrina */
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  transition: transform 0.35s ease;
+}
+
+/* Hover sutil */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 0 1px rgba(212,175,55,0.12),
+    0 28px 60px rgba(0,0,0,0.75);
+}
+
+.card:hover img {
+  transform: scale(1.02);
+}
+
+/* Título elegante y compacto */
+.card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Precio discreto, no protagonista */
+.precio {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #d4af37;
+  opacity: 0.9;
+}
+
+/* Contenedor del botón */
+.card-buttons {
+  margin-top: 4px;
+}
+
+/* Botón EXACTO estilo imagen guía */
+.consultar-btn {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 999px;
+  border: 1px solid rgba(212,175,55,0.9);
+  background: transparent;
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.consultar-btn:hover {
+  background: rgba(212,175,55,0.08);
+}
