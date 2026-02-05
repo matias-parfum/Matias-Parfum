@@ -403,11 +403,12 @@ body {
   justify-content: center;
   gap: 8px;
 
-  padding: 10px 12px;
+  padding: 10px 22px;
   font-size: 13px;
 
-  background: #0b0b0b;
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: transparent;
+  border: 1px solid rgba(198,179,142,0.3);
+  color: #e6e1d5;
   border-radius: 999px;
 }
 
@@ -423,19 +424,22 @@ body {
   margin-bottom: 18px;
 }
 
-.intro p {
-  font-size: 15px;
+.intro p{
+  max-width: 700px;
+  margin: 0 auto 22px;
   line-height: 1.8;
-  max-width: 750px;
-  margin: 0 auto 16px;
-  color: #ddd;
+  font-size: 15px;
+  color: #e6e1d5;
 }
 
-.intro .slogan {
-  margin-top: 22px;
+
+.intro .slogan{
+  margin-top: 30px;
   font-style: italic;
-  color: #e5c07b;
+  font-size: 14px;
+  color: #c6b38e;
 }
+
 
 /* ===============================
    PRODUCTO TIPO TIENDA (LUJO)
@@ -817,7 +821,12 @@ body {
 }
 
 .confianza{
-  margin-top: 60px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(198,179,142,0.25);
+  border-radius: 18px;
+  padding: 50px 40px;
+  max-width: 900px;
+  margin: 80px auto 0;
 }
 
 /* =========================
