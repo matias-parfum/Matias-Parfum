@@ -828,8 +828,8 @@ body {
   height: 100vh;
   background:
     linear-gradient(
-      rgba(0,0,0,0.6),
-      rgba(0,0,0,0.6)
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.7)
     ),
     url("img/fondo-hero1.png");
   background-size: cover;
@@ -837,9 +837,17 @@ body {
   background-repeat: no-repeat;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
+  padding-top: 140px;
+}
+
+/* AJUSTE MÓVIL */
+@media (max-width: 600px){
+  .hero-elegante{
+    padding-top: 120px;
+  }
 }
 
 .hero-content{
@@ -858,7 +866,7 @@ body {
 .hero-content p{
   font-size: 18px;
   color: #e6e1d5; /* blanco hueso elegante */
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   letter-spacing: 1px;
 }
 
@@ -867,13 +875,12 @@ body {
   background: transparent;
   border: 1px solid #c6b38e;
   color: #c6b38e;
-  padding: 14px 36px;
-  font-size: 14px;
+  padding: 12px 34px;   /* ajuste fino */
+  font-size: 13px;     /* ajuste fino */
   letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 
 .btn-gold:hover{
   background: rgba(198,179,142,0.08);
