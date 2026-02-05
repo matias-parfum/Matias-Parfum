@@ -828,8 +828,8 @@ body {
   height: 100vh;
   background:
     linear-gradient(
-      rgba(0,0,0,0.7),
-      rgba(0,0,0,0.7)
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
     ),
     url("img/fondo-hero1.png");
   background-size: cover;
@@ -837,17 +837,9 @@ body {
   background-repeat: no-repeat;
 
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 140px;
-}
-
-/* AJUSTE MÓVIL */
-@media (max-width: 600px){
-  .hero-elegante{
-    padding-top: 120px;
-  }
 }
 
 .hero-content{
