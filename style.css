@@ -803,3 +803,19 @@ body {
     letter-spacing: 4px;
   }
 }
+
+/* ===== SUAVIZAR ENTRADA DESPUÉS DE INTRO ===== */
+
+/* Dar aire al hero para que no aparezca tan brusco */
+.hero{
+  margin-top: 40px;
+}
+
+/* Separar un poco más las primeras secciones */
+.intro{
+  margin-top: 80px;
+}
+
+.confianza{
+  margin-top: 60px;
+}
