@@ -827,25 +827,20 @@ body {
 .hero-elegante{
   height: 100vh;
   background:
-    radial-gradient(
-      ellipse at center,
-      rgba(255,255,255,0.08) 0%,
-      rgba(255,255,255,0.04) 18%,
-      rgba(0,0,0,0.75) 40%,
-      rgba(0,0,0,0.9) 65%,
-      #000 100%
-    ),
     linear-gradient(
-      to bottom,
-      #121212 0%,
-      #000 100%
-    );
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("img/fondo-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-
 
 .hero-content{
   max-width: 720px;
