@@ -825,12 +825,14 @@ body {
    ========================= */
 
 .entry-select{
-  min-height: 100vh;
+  position: fixed;
+  inset: 0;
   background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: 9000; /* debajo de la intro */
 }
 
 .entry-grid{
