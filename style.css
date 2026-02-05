@@ -819,3 +819,58 @@ body {
 .confianza{
   margin-top: 60px;
 }
+
+/* =========================
+   PANTALLA DE ELECCIÓN
+   ========================= */
+
+.entry-select{
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.entry-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.entry-card{
+  width: 260px;
+  height: 160px;
+  border: 1px solid rgba(212,175,55,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: #d4af37;
+
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.entry-card:hover{
+  background: rgba(212,175,55,0.08);
+  transform: translateY(-6px);
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  .entry-grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .entry-card{
+    width: 220px;
+    height: 140px;
+    font-size: 20px;
+  }
+}
