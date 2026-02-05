@@ -412,11 +412,12 @@ body {
   border-radius: 999px;
 }
 
-.intro {
-  max-width: 900px;
-  margin: 60px auto;
+.intro{
+  background: #000;
+  padding: 100px 20px;
   text-align: center;
 }
+
 
 .intro h1 {
   font-size: 30px;
