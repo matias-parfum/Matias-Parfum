@@ -861,7 +861,7 @@ body {
 
 .hero-content p{
   font-size: 18px;
-  color: #e0e0e0;
+  color: #e6e1d5; /* blanco hueso elegante */
   margin-bottom: 40px;
   letter-spacing: 1px;
 }
@@ -869,8 +869,8 @@ body {
 /* Botón elegante (ya alineado con tu estilo) */
 .btn-gold{
   background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
+  border: 1px solid #c6b38e;
+  color: #c6b38e;
   padding: 14px 36px;
   font-size: 14px;
   letter-spacing: 2px;
@@ -878,8 +878,9 @@ body {
   transition: all 0.3s ease;
 }
 
+
 .btn-gold:hover{
-  background: rgba(212,175,55,0.1);
+  background: rgba(198,179,142,0.08);
 }
 
 /* Responsive */
