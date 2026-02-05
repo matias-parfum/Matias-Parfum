@@ -205,28 +205,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // aplicar estado inicial
   aplicarFiltros();
 });
-
-function entrarCategoria(tipo){
-  // ocultar pantalla de elección
-  const entry = document.getElementById('entrySelect');
-  if(entry) entry.style.display = 'none';
-
-  // ocultar todos los catálogos
-  document.querySelectorAll('.catalogo').forEach(sec => {
-    sec.style.display = 'none';
-  });
-
-  // mostrar solo el seleccionado
-  const seccion = document.querySelector(
-    `.catalogo[data-seccion="${tipo}"]`
-  );
-
-  if(seccion){
-    seccion.style.display = 'block';
-    seccion.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }
-}
-
