@@ -205,3 +205,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // aplicar estado inicial
   aplicarFiltros();
 });
+
+function entrarCategoria(tipo){
+  const entry = document.getElementById('entrySelect');
+  if(entry) entry.style.display = 'none';
+
+  const seccion = document.querySelector(
+    `.catalogo[data-seccion="${tipo}"]`
+  );
+
+  if(seccion){
+    seccion.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
