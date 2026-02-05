@@ -92,10 +92,13 @@ body {
 /* BOTONES DENTRO DE LAS CARDS */
 .card-buttons {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   gap: 10px;
-  margin: 15px 0 10px 0;
+
+  margin-top: auto;   /* 👈 CLAVE */
+  padding-top: 20px;
 }
+
 
 /* HERO */
 .hero {
