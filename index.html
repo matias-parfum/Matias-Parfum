@@ -2,102 +2,147 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Matías Parfum | Perfumes Originales para Hombre en Costa Rica</title>
-   <meta name="description" content="Perfumes originales 100% auténticos para hombre. Marcas reconocidas, atención personalizada y envíos en Costa Rica. La elegancia comienza con tu aroma.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matías Parfum | Perfumes Originales en Costa Rica</title>
+  <meta name="description" content="Perfumes 100% originales para hombre, mujer y unisex. Marcas de lujo, atención personalizada y envíos en Costa Rica. La elegancia comienza con tu aroma.">
   <link rel="icon" type="image/png" sizes="96x96" href="img/faviconnew.png?v=2">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- INTRO MATÍAS PARFUM -->
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- =====================
+     INTRO SPLASH
+     ===================== -->
 <div class="intro-overlay">
-  <div class="intro-title">MATÍAS PARFUM</div>
+  <div class="intro-inner">
+    <span class="intro-eyebrow">Costa Rica</span>
+    <div class="intro-title">Matías Parfum</div>
+    <div class="intro-line"></div>
+  </div>
 </div>
 
+<!-- =====================
+     NAVBAR
+     ===================== -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo">Matías Parfum</a>
+  <button class="nav-cta btn-gold" onclick="consultarGeneral()">Consultar por WhatsApp</button>
+</nav>
 
-  <!-- HERO ELEGANTE -->
+<!-- =====================
+     HERO
+     ===================== -->
 <section class="hero-elegante">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-noise"></div>
   <div class="hero-content">
-    <h1>MATÍAS PARFUM</h1>
-    <p>Perfumes originales. Elegancia auténtica.</p>
-    <button class="btn-gold" onclick="consultarGeneral()">
-      Consultar por WhatsApp
-    </button>
+    <p class="hero-eyebrow">Perfumes Originales · Costa Rica</p>
+    <h1>Matías<br>Parfum</h1>
+    <div class="hero-divider"></div>
+    <p>Elegancia auténtica. Aromas que perduran.</p>
+    <button class="btn-gold" onclick="consultarGeneral()">Consultar por WhatsApp</button>
+  </div>
+  <div class="hero-scroll-cue">
+    <span>Explorar</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
-
-  <!-- TEXTO INTRODUCTORIO HOME -->
-<section class="intro">
-  <h1>Matías Parfum</h1>
-  <p>
-     Matías Parfum nace de la pasión por los perfumes y el deseo de crear una marca
-  que represente elegancia, autenticidad y estilo personal.
-  </p>
-  <p>
-    Creemos que un buen aroma dice mucho de una persona.
-    Por eso trabajamos con marcas reconocidas y fragancias auténticas,
-    pensadas para quienes valoran la elegancia y el estilo personal.
-  </p>
-  <p class="slogan">
-    La elegancia comienza con tu aroma.
-  </p>
-</section>
-
-  <section class="confianza">
-  <h2>Compra con confianza</h2>
-  <p>
-    En <strong>Matías Parfum</strong> trabajamos únicamente con 
-    <strong>perfumes 100% originales</strong>, cuidando cada detalle para ofrecerte 
-    <strong>calidad, confianza y elegancia</strong>.
-    Realizamos <strong>entregas en Costa Rica</strong>, brindamos 
-    <strong>atención personalizada por WhatsApp</strong> y garantizamos una 
-    <strong>compra segura</strong>.
-  </p>
-
-  <div class="confianza-items">
-    <span>✔️ Perfumes 100% originales</span>
-    <span>✔️ Entrega en Costa Rica</span>
-    <span>✔️ Atención por WhatsApp</span>
-    <span>✔️ Compra segura</span>
+<!-- =====================
+     BRAND STORY
+     ===================== -->
+<section class="brand-story reveal">
+  <div class="brand-story-left">
+    <span class="section-eyebrow">Nuestra historia</span>
+    <h2 class="section-title">El arte de la<br><em>fragancia</em><br>auténtica.</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="brand-story-rule"></div>
+  <div class="brand-story-right">
+    <p>Matías Parfum nace de la pasión por los perfumes y el deseo de crear una marca que represente elegancia, autenticidad y estilo personal.</p>
+    <p>Creemos que un buen aroma dice mucho de una persona. Por eso trabajamos con marcas reconocidas y fragancias auténticas, pensadas para quienes valoran la elegancia y el estilo personal.</p>
+    <p class="slogan">La elegancia comienza con tu aroma.</p>
   </div>
 </section>
 
-  <div class="search-filter-container">
-  <div class="search-box">
-    <div class="extra-filters">
-  <select id="filtroMarca" onchange="filtrarMarca(this.value)">
-    <option value="Todos">Marca (Todas)</option>
-  </select>
-
-  <select id="filtroPrecio" onchange="filtrarPrecio(this.value)">
-    <option value="Todos">Precio (Todos)</option>
-    <option value="0-30000">Hasta ₡30,000</option>
-    <option value="30001-50000">₡30,001 – ₡50,000</option>
-    <option value="50001-70000">₡50,001 – ₡70,000</option>
-    <option value="70001-9999999">₡70,000+</option>
-  </select>
-
-  <button class="btn-clear" onclick="limpiarFiltrosExtra()">Limpiar</button>
-</div>
-
-    <input type="text" id="buscador" placeholder="Buscar perfume..." onkeyup="filtrarPerfumes()">
-  </div>
-
-  <div class="filter-buttons">
-   <button onclick="filtrarTipo('Hombre', event)">Hombre</button>
-<button onclick="filtrarTipo('Mujer', event)">Mujer</button>
-<button onclick="filtrarTipo('Unisex', event)">Unisex</button>
-<button onclick="filtrarTipo('Todos', event)">Todos</button>
+<!-- =====================
+     TRUST BAR
+     ===================== -->
+<div class="trust-bar reveal">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <span class="trust-icon">✦</span>
+      <span class="trust-label">100% Originales</span>
+      <span class="trust-desc">Fragancias auténticas, certificadas</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">◈</span>
+      <span class="trust-label">Envíos en Costa Rica</span>
+      <span class="trust-desc">A todo el país, rápido y seguro</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">◇</span>
+      <span class="trust-label">WhatsApp Directo</span>
+      <span class="trust-desc">Atención personalizada inmediata</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✧</span>
+      <span class="trust-label">Compra Segura</span>
+      <span class="trust-desc">Garantía en cada pedido</span>
+    </div>
   </div>
 </div>
 
-  <!-- PERFUMES HOMBRE -->
-  <section class="catalogo" data-seccion="Hombre">
-    <h2>Perfumes para Hombre</h2>
-    <div class="grid">
+<!-- =====================
+     FILTERS (STICKY)
+     ===================== -->
+<div class="filter-section" id="filterSection">
+  <div class="filter-inner">
+    <div class="filter-search-wrap">
+      <span class="filter-search-icon">⌕</span>
+      <input type="text" id="buscador" placeholder="Buscar perfume..." onkeyup="filtrarPerfumes()">
+    </div>
+    <div class="filter-type-group" id="filterTypeGroup">
+      <button onclick="filtrarTipo('Todos', event)" class="active">Todos</button>
+      <button onclick="filtrarTipo('Hombre', event)">Hombre</button>
+      <button onclick="filtrarTipo('Mujer', event)">Mujer</button>
+      <button onclick="filtrarTipo('Unisex', event)">Unisex</button>
+    </div>
+    <div class="filter-selects">
+      <select id="filtroMarca" onchange="filtrarMarca(this.value)">
+        <option value="Todos">Marca</option>
+      </select>
+      <select id="filtroPrecio" onchange="filtrarPrecio(this.value)">
+        <option value="Todos">Precio</option>
+        <option value="0-30000">Hasta ₡30,000</option>
+        <option value="30001-50000">₡30,001 – ₡50,000</option>
+        <option value="50001-70000">₡50,001 – ₡70,000</option>
+        <option value="70001-9999999">₡70,000+</option>
+      </select>
+      <button class="btn-clear" onclick="limpiarFiltrosExtra()">Limpiar</button>
+    </div>
+  </div>
+</div>
 
+<!-- =====================
+     CATÁLOGO — HOMBRE
+     ===================== -->
+<section class="catalogo" data-seccion="Hombre">
+  <div class="catalogo-header reveal">
+    <div>
+      <span class="section-eyebrow">Colección</span>
+      <h2 class="section-title">Para Hombre</h2>
+    </div>
+    <span class="catalogo-count" id="countHombre"></span>
+  </div>
+  <div class="grid">
 <div class="card" data-nombre="Jean Paul Gaultier Le Male" data-tipo="Hombre">
 
   <!-- Opción 1: click en imagen abre la página del producto -->
@@ -1615,17 +1660,22 @@
     <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
   </div>
 </div>
+  </div>
+</section>
 
-    </div>
-  </section>
-  
-  <!-- PERFUMES MUJER -->
+<!-- =====================
+     CATÁLOGO — MUJER
+     ===================== -->
 <section class="catalogo" data-seccion="Mujer">
-  <h2>Perfumes para Mujer</h2>
-
+  <div class="catalogo-header reveal">
+    <div>
+      <span class="section-eyebrow">Colección</span>
+      <h2 class="section-title">Para Mujer</h2>
+    </div>
+    <span class="catalogo-count" id="countMujer"></span>
+  </div>
   <div class="grid">
-
-    <div class="card" data-nombre="Valentino DONNA BORN IN ROMA YELLOW DREAM 100ML EDP" data-tipo="Mujer">
+<div class="card" data-nombre="Valentino DONNA BORN IN ROMA YELLOW DREAM 100ML EDP" data-tipo="Mujer">
         <img src="img/DREAM.png" alt="Valentino DONNA BORN IN ROMA YELLOW DREAM 100ML EDP">
         <h3>Valentino DONNA BORN IN ROMA YELLOW DREAM 100ML EDP</h3>
         <p class="precio">₡67,000</p>
@@ -2179,17 +2229,22 @@
     <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
   </div>
 </div>
-    
   </div>
 </section>
 
-<!-- PERFUMES UNISEX -->
+<!-- =====================
+     CATÁLOGO — UNISEX
+     ===================== -->
 <section class="catalogo" data-seccion="Unisex">
-  <h2>Perfumes Unisex</h2>
-
+  <div class="catalogo-header reveal">
+    <div>
+      <span class="section-eyebrow">Colección</span>
+      <h2 class="section-title">Unisex</h2>
+    </div>
+    <span class="catalogo-count" id="countUnisex"></span>
+  </div>
   <div class="grid">
-
-    <div class="card" data-nombre="Orientica AMBER NOIR 80ML EDP" data-tipo="Unisex">
+<div class="card" data-nombre="Orientica AMBER NOIR 80ML EDP" data-tipo="Unisex">
   <img src="img/AMBER NOIR.png" alt="Orientica AMBER NOIR 80ML EDP">
   <h3>Orientica AMBER NOIR 80ML EDP</h3>
   <p class="precio">₡51,000</p>
@@ -2881,59 +2936,178 @@
     <button class="consultar-btn" onclick="consultarPerfume(this.closest('.card').dataset.nombre)">Consultar</button>
   </div>
 </div>
-
   </div>
 </section>
 
-<!-- BLOG / CONSEJOS -->
-<section class="blog">
-  <h2>Consejos</h2>
-  <div class="blog-grid">
-    <div class="blog-card">
-      <h3>Cómo elegir tu perfume ideal</h3>
-      <p>Descubre tips para seleccionar un aroma que refleje tu personalidad y estilo único. Considera la intensidad, la duración y el tipo de fragancia que mejor encaje contigo.</p>
+<!-- =====================
+     EDITORIAL / BLOG
+     ===================== -->
+<section class="editorial">
+  <div class="editorial-inner">
+    <div class="editorial-header reveal">
+      <span class="section-eyebrow">Guía de fragancias</span>
+      <h2 class="section-title">El arte de elegir<br>tu aroma perfecto.</h2>
+      <div class="section-rule centered"></div>
     </div>
-    
-    <div class="blog-card">
-      <h3>Fragancias para cada ocasión</h3>
-      <p>Aprende qué perfumes son ideales para el día, la noche, reuniones o eventos especiales. Un aroma adecuado puede marcar la diferencia en tu presencia.</p>
-    </div>
-    
-    <div class="blog-card">
-      <h3>Cuidado y almacenamiento de tus perfumes</h3>
-      <p>Consejos para mantener tus perfumes frescos y duraderos por más tiempo. Evita luz directa, calor y cambios bruscos de temperatura.</p>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <span class="blog-card-num">01</span>
+        <h3>Cómo elegir tu perfume ideal</h3>
+        <p>Descubre tips para seleccionar un aroma que refleje tu personalidad y estilo único. Considera la intensidad, la duración y el tipo de fragancia que mejor encaje contigo.</p>
+      </div>
+      <div class="blog-card reveal">
+        <span class="blog-card-num">02</span>
+        <h3>Fragancias para cada ocasión</h3>
+        <p>Aprende qué perfumes son ideales para el día, la noche, reuniones o eventos especiales. Un aroma adecuado puede marcar la diferencia en tu presencia.</p>
+      </div>
+      <div class="blog-card reveal">
+        <span class="blog-card-num">03</span>
+        <h3>Cuidado y almacenamiento</h3>
+        <p>Consejos para mantener tus perfumes frescos y duraderos por más tiempo. Evita luz directa, calor y cambios bruscos de temperatura.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER SOLO TEXTO -->
+<!-- =====================
+     FOOTER
+     ===================== -->
 <footer class="footer">
-  <div class="footer-content">
-    <p>© 2026 Matías Parfum. Todos los derechos reservados.</p>
-    <p>Contáctanos:</p>
-    <div class="social-icons">
-     <a href="https://www.instagram.com/matias_parfum/" target="_blank">
-  @matias_parfum
-</a>
-      <a href="https://wa.me/50688744154" target="_blank">WhatsApp</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo">Matías Parfum</span>
+      <p>Fragancias originales. Elegancia auténtica. Envíos en todo Costa Rica.</p>
     </div>
+    <div class="footer-center">
+      <div class="section-rule centered" style="margin: 0 auto;"></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/matias_parfum/" target="_blank">@matias_parfum</a>
+      <a href="https://wa.me/50683674466" target="_blank" onclick="consultarGeneral(); return false;">WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Matías Parfum. Todos los derechos reservados.</p>
+    <p>Costa Rica</p>
   </div>
 </footer>
 
-<!-- SCRIPT SAN VALENTÍN (SE OCULTA SOLO EN MARZO) -->
-<script>
-  (function () {
-    const hoy = new Date();
-    const anio = hoy.getFullYear();
-    const marzo = new Date(anio, 2, 1); // 1 de marzo
+<!-- WhatsApp Floating Button -->
+<a class="wa-float" href="https://wa.me/50683674466" target="_blank" title="Consultar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 
-    if (hoy >= marzo) {
-      const heroValentin = document.getElementById("hero-valentin");
-      if (heroValentin) heroValentin.style.display = "none";
-    }
-  })();
+<!-- San Valentín script (mantener compatibilidad) -->
+<script>
+(function () {
+  const hoy = new Date();
+  const anio = hoy.getFullYear();
+  const marzo = new Date(anio, 2, 1);
+  if (hoy >= marzo) {
+    const heroValentin = document.getElementById("hero-valentin");
+    if (heroValentin) heroValentin.style.display = "none";
+  }
+})();
 </script>
 
 <script src="script.js"></script>
+<script>
+// ===== NAVBAR SCROLL =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// ===== HERO PARALLAX =====
+const heroBg = document.getElementById('heroBg');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (heroBg && y < window.innerHeight) {
+    heroBg.style.transform = `scale(1.07) translateY(${y * 0.25}px)`;
+  }
+}, { passive: true });
+
+// ===== CUSTOM CURSOR =====
+const dot  = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mx=0, my=0, rx=0, ry=0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+(function animCursor() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  if(dot)  dot.style.transform  = `translate(${mx-3}px, ${my-3}px)`;
+  if(ring) ring.style.transform = `translate(${rx-16}px, ${ry-16}px)`;
+  requestAnimationFrame(animCursor);
+})();
+document.querySelectorAll('a,button,.card').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+});
+
+// ===== SCROLL REVEAL =====
+const reveals = document.querySelectorAll('.reveal');
+const cardEls = document.querySelectorAll('.card');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => revealObserver.observe(el));
+
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('revealed');
+      }, (i % 6) * 80);
+      cardObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+cardEls.forEach(el => cardObserver.observe(el));
+
+// ===== CARD COUNTS =====
+function updateCounts() {
+  ['Hombre','Mujer','Unisex'].forEach(tipo => {
+    const section = document.querySelector(`[data-seccion="${tipo}"]`);
+    if (!section) return;
+    const visible = section.querySelectorAll('.card:not([style*="display: none"])').length;
+    const countEl = document.getElementById('count' + tipo);
+    if (countEl) countEl.textContent = visible > 0 ? visible + ' fragancias' : '';
+  });
+}
+updateCounts();
+
+// Patch filtrarPerfumes to also update counts
+const _origAplicar = aplicarFiltros;
+window.aplicarFiltrosConConteo = function() {
+  aplicarFiltros();
+  setTimeout(updateCounts, 50);
+};
+// Override the key filter entry points
+const origFiltrarPerfumes = window.filtrarPerfumes;
+window.filtrarPerfumes = function() {
+  aplicarFiltros();
+  setTimeout(updateCounts, 50);
+};
+const origFiltrarTipo = window.filtrarTipo;
+window.filtrarTipo = function(tipo, event) {
+  tipoSeleccionado = tipo;
+  const botones = document.querySelectorAll('.filter-type-group button');
+  botones.forEach(b => b.classList.remove('active'));
+  if(event && event.target) event.target.classList.add('active');
+  aplicarFiltros();
+  setTimeout(updateCounts, 50);
+};
+</script>
+
 </body>
 </html>
