@@ -92,6 +92,10 @@
     <li><a href="#finder">Tu Perfume</a></li>
     <li><a href="#blog">Guía</a></li>
   </ul>
+  <button class="nav-cart" id="navCart" onclick="abrirCarrito()" aria-label="Ver carrito de compras">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="cart-badge" id="cartBadge" aria-live="polite"></span>
+  </button>
   <button class="nav-cta" onclick="consultarGeneral()" aria-label="Consultar por WhatsApp">WhatsApp →</button>
   <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -5331,6 +5335,39 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
+<!-- ════════════════════════════════════════
+     MINI CARRITO
+═════════════════════════════════════════ -->
+<div class="cart-backdrop" id="cartBackdrop" onclick="cerrarCarrito()"></div>
+
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <div>
+      <h2 class="cart-title">Carrito</h2>
+      <span class="cart-subtitle" id="cartSubtitle">0 productos</span>
+    </div>
+    <button class="cart-close" onclick="cerrarCarrito()" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <span class="cart-empty-icon">◎</span>
+      <p class="cart-empty-h">Tu carrito está vacío</p>
+      <p class="cart-empty-p">Agrega perfumes desde el catálogo</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total estimado</span>
+      <span class="cart-total-val" id="cartTotal">₡0</span>
+    </div>
+    <button class="cart-wa-btn" onclick="pedirPorWhatsApp()" aria-label="Enviar pedido por WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Pedir por WhatsApp
+    </button>
+    <button class="cart-clear-btn" onclick="vaciarCarrito()">Vaciar carrito</button>
+  </div>
+</aside>
+
 <script>
 // ═══════════════════════════════════════════════════════════
 // CATÁLOGO DATA (para comparador y recomendaciones)
@@ -5540,6 +5577,137 @@ function limpiarFiltros() {
 }
 
 // ═══════════════════════════════════════════════════════════
+// MINI CARRITO
+// ═══════════════════════════════════════════════════════════
+let carrito = JSON.parse(localStorage.getItem('mpCarrito') || '[]');
+
+function guardarCarrito() {
+  localStorage.setItem('mpCarrito', JSON.stringify(carrito));
+  actualizarBadge();
+}
+
+function actualizarBadge() {
+  const total = carrito.reduce((s, i) => s + i.cantidad, 0);
+  const badge = document.getElementById('cartBadge');
+  const btn   = document.getElementById('navCart');
+  if (badge) { badge.textContent = total || ''; badge.classList.toggle('visible', total > 0); }
+  if (btn)   btn.classList.toggle('has-items', total > 0);
+}
+
+function agregarAlCarrito(card) {
+  const nombre    = card.dataset.nombre || '';
+  const precioNum = getPrecioNum(card);
+  const precioStr = card.querySelector('.precio')?.textContent.trim() || '';
+  const img       = card.querySelector('.card-image-wrap img')?.src || '';
+  const href      = card.querySelector('.card-image-wrap')?.getAttribute('href') || '#';
+
+  const existente = carrito.find(i => i.nombre === nombre);
+  if (existente) {
+    existente.cantidad++;
+  } else {
+    carrito.push({ nombre, precioNum, precioStr, img, href, cantidad: 1 });
+  }
+  guardarCarrito();
+  renderCarrito();
+  abrirCarrito();
+
+  card.classList.remove('cart-flash');
+  void card.offsetWidth; // reflow para reiniciar animación
+  card.classList.add('cart-flash');
+  card.addEventListener('animationend', () => card.classList.remove('cart-flash'), { once: true });
+}
+
+function cambiarCantidad(idx, delta) {
+  if (!carrito[idx]) return;
+  carrito[idx].cantidad += delta;
+  if (carrito[idx].cantidad <= 0) carrito.splice(idx, 1);
+  guardarCarrito();
+  renderCarrito();
+}
+
+function quitarItem(idx) {
+  carrito.splice(idx, 1);
+  guardarCarrito();
+  renderCarrito();
+}
+
+function vaciarCarrito() {
+  carrito = [];
+  guardarCarrito();
+  renderCarrito();
+}
+
+function abrirCarrito() {
+  renderCarrito();
+  document.getElementById('cartDrawer')?.classList.add('open');
+  document.getElementById('cartBackdrop')?.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarCarrito() {
+  document.getElementById('cartDrawer')?.classList.remove('open');
+  document.getElementById('cartBackdrop')?.classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+function renderCarrito() {
+  const container = document.getElementById('cartItems');
+  const footer    = document.getElementById('cartFooter');
+  const subtitle  = document.getElementById('cartSubtitle');
+  if (!container) return;
+
+  const totalItems = carrito.reduce((s, i) => s + i.cantidad, 0);
+  if (subtitle) subtitle.textContent = `${totalItems} producto${totalItems !== 1 ? 's' : ''}`;
+
+  if (carrito.length === 0) {
+    container.innerHTML = `<div class="cart-empty">
+      <span class="cart-empty-icon">◎</span>
+      <p class="cart-empty-h">Tu carrito está vacío</p>
+      <p class="cart-empty-p">Agrega perfumes desde el catálogo</p>
+    </div>`;
+    if (footer) footer.classList.remove('visible');
+    return;
+  }
+
+  container.innerHTML = carrito.map((item, i) => `
+    <div class="cart-item">
+      <div class="cart-item-img">
+        <img src="${item.img}" alt="${item.nombre}" loading="lazy">
+      </div>
+      <div class="cart-item-info">
+        <p class="cart-item-name">${item.nombre}</p>
+        <p class="cart-item-price">${item.precioStr}</p>
+        <div class="cart-item-qty">
+          <button class="cart-qty-ctrl" onclick="cambiarCantidad(${i},-1)" aria-label="Restar uno">−</button>
+          <span class="cart-qty-num">${item.cantidad}</span>
+          <button class="cart-qty-ctrl" onclick="cambiarCantidad(${i},1)" aria-label="Sumar uno">+</button>
+        </div>
+      </div>
+      <button class="cart-item-remove" onclick="quitarItem(${i})" aria-label="Eliminar ${item.nombre}">✕</button>
+    </div>
+  `).join('');
+
+  const totalCRC = carrito.reduce((s, i) => s + (i.precioNum || 0) * i.cantidad, 0);
+  const totalEl  = document.getElementById('cartTotal');
+  if (totalEl) totalEl.textContent = totalCRC ? '₡' + totalCRC.toLocaleString('es-CR') : '₡0';
+  if (footer)  footer.classList.add('visible');
+}
+
+function pedirPorWhatsApp() {
+  if (carrito.length === 0) return;
+  const lineas = carrito.map(item => {
+    const sub    = (item.precioNum || 0) * item.cantidad;
+    const subStr = item.cantidad > 1 && sub ? ` (subtotal ₡${sub.toLocaleString('es-CR')})` : '';
+    const xN     = item.cantidad > 1 ? ` × ${item.cantidad}` : '';
+    return `• ${item.nombre}${xN} — ${item.precioStr}${subStr}`;
+  }).join('\n');
+  const total    = carrito.reduce((s, i) => s + (i.precioNum || 0) * i.cantidad, 0);
+  const totalStr = total ? `\n\n*Total estimado: ₡${total.toLocaleString('es-CR')}*` : '';
+  const msg = `Hola! Me gustaría hacer el siguiente pedido:\n\n${lineas}${totalStr}\n\nQuedo atento para coordinar el envío. Muchas gracias.`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// ═══════════════════════════════════════════════════════════
 // POPULATE MARCA SELECT
 // ═══════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
@@ -5554,6 +5722,20 @@ document.addEventListener('DOMContentLoaded', () => {
     sel.appendChild(o);
   });
   aplicarFiltros();
+
+  // Inyectar botón "Agregar al carrito" en cada card
+  document.querySelectorAll('.card').forEach(card => {
+    const buttons = card.querySelector('.card-buttons');
+    if (!buttons) return;
+    const addBtn = document.createElement('button');
+    addBtn.className = 'add-cart-btn';
+    addBtn.textContent = '+ Agregar al carrito';
+    addBtn.setAttribute('aria-label', `Agregar ${card.dataset.nombre || ''} al carrito`);
+    addBtn.addEventListener('click', e => { e.stopPropagation(); agregarAlCarrito(card); });
+    buttons.insertBefore(addBtn, buttons.firstChild);
+  });
+
+  actualizarBadge();
 });
 
 // ═══════════════════════════════════════════════════════════
